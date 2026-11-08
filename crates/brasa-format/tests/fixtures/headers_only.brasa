@@ -1,0 +1,3 @@
+GET https://example.com/health
+Accept: application/json
+# X-Debug: 1

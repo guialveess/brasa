@@ -1,0 +1,7 @@
+GET {{baseUrl}}/items
+Accept: application/json
+# X-Debug: 1
+
+::: query
+page = 1
+# verbose = true

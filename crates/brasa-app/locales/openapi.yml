@@ -1,0 +1,502 @@
+# OpenAPI import wizard. Glossary and rules: docs/i18n.md
+_version: 2
+"openapi.title":
+  en: "Import OpenAPI"
+  es: "Importar OpenAPI"
+  gl: "Importar OpenAPI"
+  it: "Importa OpenAPI"
+"openapi.menu":
+  en: "OpenAPI / Swagger..."
+  es: "OpenAPI / Swagger..."
+  gl: "OpenAPI / Swagger..."
+  it: "OpenAPI / Swagger..."
+"openapi.welcome":
+  en: "Import OpenAPI..."
+  es: "Importar OpenAPI..."
+  gl: "Importar OpenAPI..."
+  it: "Importa OpenAPI..."
+"openapi.palette.import":
+  en: "Import OpenAPI spec..."
+  es: "Importar especificación OpenAPI..."
+  gl: "Importar especificación OpenAPI..."
+  it: "Importa specifica OpenAPI..."
+"openapi.palette.import_url":
+  en: "Import OpenAPI from URL..."
+  es: "Importar OpenAPI desde una URL..."
+  gl: "Importar OpenAPI desde un URL..."
+  it: "Importa OpenAPI da URL..."
+"openapi.step.source":
+  en: "Source"
+  es: "Origen"
+  gl: "Orixe"
+  it: "Origine"
+"openapi.step.options":
+  en: "Options"
+  es: "Opciones"
+  gl: "Opcións"
+  it: "Opzioni"
+"openapi.step.preview":
+  en: "Preview"
+  es: "Vista previa"
+  gl: "Vista previa"
+  it: "Anteprima"
+"openapi.source.file":
+  en: "File"
+  es: "Archivo"
+  gl: "Ficheiro"
+  it: "File"
+"openapi.source.url":
+  en: "URL"
+  es: "URL"
+  gl: "URL"
+  it: "URL"
+"openapi.source.paste":
+  en: "Paste text"
+  es: "Pegar texto"
+  gl: "Pegar texto"
+  it: "Incolla testo"
+"openapi.file.drop":
+  en: "Drop an OpenAPI file or"
+  es: "Arrastra un archivo OpenAPI o"
+  gl: "Arrastra un ficheiro OpenAPI ou"
+  it: "Trascina un file OpenAPI o"
+"openapi.file.browse":
+  en: "browse"
+  es: "búscalo"
+  gl: "búscao"
+  it: "sfoglia"
+"openapi.file.types":
+  en: ".yaml · .yml · .json · catalog-info.yaml"
+  es: ".yaml · .yml · .json · catalog-info.yaml"
+  gl: ".yaml · .yml · .json · catalog-info.yaml"
+  it: ".yaml · .yml · .json · catalog-info.yaml"
+"openapi.file.reading":
+  en: "Reading the spec..."
+  es: "Leyendo la especificación..."
+  gl: "Lendo a especificación..."
+  it: "Lettura della specifica..."
+"openapi.url.label":
+  en: "Spec URL"
+  es: "URL de la especificación"
+  gl: "URL da especificación"
+  it: "URL della specifica"
+"openapi.url.fetch":
+  en: "Download"
+  es: "Descargar"
+  gl: "Descargar"
+  it: "Scarica"
+"openapi.url.fetching":
+  en: "Downloading..."
+  es: "Descargando..."
+  gl: "Descargando..."
+  it: "Download..."
+"openapi.url.hint":
+  en: "External $ref files are resolved relative to this URL. The download uses the TLS settings of requests."
+  es: "Los archivos de $ref externos se resuelven a partir de esta URL. La descarga usa los ajustes de TLS de las peticiones."
+  gl: "Os ficheiros de $ref externos resólvense a partir deste URL. A descarga usa os axustes de TLS das peticións."
+  it: "I file $ref esterni vengono risolti rispetto a questo URL. Il download usa le impostazioni TLS delle richieste."
+"openapi.paste.placeholder":
+  en: "Paste an OpenAPI or Swagger spec, or a Postman export"
+  es: "Pega una especificación OpenAPI o Swagger, o una exportación de Postman"
+  gl: "Pega unha especificación OpenAPI ou Swagger, ou unha exportación de Postman"
+  it: "Incolla una specifica OpenAPI o Swagger, o un'esportazione di Postman"
+"openapi.paste.hint":
+  en: "Pasted text has no location, so external $ref files cannot be read."
+  es: "El texto pegado no tiene ubicación, así que no se pueden leer archivos de $ref externos."
+  gl: "O texto pegado non ten localización, así que non se poden ler ficheiros de $ref externos."
+  it: "Il testo incollato non ha una posizione, quindi i file $ref esterni non possono essere letti."
+"openapi.found":
+  en: "FOUND"
+  es: "ENCONTRADAS"
+  gl: "ATOPADAS"
+  it: "TROVATE"
+"openapi.operations.one":
+  en: "%{count} operation"
+  es: "%{count} operación"
+  gl: "%{count} operación"
+  it: "%{count} operazione"
+"openapi.operations.other":
+  en: "%{count} operations"
+  es: "%{count} operaciones"
+  gl: "%{count} operacións"
+  it: "%{count} operazioni"
+"openapi.warnings.one":
+  en: "%{count} warning"
+  es: "%{count} advertencia"
+  gl: "%{count} advertencia"
+  it: "%{count} avviso"
+"openapi.warnings.other":
+  en: "%{count} warnings"
+  es: "%{count} advertencias"
+  gl: "%{count} advertencias"
+  it: "%{count} avvisi"
+"openapi.supported":
+  en: "OpenAPI 3.1 · 3.0 · Swagger 2.0"
+  es: "OpenAPI 3.1 · 3.0 · Swagger 2.0"
+  gl: "OpenAPI 3.1 · 3.0 · Swagger 2.0"
+  it: "OpenAPI 3.1 · 3.0 · Swagger 2.0"
+"openapi.read_failed":
+  en: "Could not read the spec: %{error}"
+  es: "No se pudo leer la especificación: %{error}"
+  gl: "Non se puido ler a especificación: %{error}"
+  it: "Impossibile leggere la specifica: %{error}"
+"openapi.options.name":
+  en: "Collection name"
+  es: "Nombre de la colección"
+  gl: "Nome da colección"
+  it: "Nome della raccolta"
+"openapi.options.folders":
+  en: "FOLDERS"
+  es: "CARPETAS"
+  gl: "CARTAFOLES"
+  it: "CARTELLE"
+"openapi.options.group_path":
+  en: "Path segments"
+  es: "Segmentos de la ruta"
+  gl: "Segmentos da ruta"
+  it: "Segmenti del percorso"
+"openapi.options.group_tags":
+  en: "Tags"
+  es: "Etiquetas"
+  gl: "Etiquetas"
+  it: "Tag"
+"openapi.options.generate":
+  en: "GENERATE"
+  es: "GENERAR"
+  gl: "XERAR"
+  it: "GENERA"
+"openapi.gen.env":
+  en: "Environment from servers"
+  es: "Entorno a partir de los servidores"
+  gl: "Contorno a partir dos servidores"
+  it: "Ambiente dai server"
+"openapi.gen.env_sub":
+  en: "baseUrl = %{url}"
+  es: "baseUrl = %{url}"
+  gl: "baseUrl = %{url}"
+  it: "baseUrl = %{url}"
+"openapi.gen.env_more.one":
+  en: "baseUrl = %{url} (+%{count} more environment)"
+  es: "baseUrl = %{url} (+%{count} entorno más)"
+  gl: "baseUrl = %{url} (+%{count} contorno máis)"
+  it: "baseUrl = %{url} (+%{count} altro ambiente)"
+"openapi.gen.env_more.other":
+  en: "baseUrl = %{url} (+%{count} more environments)"
+  es: "baseUrl = %{url} (+%{count} entornos más)"
+  gl: "baseUrl = %{url} (+%{count} contornos máis)"
+  it: "baseUrl = %{url} (+%{count} altri ambienti)"
+"openapi.gen.auth":
+  en: "Auth variables from securitySchemes"
+  es: "Variables de autenticación a partir de securitySchemes"
+  gl: "Variables de autenticación a partir de securitySchemes"
+  it: "Variabili di autenticazione da securitySchemes"
+"openapi.gen.auth_sub":
+  en: "%{variables}, stored in .local.env"
+  es: "%{variables}, guardadas en .local.env"
+  gl: "%{variables}, gardadas en .local.env"
+  it: "%{variables}, salvate in .local.env"
+"openapi.gen.auth_none":
+  en: "The spec declares no security schemes"
+  es: "La especificación no declara esquemas de seguridad"
+  gl: "A especificación non declara esquemas de seguridade"
+  it: "La specifica non dichiara schemi di sicurezza"
+"openapi.gen.bodies":
+  en: "Example bodies"
+  es: "Cuerpos de ejemplo"
+  gl: "Corpos de exemplo"
+  it: "Corpi di esempio"
+"openapi.gen.bodies_sub":
+  en: "From the example values, or built from the schema"
+  es: "A partir de los valores de ejemplo, o generados desde el esquema"
+  gl: "A partir dos valores de exemplo, ou xerados desde o esquema"
+  it: "Dai valori di esempio, o generati dallo schema"
+"openapi.gen.tests":
+  en: "Status code tests"
+  es: "Pruebas del código de estado"
+  gl: "Probas do código de estado"
+  it: "Test del codice di stato"
+"openapi.gen.tests_sub":
+  en: "Asserts the first documented 2xx response"
+  es: "Comprueba la primera respuesta 2xx documentada"
+  gl: "Comproba a primeira resposta 2xx documentada"
+  it: "Verifica la prima risposta 2xx documentata"
+"openapi.gen.docs":
+  en: "Request documentation"
+  es: "Documentación de la petición"
+  gl: "Documentación da petición"
+  it: "Documentazione della richiesta"
+"openapi.gen.docs_sub":
+  en: "Summary, description and parameter docs"
+  es: "Resumen, descripción y documentación de los parámetros"
+  gl: "Resumo, descrición e documentación dos parámetros"
+  it: "Sommario, descrizione e documentazione dei parametri"
+"openapi.preview.requests.one":
+  en: "%{selected} of %{count} request"
+  es: "%{selected} de %{count} petición"
+  gl: "%{selected} de %{count} petición"
+  it: "%{selected} di %{count} richiesta"
+"openapi.preview.requests.other":
+  en: "%{selected} of %{count} requests"
+  es: "%{selected} de %{count} peticiones"
+  gl: "%{selected} de %{count} peticións"
+  it: "%{selected} di %{count} richieste"
+"openapi.preview.folders.one":
+  en: "%{count} folder"
+  es: "%{count} carpeta"
+  gl: "%{count} cartafol"
+  it: "%{count} cartella"
+"openapi.preview.folders.other":
+  en: "%{count} folders"
+  es: "%{count} carpetas"
+  gl: "%{count} cartafoles"
+  it: "%{count} cartelle"
+"openapi.preview.select_all":
+  en: "Select all"
+  es: "Seleccionar todo"
+  gl: "Seleccionar todo"
+  it: "Seleziona tutto"
+"openapi.preview.select_none":
+  en: "None"
+  es: "Ninguna"
+  gl: "Ningunha"
+  it: "Nessuna"
+"openapi.preview.environments.one":
+  en: "%{count} environment (%{names})"
+  es: "%{count} entorno (%{names})"
+  gl: "%{count} contorno (%{names})"
+  it: "%{count} ambiente (%{names})"
+"openapi.preview.environments.other":
+  en: "%{count} environments (%{names})"
+  es: "%{count} entornos (%{names})"
+  gl: "%{count} contornos (%{names})"
+  it: "%{count} ambienti (%{names})"
+"openapi.preview.no_environment":
+  en: "No environment"
+  es: "Sin entorno"
+  gl: "Sen contorno"
+  it: "Nessun ambiente"
+"openapi.preview.auth.one":
+  en: "%{count} auth variable"
+  es: "%{count} variable de autenticación"
+  gl: "%{count} variable de autenticación"
+  it: "%{count} variabile di autenticazione"
+"openapi.preview.auth.other":
+  en: "%{count} auth variables"
+  es: "%{count} variables de autenticación"
+  gl: "%{count} variables de autenticación"
+  it: "%{count} variabili di autenticazione"
+"openapi.selected.one":
+  en: "%{count} request selected"
+  es: "%{count} petición seleccionada"
+  gl: "%{count} petición seleccionada"
+  it: "%{count} richiesta selezionata"
+"openapi.selected.other":
+  en: "%{count} requests selected"
+  es: "%{count} peticiones seleccionadas"
+  gl: "%{count} peticións seleccionadas"
+  it: "%{count} richieste selezionate"
+"openapi.next":
+  en: "Next"
+  es: "Siguiente"
+  gl: "Seguinte"
+  it: "Avanti"
+"openapi.back":
+  en: "Back"
+  es: "Atrás"
+  gl: "Atrás"
+  it: "Indietro"
+"openapi.import.one":
+  en: "Import %{count} request"
+  es: "Importar %{count} petición"
+  gl: "Importar %{count} petición"
+  it: "Importa %{count} richiesta"
+"openapi.import.other":
+  en: "Import %{count} requests"
+  es: "Importar %{count} peticiones"
+  gl: "Importar %{count} peticións"
+  it: "Importa %{count} richieste"
+"openapi.done.title.one":
+  en: "Imported %{count} request into %{name}"
+  es: "Se importó %{count} petición en %{name}"
+  gl: "Importouse %{count} petición en %{name}"
+  it: "Importata %{count} richiesta in %{name}"
+"openapi.done.title.other":
+  en: "Imported %{count} requests into %{name}"
+  es: "Se importaron %{count} peticiones en %{name}"
+  gl: "Importáronse %{count} peticións en %{name}"
+  it: "Importate %{count} richieste in %{name}"
+"openapi.done.note":
+  en: "The collection is open in the sidebar. Importing the same source again offers an update with the changes."
+  es: "La colección está abierta en la barra lateral. Al importar de nuevo el mismo origen se ofrece actualizarla con los cambios."
+  gl: "A colección está aberta na barra lateral. Ao importar de novo a mesma orixe ofrécese actualizala cos cambios."
+  it: "La raccolta è aperta nella barra laterale. Importando di nuovo la stessa origine viene proposto di aggiornarla con le modifiche."
+"openapi.done.warnings":
+  en: "Imported with these warnings:"
+  es: "Importada con estas advertencias:"
+  gl: "Importada con estas advertencias:"
+  it: "Importata con questi avvisi:"
+"openapi.source.folder":
+  en: "Folder"
+  es: "Carpeta"
+  gl: "Cartafol"
+  it: "Cartella"
+"openapi.source.git":
+  en: "Git repository"
+  es: "Repositorio Git"
+  gl: "Repositorio Git"
+  it: "Repository Git"
+"openapi.folder.none":
+  en: "No folder chosen"
+  es: "Ninguna carpeta elegida"
+  gl: "Ningún cartafol escollido"
+  it: "Nessuna cartella scelta"
+"openapi.folder.choose":
+  en: "Choose..."
+  es: "Elegir..."
+  gl: "Escoller..."
+  it: "Scegli..."
+"openapi.folder.scanning":
+  en: "Looking for specs..."
+  es: "Buscando especificaciones..."
+  gl: "Buscando especificacións..."
+  it: "Ricerca delle specifiche..."
+"openapi.folder.hint":
+  en: "Subfolders are searched too, except hidden ones and node_modules, target, vendor, dist and build. A catalog-info.yaml brings in the specs it references."
+  es: "También se buscan las subcarpetas, salvo las ocultas y node_modules, target, vendor, dist y build. Un catalog-info.yaml añade las especificaciones a las que hace referencia."
+  gl: "Tamén se buscan os subcartafoles, agás os ocultos e node_modules, target, vendor, dist e build. Un catalog-info.yaml engade as especificacións ás que fai referencia."
+  it: "Vengono cercate anche le sottocartelle, tranne quelle nascoste e node_modules, target, vendor, dist e build. Un catalog-info.yaml aggiunge le specifiche a cui fa riferimento."
+"openapi.git.repository":
+  en: "Repository"
+  es: "Repositorio"
+  gl: "Repositorio"
+  it: "Repository"
+"openapi.git.branch":
+  en: "Branch"
+  es: "Rama"
+  gl: "Rama"
+  it: "Branch"
+"openapi.git.branch_placeholder":
+  en: "default"
+  es: "predeterminada"
+  gl: "predeterminada"
+  it: "predefinito"
+"openapi.git.clone":
+  en: "Clone"
+  es: "Clonar"
+  gl: "Clonar"
+  it: "Clona"
+"openapi.git.cloning":
+  en: "Cloning..."
+  es: "Clonando..."
+  gl: "Clonando..."
+  it: "Clonazione..."
+"openapi.git.hint":
+  en: "Only the last commit of the branch is downloaded, with your git and its credentials, to a temporary folder deleted when the wizard closes."
+  es: "Solo se descarga el último commit de la rama, con tu git y sus credenciales, a una carpeta temporal que se borra al cerrar el asistente."
+  gl: "Só se descarga o último commit da rama, co teu git e as súas credenciais, a un cartafol temporal que se borra ao pechar o asistente."
+  it: "Viene scaricato solo l'ultimo commit del branch, con il tuo git e le sue credenziali, in una cartella temporanea eliminata alla chiusura della procedura."
+"openapi.git.missing":
+  en: "Git is not available: install it, or choose it in Settings, Git."
+  es: "Git no está disponible: instálalo o elígelo en Ajustes, Git."
+  gl: "Git non está dispoñible: instálao ou escólleo en Axustes, Git."
+  it: "Git non è disponibile: installalo o sceglilo in Impostazioni, Git."
+"openapi.none_found":
+  en: "No OpenAPI or Swagger spec found."
+  es: "No se encontró ninguna especificación OpenAPI o Swagger."
+  gl: "Non se atopou ningunha especificación OpenAPI ou Swagger."
+  it: "Nessuna specifica OpenAPI o Swagger trovata."
+"openapi.catalog.one":
+  en: "Backstage · references %{count} spec"
+  es: "Backstage · referencia %{count} especificación"
+  gl: "Backstage · referencia %{count} especificación"
+  it: "Backstage · fa riferimento a %{count} specifica"
+"openapi.catalog.other":
+  en: "Backstage · references %{count} specs"
+  es: "Backstage · referencia %{count} especificaciones"
+  gl: "Backstage · referencia %{count} especificacións"
+  it: "Backstage · fa riferimento a %{count} specifiche"
+"openapi.options.versions":
+  en: "VERSIONS"
+  es: "VERSIONES"
+  gl: "VERSIÓNS"
+  it: "VERSIONI"
+"openapi.from_versions.one":
+  en: "%{operations} from %{count} version"
+  es: "%{operations} de %{count} versión"
+  gl: "%{operations} de %{count} versión"
+  it: "%{operations} da %{count} versione"
+"openapi.from_versions.other":
+  en: "%{operations} from %{count} versions"
+  es: "%{operations} de %{count} versiones"
+  gl: "%{operations} de %{count} versións"
+  it: "%{operations} da %{count} versioni"
+"openapi.update.imported":
+  en: "\"%{name}\" was imported from this source on %{date}."
+  es: "\"%{name}\" se importó desde este origen el %{date}."
+  gl: "\"%{name}\" importouse desde esta orixe o %{date}."
+  it: "\"%{name}\" è stata importata da questa origine il %{date}."
+"openapi.update.existing":
+  en: "Update existing"
+  es: "Actualizar la existente"
+  gl: "Actualizar a existente"
+  it: "Aggiorna quella esistente"
+"openapi.update.new":
+  en: "Import as new collection"
+  es: "Importar como colección nueva"
+  gl: "Importar como colección nova"
+  it: "Importa come nuova raccolta"
+"openapi.update.summary":
+  en: "%{added} added · %{changed} changed · %{removed} removed · %{unchanged} unchanged"
+  es: "añadidas: %{added} · cambiadas: %{changed} · eliminadas: %{removed} · sin cambios: %{unchanged}"
+  gl: "engadidas: %{added} · cambiadas: %{changed} · eliminadas: %{removed} · sen cambios: %{unchanged}"
+  it: "aggiunte: %{added} · modificate: %{changed} · rimosse: %{removed} · invariate: %{unchanged}"
+"openapi.update.added":
+  en: "Added"
+  es: "Añadida"
+  gl: "Engadida"
+  it: "Aggiunta"
+"openapi.update.changed":
+  en: "Changed"
+  es: "Cambiada"
+  gl: "Cambiada"
+  it: "Modificata"
+"openapi.update.removed":
+  en: "Removed"
+  es: "Eliminada"
+  gl: "Eliminada"
+  it: "Rimossa"
+"openapi.update.kept":
+  en: "kept, unchecked"
+  es: "se conserva, sin marcar"
+  gl: "consérvase, sen marcar"
+  it: "conservata, non selezionata"
+"openapi.update.note":
+  en: "Changed requests keep their scripts, tests and edited values: only the URL, parameters, headers and an example body that was not edited are updated from the spec. Removed endpoints stay unless checked."
+  es: "Las peticiones cambiadas conservan sus scripts, pruebas y valores editados: de la especificación solo se actualizan la URL, los parámetros, las cabeceras y un cuerpo de ejemplo que no se haya editado. Los endpoints eliminados se conservan salvo que se marquen."
+  gl: "As peticións cambiadas conservan os seus scripts, probas e valores editados: da especificación só se actualizan o URL, os parámetros, as cabeceiras e un corpo de exemplo que non se editase. Os endpoints eliminados consérvanse agás que se marquen."
+  it: "Le richieste modificate mantengono script, test e valori modificati: dalla specifica si aggiornano solo URL, parametri, intestazioni e un corpo di esempio non modificato. Gli endpoint rimossi restano, a meno che non siano selezionati."
+"openapi.update.up_to_date":
+  en: "The collection is up to date with the spec."
+  es: "La colección está al día con la especificación."
+  gl: "A colección está ao día coa especificación."
+  it: "La raccolta è aggiornata rispetto alla specifica."
+"openapi.update.button.one":
+  en: "Update %{count} request"
+  es: "Actualizar %{count} petición"
+  gl: "Actualizar %{count} petición"
+  it: "Aggiorna %{count} richiesta"
+"openapi.update.button.other":
+  en: "Update %{count} requests"
+  es: "Actualizar %{count} peticiones"
+  gl: "Actualizar %{count} peticións"
+  it: "Aggiorna %{count} richieste"
+"openapi.done.updated":
+  en: "Updated %{name}: %{added} added, %{changed} changed, %{removed} removed"
+  es: "%{name} actualizada. Añadidas: %{added}, cambiadas: %{changed}, eliminadas: %{removed}"
+  gl: "%{name} actualizada. Engadidas: %{added}, cambiadas: %{changed}, eliminadas: %{removed}"
+  it: "%{name} aggiornata. Aggiunte: %{added}, modificate: %{changed}, rimosse: %{removed}"
+"openapi.palette.update":
+  en: "Update from OpenAPI: %{name}"
+  es: "Actualizar desde OpenAPI: %{name}"
+  gl: "Actualizar desde OpenAPI: %{name}"
+  it: "Aggiorna da OpenAPI: %{name}"

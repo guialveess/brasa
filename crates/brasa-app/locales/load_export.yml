@@ -1,0 +1,67 @@
+# Load test PDF and Markdown reports. Glossary and rules: docs/i18n.md
+_version: 2
+"load_export.all_requests":
+  en: "All requests"
+  es: "Todas las peticiones"
+  gl: "Todas as peticións"
+  it: "Tutte le richieste"
+"load_export.statuses":
+  en: "Statuses"
+  es: "Estados"
+  gl: "Estados"
+  it: "Stati"
+"load_export.latency.title":
+  en: "Latency"
+  es: "Latencia"
+  gl: "Latencia"
+  it: "Latenza"
+"load_export.latency.caption":
+  en: "Successful responses per request, each on its own latency axis."
+  es: "Respuestas correctas por petición, cada una en su propio eje de latencia."
+  gl: "Respostas correctas por petición, cada unha no seu propio eixe de latencia."
+  it: "Risposte riuscite per richiesta, ciascuna sul proprio asse di latenza."
+"load_export.latency.note_none":
+  en: "Successful responses only."
+  es: "Solo respuestas correctas."
+  gl: "Só respostas correctas."
+  it: "Solo risposte riuscite."
+"load_export.latency.note.one":
+  en: "Successful responses only, %{count} error left out."
+  es: "Solo respuestas correctas, %{count} error excluido."
+  gl: "Só respostas correctas, %{count} erro excluído."
+  it: "Solo risposte riuscite, %{count} errore escluso."
+"load_export.latency.note.other":
+  en: "Successful responses only, %{count} errors left out."
+  es: "Solo respuestas correctas, %{count} errores excluidos."
+  gl: "Só respostas correctas, %{count} erros excluídos."
+  it: "Solo risposte riuscite, %{count} errori esclusi."
+"load_export.latency.responses.one":
+  en: "%{count} response"
+  es: "%{count} respuesta"
+  gl: "%{count} resposta"
+  it: "%{count} risposta"
+"load_export.latency.responses.other":
+  en: "%{count} responses"
+  es: "%{count} respuestas"
+  gl: "%{count} respostas"
+  it: "%{count} risposte"
+"load_export.latency.curves_title":
+  en: "Latency by percentile"
+  es: "Latencia por percentil"
+  gl: "Latencia por percentil"
+  it: "Latenza per percentile"
+"load_export.latency.curves_axes":
+  en: "log axes"
+  es: "ejes logarítmicos"
+  gl: "eixes logarítmicos"
+  it: "assi logaritmici"
+"load_export.latency.min":
+  en: "min"
+  es: "mín"
+  gl: "mín"
+  it: "min"
+"load_export.latency.max":
+  en: "max"
+  es: "máx"
+  gl: "máx"
+  it: "max"

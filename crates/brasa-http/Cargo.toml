@@ -1,0 +1,33 @@
+[package]
+name = "brasa-http"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+brasa-core = { path = "../brasa-core" }
+# platform-verifier: trust the OS certificate store, see `SendOptions::system_certificates`.
+ureq = { workspace = true, features = ["platform-verifier"] }
+rustls = { version = "0.23", default-features = false, features = ["std"] }
+thiserror = { workspace = true }
+log = { workspace = true }
+tiny_http = { workspace = true, optional = true }
+
+# The system bundle, loaded once per process on Linux and the BSDs, see `system_roots` in
+# src/send.rs. Already built by `rustls-platform-verifier`, same version.
+[target.'cfg(all(unix, not(target_vendor = "apple")))'.dependencies]
+rustls-native-certs = "0.8"
+
+[dev-dependencies]
+pretty_assertions = { workspace = true }
+rustls = { version = "0.23", default-features = false, features = ["std", "ring"] }
+# Enables the test server helper for this crate's own tests, without shipping it in release builds.
+brasa-http = { path = ".", features = ["test-support"] }
+
+[features]
+test-support = ["dep:tiny_http"]
+
+[lints]
+workspace = true

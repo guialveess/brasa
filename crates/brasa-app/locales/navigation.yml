@@ -1,0 +1,122 @@
+# Navigation rail and its side panels (environments, load tests). Glossary and rules: docs/i18n.md
+_version: 2
+"navigation.rail.collections":
+  en: "Collections"
+  es: "Colecciones"
+  gl: "Coleccións"
+  it: "Raccolte"
+"navigation.rail.source_control":
+  en: "Source Control"
+  es: "Control de código fuente"
+  gl: "Control de código fonte"
+  it: "Controllo del codice sorgente"
+"navigation.rail.environments":
+  en: "Environments"
+  es: "Entornos"
+  gl: "Contornos"
+  it: "Ambienti"
+"navigation.rail.load_tests":
+  en: "Load tests"
+  es: "Pruebas de carga"
+  gl: "Probas de carga"
+  it: "Test di carico"
+"navigation.env.title":
+  en: "Environments"
+  es: "Entornos"
+  gl: "Contornos"
+  it: "Ambienti"
+"navigation.env.new":
+  en: "New environment"
+  es: "Nuevo entorno"
+  gl: "Novo contorno"
+  it: "Nuovo ambiente"
+"navigation.env.name_placeholder":
+  en: "Environment name"
+  es: "Nombre del entorno"
+  gl: "Nome do contorno"
+  it: "Nome dell'ambiente"
+"navigation.env.create_hint":
+  en: "\u21b5 create"
+  es: "\u21b5 crear"
+  gl: "\u21b5 crear"
+  it: "\u21b5 crea"
+"navigation.env.active":
+  en: "Active"
+  es: "Activo"
+  gl: "Activo"
+  it: "Attivo"
+"navigation.env.reveal":
+  en: "Reveal"
+  es: "Mostrar"
+  gl: "Mostrar"
+  it: "Mostra"
+"navigation.env.reveal_tooltip":
+  en: "Open the environments folder"
+  es: "Abrir la carpeta de entornos"
+  gl: "Abrir o cartafol de contornos"
+  it: "Apri la cartella degli ambienti"
+"navigation.env.empty":
+  en: "Open a folder to see its environments."
+  es: "Abre una carpeta para ver sus entornos."
+  gl: "Abre un cartafol para ver os seus contornos."
+  it: "Apri una cartella per vedere i suoi ambienti."
+"navigation.load.title":
+  en: "Load tests"
+  es: "Pruebas de carga"
+  gl: "Probas de carga"
+  it: "Test di carico"
+"navigation.load.new":
+  en: "New load test"
+  es: "Nueva prueba de carga"
+  gl: "Nova proba de carga"
+  it: "Nuovo test di carico"
+"navigation.load.targets":
+  en: "Targets"
+  es: "Destinos"
+  gl: "Destinos"
+  it: "Destinazioni"
+"navigation.load.runs":
+  en: "Runs this session"
+  es: "Ejecuciones de esta sesión"
+  gl: "Execucións desta sesión"
+  it: "Esecuzioni di questa sessione"
+"navigation.load.no_runs":
+  en: "No load tests open yet."
+  es: "Aún no hay pruebas de carga abiertas."
+  gl: "Aínda non hai probas de carga abertas."
+  it: "Nessun test di carico aperto."
+"navigation.run.running":
+  en: "running \u00b7 %{elapsed} / %{total}"
+  es: "en curso \u00b7 %{elapsed} / %{total}"
+  gl: "en curso \u00b7 %{elapsed} / %{total}"
+  it: "in corso \u00b7 %{elapsed} / %{total}"
+"navigation.run.done":
+  en: "done"
+  es: "terminada"
+  gl: "rematada"
+  it: "completato"
+"navigation.run.done_p95":
+  en: "done \u00b7 p95 %{p95} ms"
+  es: "terminada \u00b7 p95 %{p95} ms"
+  gl: "rematada \u00b7 p95 %{p95} ms"
+  it: "completato \u00b7 p95 %{p95} ms"
+"navigation.run.stopped":
+  en: "stopped"
+  es: "detenida"
+  gl: "detida"
+  it: "interrotto"
+"navigation.run.stopped_p95":
+  en: "stopped \u00b7 p95 %{p95} ms"
+  es: "detenida \u00b7 p95 %{p95} ms"
+  gl: "detida \u00b7 p95 %{p95} ms"
+  it: "interrotto \u00b7 p95 %{p95} ms"
+"navigation.run.failed":
+  en: "failed"
+  es: "fallida"
+  gl: "fallida"
+  it: "non riuscito"
+"navigation.run.not_started":
+  en: "not started"
+  es: "sin iniciar"
+  gl: "sen iniciar"
+  it: "non avviato"

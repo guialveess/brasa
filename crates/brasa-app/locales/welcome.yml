@@ -1,0 +1,92 @@
+# Welcome tab. Glossary and rules: docs/i18n.md
+_version: 2
+"welcome.tab":
+  en: "Welcome"
+  es: "Bienvenida"
+  gl: "Benvida"
+  it: "Benvenuto"
+"welcome.tagline":
+  en: "A native, lightweight HTTP client. No account and no cloud."
+  es: "Cliente HTTP nativo y ligero. Sin cuenta y sin nube."
+  gl: "Cliente HTTP nativo e lixeiro. Sen conta e sen nube."
+  it: "Client HTTP nativo e leggero. Senza account e senza cloud."
+"welcome.files_intro":
+  en: "Your requests are text files on your disk:"
+  es: "Tus peticiones son ficheros de texto en tu disco:"
+  gl: "As túas peticións son ficheiros de texto no teu disco:"
+  it: "Le tue richieste sono file di testo sul tuo disco:"
+"welcome.folder":
+  en: "folder"
+  es: "carpeta"
+  gl: "cartafol"
+  it: "cartella"
+"welcome.workspace":
+  en: "workspace"
+  es: "espacio de trabajo"
+  gl: "espazo de traballo"
+  it: "spazio di lavoro"
+"welcome.subfolder":
+  en: "subfolder"
+  es: "subcarpeta"
+  gl: "subcartafol"
+  it: "sottocartella"
+"welcome.collection":
+  en: "collection"
+  es: "colección"
+  gl: "colección"
+  it: "raccolta"
+"welcome.request":
+  en: "request"
+  es: "petición"
+  gl: "petición"
+  it: "richiesta"
+"welcome.start":
+  en: "Start"
+  es: "Empezar"
+  gl: "Comezar"
+  it: "Inizia"
+"welcome.theme":
+  en: "Theme"
+  es: "Tema"
+  gl: "Tema"
+  it: "Tema"
+"welcome.recent":
+  en: "Recent"
+  es: "Recientes"
+  gl: "Recentes"
+  it: "Recenti"
+"welcome.import_postman":
+  en: "Import from Postman..."
+  es: "Importar de Postman..."
+  gl: "Importar de Postman..."
+  it: "Importa da Postman..."
+"welcome.quick_start":
+  en: "Quick start"
+  es: "Guía rápida"
+  gl: "Guía rápida"
+  it: "Guida rapida"
+"welcome.shortcuts":
+  en: "Shortcuts"
+  es: "Atajos"
+  gl: "Atallos"
+  it: "Scorciatoie"
+"welcome.search":
+  en: "Search"
+  es: "Buscador"
+  gl: "Buscador"
+  it: "Ricerca"
+"welcome.show_on_start":
+  en: "Show the welcome tab when Brasa starts"
+  es: "Mostrar la bienvenida al abrir Brasa"
+  gl: "Amosar a benvida ao abrir Brasa"
+  it: "Mostra il benvenuto all'avvio di Brasa"
+"welcome.palette_action":
+  en: "Show welcome"
+  es: "Mostrar bienvenida"
+  gl: "Amosar a benvida"
+  it: "Mostra il benvenuto"
+"welcome.no_workspace":
+  en: "Create a workspace or open a folder to get started."
+  es: "Crea un espacio de trabajo o abre una carpeta para empezar."
+  gl: "Crea un espazo de traballo ou abre un cartafol para comezar."
+  it: "Crea uno spazio di lavoro o apri una cartella per iniziare."

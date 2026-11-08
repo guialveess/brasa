@@ -1,0 +1,297 @@
+# Window shell: title bar, status bar, sidebar, tabs, import, command palette. Glossary and rules: docs/i18n.md
+_version: 2
+"shell.tabs.close":
+  en: "Close"
+  es: "Cerrar"
+  gl: "Pechar"
+  it: "Chiudi"
+"shell.tabs.close_others":
+  en: "Close others"
+  es: "Cerrar las demás"
+  gl: "Pechar as demais"
+  it: "Chiudi le altre"
+"shell.tabs.close_right":
+  en: "Close tabs to the right"
+  es: "Cerrar pestañas a la derecha"
+  gl: "Pechar lapelas á dereita"
+  it: "Chiudi le schede a destra"
+"shell.tabs.close_left":
+  en: "Close tabs to the left"
+  es: "Cerrar pestañas a la izquierda"
+  gl: "Pechar lapelas á esquerda"
+  it: "Chiudi le schede a sinistra"
+"shell.tabs.close_all":
+  en: "Close all"
+  es: "Cerrar todas"
+  gl: "Pechar todas"
+  it: "Chiudi tutte"
+"shell.title_bar.no_workspace":
+  en: "Open a folder"
+  es: "Abrir una carpeta"
+  gl: "Abrir un cartafol"
+  it: "Apri una cartella"
+"shell.title_bar.search_hint":
+  en: "Search requests and actions"
+  es: "Buscar peticiones y acciones"
+  gl: "Buscar peticións e accións"
+  it: "Cerca richieste e azioni"
+"shell.title_bar.recent":
+  en: "Recent"
+  es: "Recientes"
+  gl: "Recentes"
+  it: "Recenti"
+"shell.title_bar.open_label":
+  en: "Open"
+  es: "Abierto"
+  gl: "Aberto"
+  it: "Aperto"
+"shell.title_bar.remove_recent":
+  en: "Remove from history"
+  es: "Quitar del historial"
+  gl: "Quitar do historial"
+  it: "Rimuovi dalla cronologia"
+"shell.title_bar.no_other_recent":
+  en: "No other recent workspaces."
+  es: "No hay otros espacios de trabajo recientes."
+  gl: "Non hai outros espazos de traballo recentes."
+  it: "Nessun altro spazio di lavoro recente."
+"shell.status_bar.unsaved":
+  en: "Unsaved changes"
+  es: "Cambios sin guardar"
+  gl: "Cambios sen gardar"
+  it: "Modifiche non salvate"
+"shell.status_bar.open_folder":
+  en: "Click to open the workspace folder"
+  es: "Haz clic para abrir la carpeta del espacio de trabajo"
+  gl: "Fai clic para abrir o cartafol do espazo de traballo"
+  it: "Fai clic per aprire la cartella dello spazio di lavoro"
+"shell.tab.params":
+  en: "Params"
+  es: "Parámetros"
+  gl: "Parámetros"
+  it: "Parametri"
+"shell.tab.auth":
+  en: "Auth"
+  es: "Autenticación"
+  gl: "Autenticación"
+  it: "Autenticazione"
+"shell.tab.pre":
+  en: "Pre-request"
+  es: "Script previo"
+  gl: "Script previo"
+  it: "Script pre"
+"shell.tab.post":
+  en: "Post-response"
+  es: "Script posterior"
+  gl: "Script posterior"
+  it: "Script post"
+"shell.tab.docs":
+  en: "Docs"
+  es: "Docs"
+  gl: "Docs"
+  it: "Docs"
+"shell.import.button":
+  en: "Import"
+  es: "Importar"
+  gl: "Importar"
+  it: "Importa"
+"shell.sidebar.collapse":
+  en: "Collapse sidebar"
+  es: "Contraer barra lateral"
+  gl: "Contraer barra lateral"
+  it: "Comprimi la barra laterale"
+"shell.sidebar.filter":
+  en: "Filter"
+  es: "Filtrar"
+  gl: "Filtrar"
+  it: "Filtra"
+"shell.sidebar.opening":
+  en: "Opening %{name}..."
+  es: "Abriendo %{name}..."
+  gl: "Abrindo %{name}..."
+  it: "Apertura di %{name}..."
+"shell.sidebar.collections":
+  en: "Collections"
+  es: "Colecciones"
+  gl: "Coleccións"
+  it: "Raccolte"
+"shell.sidebar.refresh":
+  en: "Refresh collections"
+  es: "Actualizar colecciones"
+  gl: "Actualizar coleccións"
+  it: "Aggiorna raccolte"
+"shell.sidebar.broken":
+  en: "%{name} (broken)"
+  es: "%{name} (dañada)"
+  gl: "%{name} (danada)"
+  it: "%{name} (danneggiata)"
+"shell.sidebar.load_test":
+  en: "Load test..."
+  es: "Prueba de carga..."
+  gl: "Proba de carga..."
+  it: "Test di carico..."
+"shell.sidebar.export_as":
+  en: "Export as..."
+  es: "Exportar como..."
+  gl: "Exportar como..."
+  it: "Esporta come..."
+"shell.sidebar.export_coming_soon":
+  en: "Coming soon"
+  es: "Próximamente"
+  gl: "Proximamente"
+  it: "Prossimamente"
+"shell.sidebar.export_saved":
+  en: "Exported to %{path}"
+  es: "Exportado a %{path}"
+  gl: "Exportado a %{path}"
+  it: "Esportato in %{path}"
+"shell.sidebar.duplicate":
+  en: "Duplicate"
+  es: "Duplicar"
+  gl: "Duplicar"
+  it: "Duplica"
+"shell.sidebar.dragged_items.one":
+  en: "%{count} item"
+  es: "%{count} elemento"
+  gl: "%{count} elemento"
+  it: "%{count} elemento"
+"shell.sidebar.dragged_items.other":
+  en: "%{count} items"
+  es: "%{count} elementos"
+  gl: "%{count} elementos"
+  it: "%{count} elementi"
+"shell.sidebar.copy_suffix":
+  en: "copy"
+  es: "copia"
+  gl: "copia"
+  it: "copia"
+"shell.sidebar.request_name":
+  en: "Request name"
+  es: "Nombre de la petición"
+  gl: "Nome da petición"
+  it: "Nome della richiesta"
+"shell.sidebar.folder_name":
+  en: "Folder name"
+  es: "Nombre de la carpeta"
+  gl: "Nome do cartafol"
+  it: "Nome della cartella"
+"shell.sidebar.name":
+  en: "Name"
+  es: "Nombre"
+  gl: "Nome"
+  it: "Nome"
+"shell.sidebar.delete_title":
+  en: "Delete?"
+  es: "¿Eliminar?"
+  gl: "Eliminar?"
+  it: "Eliminare?"
+"shell.sidebar.delete_text":
+  en: "\"%{name}\" will be permanently deleted. This cannot be undone."
+  es: "«%{name}» se eliminará de forma permanente. Esta acción no se puede deshacer."
+  gl: "«%{name}» eliminarase de forma permanente. Esta acción non se pode desfacer."
+  it: "Eliminazione definitiva di «%{name}». L'operazione non può essere annullata."
+"shell.palette.environments":
+  en: "Environments"
+  es: "Entornos"
+  gl: "Contornos"
+  it: "Ambienti"
+"shell.palette.actions":
+  en: "Actions"
+  es: "Acciones"
+  gl: "Accións"
+  it: "Azioni"
+"shell.palette.send":
+  en: "Send request"
+  es: "Enviar petición"
+  gl: "Enviar petición"
+  it: "Invia richiesta"
+"shell.palette.import_collection":
+  en: "Import Postman collection..."
+  es: "Importar colección de Postman..."
+  gl: "Importar colección de Postman..."
+  it: "Importa raccolta Postman..."
+"shell.palette.import_environment":
+  en: "Import Postman environment..."
+  es: "Importar entorno de Postman..."
+  gl: "Importar contorno de Postman..."
+  it: "Importa ambiente Postman..."
+"shell.palette.open_settings":
+  en: "Open Settings"
+  es: "Abrir ajustes"
+  gl: "Abrir axustes"
+  it: "Apri impostazioni"
+"shell.palette.new_load_test":
+  en: "New load test"
+  es: "Nueva prueba de carga"
+  gl: "Nova proba de carga"
+  it: "Nuovo test di carico"
+"shell.palette.toggle_theme":
+  en: "Toggle theme"
+  es: "Cambiar tema"
+  gl: "Cambiar o tema"
+  it: "Cambia tema"
+"shell.palette.check_for_updates":
+  en: "Check for updates"
+  es: "Buscar actualizaciones"
+  gl: "Buscar actualizacións"
+  it: "Cerca aggiornamenti"
+"shell.new_workspace.title":
+  en: "New workspace"
+  es: "Nuevo espacio de trabajo"
+  gl: "Novo espazo de traballo"
+  it: "Nuovo spazio di lavoro"
+"shell.new_workspace.example_note":
+  en: "A new folder with an example request, hello.brasa, ready to send."
+  es: "Una carpeta nueva con una petición de ejemplo, hello.brasa, lista para enviar."
+  gl: "Un cartafol novo cunha petición de exemplo, hello.brasa, lista para enviar."
+  it: "Una nuova cartella con una richiesta di esempio, hello.brasa, pronta da inviare."
+"shell.new_workspace.name":
+  en: "Name"
+  es: "Nombre"
+  gl: "Nome"
+  it: "Nome"
+"shell.new_workspace.name_placeholder":
+  en: "my-api"
+  es: "mi-api"
+  gl: "a-miña-api"
+  it: "mia-api"
+"shell.new_workspace.location":
+  en: "Location"
+  es: "Ubicación"
+  gl: "Localización"
+  it: "Posizione"
+"shell.new_workspace.change":
+  en: "Change..."
+  es: "Cambiar..."
+  gl: "Cambiar..."
+  it: "Cambia..."
+"shell.new_workspace.init_git":
+  en: "Initialize a Git repository"
+  es: "Inicializar un repositorio Git"
+  gl: "Inicializar un repositorio Git"
+  it: "Inizializza un repository Git"
+"shell.new_workspace.init_git_note":
+  en: "Runs git init and adds this .gitignore."
+  es: "Ejecuta git init y añade este .gitignore."
+  gl: "Executa git init e engade este .gitignore."
+  it: "Esegue git init e aggiunge questo .gitignore."
+"shell.new_workspace.git_missing":
+  en: "Git isn't available."
+  es: "Git no está disponible."
+  gl: "Git non está dispoñible."
+  it: "Git non è disponibile."
+"shell.new_workspace.target":
+  en: "Creates"
+  es: "Se creará"
+  gl: "Crearase"
+  it: "Verrà creata"
+"shell.new_workspace.not_empty":
+  en: "That folder already exists and is not empty. Choose another name or location."
+  es: "Esa carpeta ya existe y no está vacía. Elige otro nombre u otra ubicación."
+  gl: "Ese cartafol xa existe e non está baleiro. Escolle outro nome ou outra localización."
+  it: "Quella cartella esiste già e non è vuota. Scegli un altro nome o un'altra posizione."
+"shell.new_workspace.failed":
+  en: "Could not create the workspace: %{error}"
+  es: "No se pudo crear el espacio de trabajo: %{error}"
+  gl: "Non se puido crear o espazo de traballo: %{error}"
+  it: "Impossibile creare lo spazio di lavoro: %{error}"

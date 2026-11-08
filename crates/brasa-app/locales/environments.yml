@@ -1,0 +1,262 @@
+# Environment editor tab (GitHub #65). Glossary and rules: docs/i18n.md
+_version: 2
+"environments.tab_label":
+  en: "Env \u00b7 %{name}"
+  es: "Entorno \u00b7 %{name}"
+  gl: "Contorno \u00b7 %{name}"
+  it: "Ambiente \u00b7 %{name}"
+"environments.use":
+  en: "Use this environment"
+  es: "Usar este entorno"
+  gl: "Usar este contorno"
+  it: "Usa questo ambiente"
+"environments.active_env":
+  en: "Active environment"
+  es: "Entorno activo"
+  gl: "Contorno activo"
+  it: "Ambiente attivo"
+"environments.more_tooltip":
+  en: "More actions"
+  es: "Más acciones"
+  gl: "Máis accións"
+  it: "Altre azioni"
+"environments.menu.reveal":
+  en: "Reveal in file manager"
+  es: "Mostrar en el explorador de archivos"
+  gl: "Mostrar no explorador de ficheiros"
+  it: "Mostra nel file manager"
+"environments.menu.color":
+  en: "Color…"
+  es: "Color…"
+  gl: "Cor…"
+  it: "Colore…"
+"environments.color.title":
+  en: "Color"
+  es: "Color"
+  gl: "Cor"
+  it: "Colore"
+"environments.color.tooltip":
+  en: "Color: %{color}"
+  es: "Color: %{color}"
+  gl: "Cor: %{color}"
+  it: "Colore: %{color}"
+"environments.color.automatic":
+  en: "Automatic"
+  es: "Automático"
+  gl: "Automática"
+  it: "Automatico"
+"environments.color.from_name":
+  en: "%{color}, from the name"
+  es: "%{color}, según el nombre"
+  gl: "%{color}, segundo o nome"
+  it: "%{color}, dal nome"
+"environments.color.saved_hint":
+  en: "Saved in .brasa/project.toml, shared through git."
+  es: "Se guarda en .brasa/project.toml y se comparte con git."
+  gl: "Gárdase en .brasa/project.toml e compártese con git."
+  it: "Salvato in .brasa/project.toml e condiviso con git."
+"environments.color.red":
+  en: "Red"
+  es: "Rojo"
+  gl: "Vermello"
+  it: "Rosso"
+"environments.color.orange":
+  en: "Orange"
+  es: "Naranja"
+  gl: "Laranxa"
+  it: "Arancione"
+"environments.color.amber":
+  en: "Amber"
+  es: "Ámbar"
+  gl: "Ámbar"
+  it: "Ambra"
+"environments.color.green":
+  en: "Green"
+  es: "Verde"
+  gl: "Verde"
+  it: "Verde"
+"environments.color.teal":
+  en: "Teal"
+  es: "Verde azulado"
+  gl: "Verde azulado"
+  it: "Verde acqua"
+"environments.color.blue":
+  en: "Blue"
+  es: "Azul"
+  gl: "Azul"
+  it: "Blu"
+"environments.color.violet":
+  en: "Violet"
+  es: "Violeta"
+  gl: "Violeta"
+  it: "Viola"
+"environments.color.pink":
+  en: "Pink"
+  es: "Rosa"
+  gl: "Rosa"
+  it: "Rosa"
+"environments.color.grey":
+  en: "Grey"
+  es: "Gris"
+  gl: "Gris"
+  it: "Grigio"
+"environments.menu.move_up":
+  en: "Move up"
+  es: "Subir"
+  gl: "Subir"
+  it: "Sposta su"
+"environments.menu.move_down":
+  en: "Move down"
+  es: "Bajar"
+  gl: "Baixar"
+  it: "Sposta giù"
+"environments.file.versioned":
+  en: "versioned"
+  es: "versionado"
+  gl: "versionado"
+  it: "versionato"
+"environments.file.gitignored":
+  en: "gitignored"
+  es: "ignorado por git"
+  gl: "ignorado por git"
+  it: "ignorato da git"
+"environments.file.not_created":
+  en: "not created"
+  es: "sin crear"
+  gl: "sen crear"
+  it: "non creato"
+"environments.filter_placeholder":
+  en: "Filter variables"
+  es: "Filtrar variables"
+  gl: "Filtrar variables"
+  it: "Filtra variabili"
+"environments.scope.all":
+  en: "All %{count}"
+  es: "Todas %{count}"
+  gl: "Todas %{count}"
+  it: "Tutte %{count}"
+"environments.show_secrets":
+  en: "Show secrets"
+  es: "Mostrar secretos"
+  gl: "Mostrar segredos"
+  it: "Mostra segreti"
+"environments.hide_secrets":
+  en: "Hide secrets"
+  es: "Ocultar secretos"
+  gl: "Ocultar segredos"
+  it: "Nascondi segreti"
+"environments.add":
+  en: "Add variable"
+  es: "Añadir variable"
+  gl: "Engadir variable"
+  it: "Aggiungi variabile"
+"environments.col.name":
+  en: "Name"
+  es: "Nombre"
+  gl: "Nome"
+  it: "Nome"
+"environments.col.stored_in":
+  en: "Stored in"
+  es: "Guardada en"
+  gl: "Gardada en"
+  it: "Salvata in"
+"environments.source.session":
+  en: "session"
+  es: "sesión"
+  gl: "sesión"
+  it: "sessione"
+"environments.note.overrides":
+  en: "Overrides the value in %{file}"
+  es: "Sustituye el valor de %{file}"
+  gl: "Substitúe o valor de %{file}"
+  it: "Sostituisce il valore in %{file}"
+"environments.note.session":
+  en: "Set by a script \u00b7 cleared on quit"
+  es: "Definida por un script \u00b7 se borra al salir"
+  gl: "Definida por un script \u00b7 bórrase ao saír"
+  it: "Impostata da uno script \u00b7 cancellata all'uscita"
+"environments.name_placeholder":
+  en: "name"
+  es: "nombre"
+  gl: "nome"
+  it: "nome"
+"environments.remove_tooltip":
+  en: "Remove variable"
+  es: "Quitar variable"
+  gl: "Quitar variable"
+  it: "Rimuovi variabile"
+"environments.stored_in_tooltip":
+  en: "Move to the other file"
+  es: "Mover al otro archivo"
+  gl: "Mover ao outro ficheiro"
+  it: "Sposta nell'altro file"
+"environments.empty":
+  en: "No variables yet. Use Add variable to create one."
+  es: "Aún no hay variables. Usa Añadir variable para crear una."
+  gl: "Aínda non hai variables. Usa Engadir variable para crear unha."
+  it: "Nessuna variabile. Usa Aggiungi variabile per crearne una."
+"environments.empty_filter":
+  en: "No variable matches the filter."
+  es: "Ninguna variable coincide con el filtro."
+  gl: "Ningunha variable coincide co filtro."
+  it: "Nessuna variabile corrisponde al filtro."
+"environments.resolution.label":
+  en: "Resolution order:"
+  es: "Orden de resolución:"
+  gl: "Orde de resolución:"
+  it: "Ordine di risoluzione:"
+"environments.resolution.order":
+  en: "Pre-request vars \u203a Session (scripts) \u203a .local.env \u203a .env"
+  es: "Variables previas \u203a Sesión (scripts) \u203a .local.env \u203a .env"
+  gl: "Variables previas \u203a Sesión (scripts) \u203a .local.env \u203a .env"
+  it: "Variabili pre-richiesta \u203a Sessione (script) \u203a .local.env \u203a .env"
+"environments.error.empty_name":
+  en: "A variable has no name."
+  es: "Una variable no tiene nombre."
+  gl: "Unha variable non ten nome."
+  it: "Una variabile non ha nome."
+"environments.error.invalid_name":
+  en: "\"%{name}\" is not a valid name: it cannot contain =, line breaks or start with #."
+  es: "\"%{name}\" no es un nombre válido: no puede contener =, saltos de línea ni empezar por #."
+  gl: "\"%{name}\" non é un nome válido: non pode conter =, saltos de liña nin comezar por #."
+  it: "\"%{name}\" non è un nome valido: non può contenere =, a capo né iniziare con #."
+"environments.error.invalid_value":
+  en: "The value of %{name} cannot contain line breaks."
+  es: "El valor de %{name} no puede contener saltos de línea."
+  gl: "O valor de %{name} non pode conter saltos de liña."
+  it: "Il valore di %{name} non può contenere a capo."
+"environments.error.duplicate":
+  en: "%{name} is defined twice in the same file."
+  es: "%{name} está definida dos veces en el mismo archivo."
+  gl: "%{name} está definida dúas veces no mesmo ficheiro."
+  it: "%{name} è definita due volte nello stesso file."
+"environments.delete.title":
+  en: "Delete environment"
+  es: "Eliminar entorno"
+  gl: "Eliminar contorno"
+  it: "Elimina ambiente"
+"environments.delete.text":
+  en: "Delete %{name} with its .env and .local.env files? This cannot be undone."
+  es: "¿Eliminar %{name} con sus archivos .env y .local.env? No se puede deshacer."
+  gl: "Eliminar %{name} cos seus ficheiros .env e .local.env? Non se pode desfacer."
+  it: "Eliminare %{name} con i suoi file .env e .local.env? Non si può annullare."
+"environments.rename.title":
+  en: "Rename environment"
+  es: "Renombrar entorno"
+  gl: "Renomear contorno"
+  it: "Rinomina ambiente"
+"environments.discard.title":
+  en: "Discard unsaved changes?"
+  es: "¿Descartar los cambios sin guardar?"
+  gl: "Descartar os cambios sen gardar?"
+  it: "Scartare le modifiche non salvate?"
+"environments.discard.text":
+  en: "%{name} has changes that are not saved yet. Closing the tab loses them."
+  es: "%{name} tiene cambios sin guardar. Al cerrar la pestaña se pierden."
+  gl: "%{name} ten cambios sen gardar. Ao pechar a lapela perdense."
+  it: "%{name} ha modifiche non ancora salvate. Chiudendo la scheda andranno perse."
+"environments.discard.confirm":
+  en: "Discard"
+  es: "Descartar"
+  gl: "Descartar"
+  it: "Scarta"

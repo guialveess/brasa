@@ -1,0 +1,652 @@
+# Load test tab. Glossary and rules: docs/i18n.md
+_version: 2
+"load_test.tab.title":
+  en: "Load test"
+  es: "Prueba de carga"
+  gl: "Proba de carga"
+  it: "Test di carico"
+"load_test.config.vus":
+  en: "Virtual users"
+  es: "Usuarios virtuales"
+  gl: "Usuarios virtuais"
+  it: "Utenti virtuali"
+"load_test.config.duration":
+  en: "Duration"
+  es: "Duración"
+  gl: "Duración"
+  it: "Durata"
+"load_test.config.ramp_up":
+  en: "Ramp-up"
+  es: "Subida gradual"
+  gl: "Subida gradual"
+  it: "Incremento graduale"
+"load_test.config.think_time":
+  en: "Think time"
+  es: "Tiempo de pausa"
+  gl: "Tempo de pausa"
+  it: "Tempo di pausa"
+"load_test.config.footer":
+  en: "Runs on this machine. Results are saved to "
+  es: "Se ejecuta en esta máquina. Los resultados se guardan en "
+  gl: "Execútase nesta máquina. Os resultados gárdanse en "
+  it: "Viene eseguito su questa macchina. I risultati sono salvati in "
+"load_test.config.target":
+  en: "Target"
+  es: "Destino"
+  gl: "Destino"
+  it: "Destinazione"
+"load_test.config.kind_collection":
+  en: "Collection"
+  es: "Colección"
+  gl: "Colección"
+  it: "Raccolta"
+"load_test.config.choose_folder":
+  en: "Choose a folder"
+  es: "Elegir carpeta"
+  gl: "Escoller cartafol"
+  it: "Scegli una cartella"
+"load_test.config.choose_request":
+  en: "Choose a request"
+  es: "Elegir petición"
+  gl: "Escoller petición"
+  it: "Scegli una richiesta"
+"load_test.config.requests.one":
+  en: "%{count} request"
+  es: "%{count} petición"
+  gl: "%{count} petición"
+  it: "%{count} richiesta"
+"load_test.config.requests.other":
+  en: "%{count} requests"
+  es: "%{count} peticiones"
+  gl: "%{count} peticións"
+  it: "%{count} richieste"
+"load_test.config.stop_on_errors":
+  en: "Stop on errors"
+  es: "Detener si hay errores"
+  gl: "Deter se hai erros"
+  it: "Interrompi in caso di errori"
+"load_test.config.stop_on_errors_hint":
+  en: "When error rate > 5%"
+  es: "Si los errores superan el 5%"
+  gl: "Se os erros superan o 5%"
+  it: "Se gli errori superano il 5%"
+"load_test.thresholds.title":
+  en: "Thresholds"
+  es: "Umbrales"
+  gl: "Limiares"
+  it: "Soglie"
+"load_test.thresholds.hint":
+  en: "fails the run if missed"
+  es: "falla si no se cumplen"
+  gl: "falla se non se cumpren"
+  it: "fallisce se non rispettate"
+"load_test.thresholds.add":
+  en: "Add threshold"
+  es: "Añadir umbral"
+  gl: "Engadir limiar"
+  it: "Aggiungi soglia"
+"load_test.config.stop_run":
+  en: "Stop run"
+  es: "Detener"
+  gl: "Deter"
+  it: "Interrompi"
+"load_test.config.start_run":
+  en: "Start run"
+  es: "Iniciar"
+  gl: "Iniciar"
+  it: "Avvia"
+"load_test.failure.no_workspace":
+  en: "No workspace is open."
+  es: "No hay ningún espacio de trabajo abierto."
+  gl: "Non hai ningún espazo de traballo aberto."
+  it: "Nessuno spazio di lavoro aperto."
+"load_test.failure.tab_closed":
+  en: "This tab is no longer open."
+  es: "Esta pestaña ya no está abierta."
+  gl: "Esta lapela xa non está aberta."
+  it: "Questa scheda non è più aperta."
+"load_test.failure.no_target":
+  en: "Pick a request or a folder first."
+  es: "Elige antes una petición o una carpeta."
+  gl: "Escolle antes unha petición ou un cartafol."
+  it: "Scegli prima una richiesta o una cartella."
+"load_test.failure.empty_folder":
+  en: "This folder has no requests."
+  es: "Esta carpeta no tiene peticiones."
+  gl: "Este cartafol non ten peticións."
+  it: "Questa cartella non contiene richieste."
+"load_test.failure.load":
+  en: "Could not load a request: %{error}"
+  es: "No se pudo cargar una petición: %{error}"
+  gl: "Non se puido cargar unha petición: %{error}"
+  it: "Impossibile caricare una richiesta: %{error}"
+"load_test.run.numbered":
+  en: "Run #%{number}"
+  es: "Ejecución #%{number}"
+  gl: "Execución #%{number}"
+  it: "Esecuzione #%{number}"
+"load_test.run.plain":
+  en: "Run"
+  es: "Ejecución"
+  gl: "Execución"
+  it: "Esecuzione"
+"load_test.dashboard.empty":
+  en: "Configure the run and press Start"
+  es: "Configura la prueba y pulsa Iniciar"
+  gl: "Configura a proba e preme Iniciar"
+  it: "Configura il test e premi Avvia"
+"load_test.history.title":
+  en: "Previous runs"
+  es: "Ejecuciones anteriores"
+  gl: "Execucións anteriores"
+  it: "Esecuzioni precedenti"
+"load_test.status.not_started":
+  en: "Not started"
+  es: "Sin iniciar"
+  gl: "Sen iniciar"
+  it: "Non avviato"
+"load_test.status.running":
+  en: "Running"
+  es: "En curso"
+  gl: "En curso"
+  it: "In corso"
+"load_test.status.finished":
+  en: "Finished"
+  es: "Terminada"
+  gl: "Rematada"
+  it: "Completato"
+"load_test.status.stopped":
+  en: "Stopped"
+  es: "Detenida"
+  gl: "Detida"
+  it: "Interrotto"
+"load_test.status.failed":
+  en: "Failed"
+  es: "Fallida"
+  gl: "Fallida"
+  it: "Fallito"
+"load_test.kpi.rps":
+  en: "Requests/s"
+  es: "Peticiones/s"
+  gl: "Peticións/s"
+  it: "Richieste/s"
+"load_test.kpi.errors":
+  en: "Errors"
+  es: "Errores"
+  gl: "Erros"
+  it: "Errori"
+"load_test.kpi.total":
+  en: "Total"
+  es: "Total"
+  gl: "Total"
+  it: "Totale"
+"load_test.chart.title":
+  en: "Performance over time"
+  es: "Rendimiento en el tiempo"
+  gl: "Rendemento no tempo"
+  it: "Prestazioni nel tempo"
+"load_test.distribution.title":
+  en: "Latency distribution"
+  es: "Distribución de latencia"
+  gl: "Distribución da latencia"
+  it: "Distribuzione della latenza"
+"load_test.status_key.timeout":
+  en: "Timeout"
+  es: "Timeout"
+  gl: "Timeout"
+  it: "Timeout"
+"load_test.status_key.failed":
+  en: "Failed"
+  es: "Fallida"
+  gl: "Fallida"
+  it: "Fallita"
+"load_test.table.count":
+  en: "Count"
+  es: "Cantidad"
+  gl: "Cantidade"
+  it: "Conteggio"
+"load_test.table.target_n":
+  en: "Target %{number}"
+  es: "Destino %{number}"
+  gl: "Destino %{number}"
+  it: "Destinazione %{number}"
+"load_test.compare.select":
+  en: "Select a run"
+  es: "Elegir ejecución"
+  gl: "Escoller execución"
+  it: "Scegli esecuzione"
+"load_test.compare.title":
+  en: "Compare with"
+  es: "Comparar con"
+  gl: "Comparar con"
+  it: "Confronta con"
+"load_test.config.reuse_connections":
+  en: "Reuse connections"
+  es: "Reutilizar conexiones"
+  gl: "Reutilizar conexións"
+  it: "Riutilizza le connessioni"
+"load_test.config.reuse_connections_hint":
+  en: "Keep-alive, one connection per VU"
+  es: "Keep-alive, una conexión por VU"
+  gl: "Keep-alive, unha conexión por VU"
+  it: "Keep-alive, una connessione per VU"
+"load_test.connections.reused":
+  en: "Keep-alive"
+  es: "Keep-alive"
+  gl: "Keep-alive"
+  it: "Keep-alive"
+"load_test.connections.new":
+  en: "New connections"
+  es: "Conexiones nuevas"
+  gl: "Conexións novas"
+  it: "Nuove connessioni"
+"load_test.compare.connections_differ":
+  en: "One run reused connections and the other did not."
+  es: "Una ejecución reutilizó conexiones y la otra no."
+  gl: "Unha execución reutilizou conexións e a outra non."
+  it: "Un'esecuzione ha riutilizzato le connessioni e l'altra no."
+"load_test.results.summary":
+  en: "Summary"
+  es: "Resumen"
+  gl: "Resumo"
+  it: "Riepilogo"
+"load_test.results.requests":
+  en: "Requests"
+  es: "Peticiones"
+  gl: "Peticións"
+  it: "Richieste"
+"load_test.results.errors":
+  en: "Errors"
+  es: "Errores"
+  gl: "Erros"
+  it: "Errori"
+"load_test.verdict.passed":
+  en: "Thresholds passed"
+  es: "Umbrales superados"
+  gl: "Limiares superados"
+  it: "Soglie rispettate"
+"load_test.verdict.failed":
+  en: "Not passed · %{failed} of %{total}"
+  es: "No superada · %{failed} de %{total}"
+  gl: "Non superada · %{failed} de %{total}"
+  it: "Non superato · %{failed} su %{total}"
+"load_test.kpi.goal":
+  en: "goal %{limit}"
+  es: "objetivo %{limit}"
+  gl: "obxectivo %{limit}"
+  it: "obiettivo %{limit}"
+"load_test.chart.hint_drag":
+  en: "Drag to select a window"
+  es: "Arrastra para seleccionar un tramo"
+  gl: "Arrastra para seleccionar un tramo"
+  it: "Trascina per selezionare un intervallo"
+"load_test.chart.hint_clear":
+  en: "Click to clear the window"
+  es: "Clic para quitar el tramo"
+  gl: "Preme para quitar o tramo"
+  it: "Clic per rimuovere l'intervallo"
+"load_test.chart.goal":
+  en: "%{metric} goal %{limit}"
+  es: "%{metric} objetivo %{limit}"
+  gl: "%{metric} obxectivo %{limit}"
+  it: "%{metric} obiettivo %{limit}"
+"load_test.window.chip":
+  en: "Window %{range}"
+  es: "Tramo %{range}"
+  gl: "Tramo %{range}"
+  it: "Intervallo %{range}"
+"load_test.table.per_request":
+  en: "Per request"
+  es: "Por petición"
+  gl: "Por petición"
+  it: "Per richiesta"
+"load_test.requests.search":
+  en: "Search URL or request"
+  es: "Buscar URL o petición"
+  gl: "Buscar URL ou petición"
+  it: "Cerca URL o richiesta"
+"load_test.requests.all":
+  en: "All"
+  es: "Todos"
+  gl: "Todos"
+  it: "Tutti"
+"load_test.requests.latency":
+  en: "Latency"
+  es: "Latencia"
+  gl: "Latencia"
+  it: "Latenza"
+"load_test.requests.any":
+  en: "Any"
+  es: "Cualquiera"
+  gl: "Calquera"
+  it: "Qualsiasi"
+"load_test.requests.only_errors":
+  en: "Only errors"
+  es: "Solo errores"
+  gl: "Só erros"
+  it: "Solo errori"
+"load_test.requests.count.one":
+  en: "%{count} request"
+  es: "%{count} petición"
+  gl: "%{count} petición"
+  it: "%{count} richiesta"
+"load_test.requests.count.other":
+  en: "%{count} requests"
+  es: "%{count} peticiones"
+  gl: "%{count} peticións"
+  it: "%{count} richieste"
+"load_test.requests.sorted_by":
+  en: "sorted by %{column}"
+  es: "ordenadas por %{column}"
+  gl: "ordenadas por %{column}"
+  it: "ordinate per %{column}"
+"load_test.requests.time":
+  en: "Time"
+  es: "Tiempo"
+  gl: "Tempo"
+  it: "Tempo"
+"load_test.requests.status":
+  en: "Status"
+  es: "Estado"
+  gl: "Estado"
+  it: "Stato"
+"load_test.requests.size":
+  en: "Size"
+  es: "Tamaño"
+  gl: "Tamaño"
+  it: "Dimensione"
+"load_test.requests.empty":
+  en: "No request matches the filters"
+  es: "Ninguna petición coincide con los filtros"
+  gl: "Ningunha petición coincide cos filtros"
+  it: "Nessuna richiesta corrisponde ai filtri"
+"load_test.errors.view_requests":
+  en: "View requests"
+  es: "Ver peticiones"
+  gl: "Ver peticións"
+  it: "Vedi richieste"
+"load_test.errors.first_last":
+  en: "First · last"
+  es: "Primera · última"
+  gl: "Primeira · última"
+  it: "Prima · ultima"
+"load_test.errors.affected":
+  en: "Affected requests"
+  es: "Peticiones afectadas"
+  gl: "Peticións afectadas"
+  it: "Richieste interessate"
+"load_test.errors.none_in_window":
+  en: "No errors in this window"
+  es: "Sin errores en este tramo"
+  gl: "Sen erros neste tramo"
+  it: "Nessun errore in questo intervallo"
+"load_test.errors.none":
+  en: "No errors"
+  es: "Sin errores"
+  gl: "Sen erros"
+  it: "Nessun errore"
+"load_test.errors.timeout_title":
+  en: "No response in %{secs} s"
+  es: "Sin respuesta en %{secs} s"
+  gl: "Sen resposta en %{secs} s"
+  it: "Nessuna risposta in %{secs} s"
+"load_test.errors.failed_title":
+  en: "Request failed"
+  es: "La petición falló"
+  gl: "A petición fallou"
+  it: "Richiesta non riuscita"
+"load_test.compare.none":
+  en: "No comparison"
+  es: "Sin comparación"
+  gl: "Sen comparación"
+  it: "Nessun confronto"
+"load_test.compare.nothing":
+  en: "none"
+  es: "nada"
+  gl: "nada"
+  it: "nessuna"
+"load_test.compare.compared_with":
+  en: "Compared with %{run}"
+  es: "Comparada con %{run}"
+  gl: "Comparada con %{run}"
+  it: "Confrontata con %{run}"
+"load_test.export.button":
+  en: "Export"
+  es: "Exportar"
+  gl: "Exportar"
+  it: "Esporta"
+"load_test.export.markdown":
+  en: "Summary, thresholds, comparison and per request table"
+  es: "Resumen, umbrales, comparación y tabla por petición"
+  gl: "Resumo, limiares, comparación e táboa por petición"
+  it: "Riepilogo, soglie, confronto e tabella per richiesta"
+"load_test.export.pdf":
+  en: "Report with charts, ready to attach"
+  es: "Informe con gráficas, listo para adjuntar"
+  gl: "Informe con gráficas, listo para anexar"
+  it: "Report con grafici, pronto da allegare"
+"load_test.export.csv.one":
+  en: "One row per request · %{count} row"
+  es: "Una fila por petición · %{count} fila"
+  gl: "Unha fila por petición · %{count} fila"
+  it: "Una riga per richiesta · %{count} riga"
+"load_test.export.csv.other":
+  en: "One row per request · %{count} rows"
+  es: "Una fila por petición · %{count} filas"
+  gl: "Unha fila por petición · %{count} filas"
+  it: "Una riga per richiesta · %{count} righe"
+"load_test.export.json":
+  en: "Time series, histogram, errors and requests"
+  es: "Serie temporal, histograma, errores y peticiones"
+  gl: "Serie temporal, histograma, erros e peticións"
+  it: "Serie temporale, istogramma, errori e richieste"
+"load_test.export.only_window":
+  en: "Only the window %{range}"
+  es: "Solo el tramo %{range}"
+  gl: "Só o tramo %{range}"
+  it: "Solo l'intervallo %{range}"
+"load_test.export.copy_markdown":
+  en: "Copy summary as Markdown"
+  es: "Copiar resumen como Markdown"
+  gl: "Copiar resumo como Markdown"
+  it: "Copia riepilogo come Markdown"
+"load_test.export.saved":
+  en: "Exported to %{path}"
+  es: "Exportado a %{path}"
+  gl: "Exportado a %{path}"
+  it: "Esportato in %{path}"
+"load_test.export.copied":
+  en: "Summary copied as Markdown"
+  es: "Resumen copiado como Markdown"
+  gl: "Resumo copiado como Markdown"
+  it: "Riepilogo copiato come Markdown"
+"load_test.export.failed":
+  en: "Could not export: %{error}"
+  es: "No se pudo exportar: %{error}"
+  gl: "Non se puido exportar: %{error}"
+  it: "Impossibile esportare: %{error}"
+"load_test.export.progress.title":
+  en: "Exporting %{format}"
+  es: "Exportando %{format}"
+  gl: "Exportando %{format}"
+  it: "Esportazione in %{format}"
+"load_test.export.progress.statistics":
+  en: "Computing the statistics"
+  es: "Calculando las estadísticas"
+  gl: "Calculando as estatísticas"
+  it: "Calcolo delle statistiche"
+"load_test.export.progress.latency":
+  en: "Computing the latencies"
+  es: "Calculando las latencias"
+  gl: "Calculando as latencias"
+  it: "Calcolo delle latenze"
+"load_test.export.progress.render":
+  en: "Building the %{format}"
+  es: "Generando el %{format}"
+  gl: "Xerando o %{format}"
+  it: "Generazione del %{format}"
+"load_test.export.progress.write":
+  en: "Saving the file"
+  es: "Guardando el archivo"
+  gl: "Gardando o ficheiro"
+  it: "Salvataggio del file"
+"load_test.export.cancelled":
+  en: "Export cancelled"
+  es: "Exportación cancelada"
+  gl: "Exportación cancelada"
+  it: "Esportazione annullata"
+"load_test.report.generated_by":
+  en: "Generated by Brasa %{version} on %{date}"
+  es: "Generado por Brasa %{version} el %{date}"
+  gl: "Xerado por Brasa %{version} o %{date}"
+  it: "Generato da Brasa %{version} il %{date}"
+"load_test.report.thresholds":
+  en: "Thresholds"
+  es: "Umbrales"
+  gl: "Limiares"
+  it: "Soglie"
+"load_test.requests.unavailable":
+  en: "Runs saved by older versions of Brasa have no per request detail."
+  es: "Las ejecuciones guardadas por versiones anteriores de Brasa no tienen el detalle de cada petición."
+  gl: "As execucións gardadas por versións anteriores de Brasa non teñen o detalle de cada petición."
+  it: "Le esecuzioni salvate da versioni precedenti di Brasa non hanno il dettaglio di ogni richiesta."
+"load_test.requests.loading":
+  en: "Loading the requests..."
+  es: "Cargando las peticiones..."
+  gl: "Cargando as peticións..."
+  it: "Caricamento delle richieste..."
+"load_test.chart.ramp_up":
+  en: "ramp-up %{secs} s"
+  es: "subida gradual %{secs} s"
+  gl: "subida gradual %{secs} s"
+  it: "incremento graduale %{secs} s"
+"load_test.chart.planned":
+  en: "Planned VUs"
+  es: "VUs previstos"
+  gl: "VUs previstos"
+  it: "VU previsti"
+"load_test.table.all_requests":
+  en: "All requests"
+  es: "Todas las peticiones"
+  gl: "Todas as peticións"
+  it: "Tutte le richieste"
+"load_test.status_bar.title":
+  en: "%{name} · %{responses}"
+  es: "%{name} · %{responses}"
+  gl: "%{name} · %{responses}"
+  it: "%{name} · %{responses}"
+"load_test.status_bar.responses.one":
+  en: "%{count} response"
+  es: "%{count} respuesta"
+  gl: "%{count} resposta"
+  it: "%{count} risposta"
+"load_test.status_bar.responses.other":
+  en: "%{count} responses"
+  es: "%{count} respuestas"
+  gl: "%{count} respostas"
+  it: "%{count} risposte"
+"load_test.results.latency":
+  en: "Latency"
+  es: "Latencia"
+  gl: "Latencia"
+  it: "Latenza"
+"load_test.latency.request":
+  en: "Request"
+  es: "Petición"
+  gl: "Petición"
+  it: "Richiesta"
+"load_test.latency.linear":
+  en: "Linear"
+  es: "Lineal"
+  gl: "Lineal"
+  it: "Lineare"
+"load_test.latency.log":
+  en: "Log"
+  es: "Log"
+  gl: "Log"
+  it: "Log"
+"load_test.latency.include_errors":
+  en: "Include errors"
+  es: "Incluir errores"
+  gl: "Incluír erros"
+  it: "Includi errori"
+"load_test.latency.live":
+  en: "Live"
+  es: "En directo"
+  gl: "En directo"
+  it: "In diretta"
+"load_test.latency.excluded.one":
+  en: "%{count} error excluded"
+  es: "%{count} error excluido"
+  gl: "%{count} erro excluído"
+  it: "%{count} errore escluso"
+"load_test.latency.excluded.other":
+  en: "%{count} errors excluded"
+  es: "%{count} errores excluidos"
+  gl: "%{count} erros excluídos"
+  it: "%{count} errori esclusi"
+"load_test.latency.bin_linear":
+  en: "responses per %{width} bin"
+  es: "respuestas por intervalo de %{width}"
+  gl: "respostas por intervalo de %{width}"
+  it: "risposte per intervallo di %{width}"
+"load_test.latency.bin_log":
+  en: "responses per bin, log latency axis"
+  es: "respuestas por intervalo, eje de latencia logarítmico"
+  gl: "respostas por intervalo, eixe de latencia logarítmico"
+  it: "risposte per intervallo, asse della latenza logaritmico"
+"load_test.latency.axis":
+  en: "responses"
+  es: "respuestas"
+  gl: "respostas"
+  it: "risposte"
+"load_test.latency.percentiles":
+  en: "Percentiles"
+  es: "Percentiles"
+  gl: "Percentís"
+  it: "Percentili"
+"load_test.latency.click_hint":
+  en: "Click a row to focus it"
+  es: "Haz clic en una fila para centrarte en ella"
+  gl: "Preme nunha fila para centrarte nela"
+  it: "Fai clic su una riga per metterla a fuoco"
+"load_test.latency.curve":
+  en: "Latency by percentile"
+  es: "Latencia por percentil"
+  gl: "Latencia por percentil"
+  it: "Latenza per percentile"
+"load_test.latency.log_axes":
+  en: "log axes"
+  es: "ejes logarítmicos"
+  gl: "eixes logarítmicos"
+  it: "assi logaritmici"
+"load_test.latency.bin_tooltip":
+  en: "%{range} · %{count} of %{total}"
+  es: "%{range} · %{count} de %{total}"
+  gl: "%{range} · %{count} de %{total}"
+  it: "%{range} · %{count} su %{total}"
+"load_test.latency.no_responses":
+  en: "No responses"
+  es: "Sin respuestas"
+  gl: "Sen respostas"
+  it: "Nessuna risposta"
+"load_test.latency.loading":
+  en: "Computing the latency..."
+  es: "Calculando la latencia..."
+  gl: "Calculando a latencia..."
+  it: "Calcolo della latenza..."
+"load_test.latency.same_scale":
+  en: "%{run}, same scale"
+  es: "%{run}, misma escala"
+  gl: "%{run}, mesma escala"
+  it: "%{run}, stessa scala"
+"load_test.latency.delta_hint":
+  en: "Δ against %{run} · click a row to focus it"
+  es: "Δ frente a %{run} · haz clic en una fila para centrarte en ella"
+  gl: "Δ fronte a %{run} · preme nunha fila para centrarte nela"
+  it: "Δ rispetto a %{run} · fai clic su una riga per metterla a fuoco"
+"load_test.latency.log_axes_compare":
+  en: "log axes · dashed: %{run}"
+  es: "ejes logarítmicos · discontinua: %{run}"
+  gl: "eixes logarítmicos · descontinua: %{run}"
+  it: "assi logaritmici · tratteggio: %{run}"

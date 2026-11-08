@@ -1,0 +1,577 @@
+# The destination of an import and the import wizard's shared strings. Glossary and rules: docs/i18n.md
+_version: 2
+"import.dest.title":
+  en: "Destination"
+  es: "Destino"
+  gl: "Destino"
+  it: "Destinazione"
+"import.dest.no_workspace":
+  en: "You have no workspace yet. A new one will hold the collection. Nothing is written until you confirm."
+  es: "Aún no tienes ningún espacio de trabajo. Se creará uno para guardar la colección. No se escribe nada hasta que confirmes."
+  gl: "Aínda non tes ningún espazo de traballo. Crearase un para gardar a colección. Non se escribe nada ata que confirmes."
+  it: "Non hai ancora uno spazio di lavoro. Ne verrà creato uno per la raccolta. Non viene scritto nulla finché non confermi."
+"import.dest.new":
+  en: "New workspace"
+  es: "Espacio de trabajo nuevo"
+  gl: "Espazo de traballo novo"
+  it: "Nuovo spazio di lavoro"
+"import.dest.open_existing":
+  en: "Open existing folder..."
+  es: "Abrir carpeta existente..."
+  gl: "Abrir cartafol existente..."
+  it: "Apri cartella esistente..."
+"import.dest.name":
+  en: "Workspace name"
+  es: "Nombre del espacio de trabajo"
+  gl: "Nome do espazo de traballo"
+  it: "Nome dello spazio di lavoro"
+"import.dest.will_create":
+  en: "Will be created in"
+  es: "Se creará en"
+  gl: "Crearase en"
+  it: "Verrà creato in"
+"import.dest.folder":
+  en: "Folder"
+  es: "Carpeta"
+  gl: "Cartafol"
+  it: "Cartella"
+"import.dest.choose":
+  en: "Choose..."
+  es: "Elegir..."
+  gl: "Escoller..."
+  it: "Scegli..."
+"import.dest.note":
+  en: "A workspace is a folder with your requests as .brasa files."
+  es: "Un espacio de trabajo es una carpeta con tus peticiones como ficheros .brasa."
+  gl: "Un espazo de traballo é un cartafol coas túas peticións como ficheiros .brasa."
+  it: "Uno spazio di lavoro è una cartella con le tue richieste come file .brasa."
+"import.dest.current":
+  en: "Current workspace: %{name}"
+  es: "Espacio de trabajo actual: %{name}"
+  gl: "Espazo de traballo actual: %{name}"
+  it: "Spazio di lavoro attuale: %{name}"
+"import.dest.recent":
+  en: "Another recent workspace"
+  es: "Otro espacio de trabajo reciente"
+  gl: "Outro espazo de traballo recente"
+  it: "Un altro spazio di lavoro recente"
+"import.dest.adds_folder":
+  en: "It will be added as the folder %{collection}/ inside %{workspace}."
+  es: "Se añadirá como carpeta %{collection}/ dentro de %{workspace}."
+  gl: "Engadirase como cartafol %{collection}/ dentro de %{workspace}."
+  it: "Verrà aggiunta come cartella %{collection}/ in %{workspace}."
+"import.dest.name_taken":
+  en: "%{path} already exists. %{suggested} is free."
+  es: "Ya existe %{path}. %{suggested} está libre."
+  gl: "Xa existe %{path}. %{suggested} está libre."
+  it: "%{path} esiste già. %{suggested} è libero."
+"import.dest.use_suggested":
+  en: "Use %{suggested}"
+  es: "Usar %{suggested}"
+  gl: "Usar %{suggested}"
+  it: "Usa %{suggested}"
+"import.dest.choose_other":
+  en: "Choose another folder"
+  es: "Elegir otra carpeta"
+  gl: "Escoller outro cartafol"
+  it: "Scegli un'altra cartella"
+"import.dest.is_workspace":
+  en: "That folder already is a Brasa workspace. Add the collection there?"
+  es: "Esa carpeta ya es un espacio de trabajo de Brasa. ¿Añadimos la colección ahí?"
+  gl: "Ese cartafol xa é un espazo de traballo de Brasa. Engadimos a colección aí?"
+  it: "Quella cartella è già uno spazio di lavoro di Brasa. Aggiungere lì la raccolta?"
+"import.dest.add_there":
+  en: "Add to that workspace"
+  es: "Añadir a ese espacio de trabajo"
+  gl: "Engadir a ese espazo de traballo"
+  it: "Aggiungi a quello spazio di lavoro"
+"import.dest.has_files.one":
+  en: "The folder is not empty (%{count} item). Brasa only adds its environments and the collection."
+  es: "La carpeta no está vacía (%{count} elemento). Brasa solo añade sus entornos y la colección."
+  gl: "O cartafol non está baleiro (%{count} elemento). Brasa só engade os seus contornos e a colección."
+  it: "La cartella non è vuota (%{count} elemento). Brasa aggiunge solo i suoi ambienti e la raccolta."
+"import.dest.has_files.other":
+  en: "The folder is not empty (%{count} items). Brasa only adds its environments and the collection."
+  es: "La carpeta no está vacía (%{count} elementos). Brasa solo añade sus entornos y la colección."
+  gl: "O cartafol non está baleiro (%{count} elementos). Brasa só engade os seus contornos e a colección."
+  it: "La cartella non è vuota (%{count} elementi). Brasa aggiunge solo i suoi ambienti e la raccolta."
+"import.dest.use_anyway":
+  en: "Use it anyway"
+  es: "Usarla de todos modos"
+  gl: "Usalo de todos os xeitos"
+  it: "Usala comunque"
+"import.dest.not_writable":
+  en: "Brasa cannot write in that location."
+  es: "No se puede escribir en esa ubicación."
+  gl: "Non se pode escribir nesa localización."
+  it: "Non è possibile scrivere in quella posizione."
+"import.dest.back_to_default":
+  en: "Back to Documents"
+  es: "Volver a Documentos"
+  gl: "Volver a Documentos"
+  it: "Torna a Documenti"
+"import.summary.create":
+  en: "The workspace %{name} will be created in %{path}"
+  es: "Se creará el espacio de trabajo %{name} en %{path}"
+  gl: "Crearase o espazo de traballo %{name} en %{path}"
+  it: "Lo spazio di lavoro %{name} verrà creato in %{path}"
+"import.summary.add":
+  en: "It will be added as the folder %{collection} in %{workspace}"
+  es: "Se añadirá como carpeta %{collection} en %{workspace}"
+  gl: "Engadirase como cartafol %{collection} en %{workspace}"
+  it: "Verrà aggiunta come cartella %{collection} in %{workspace}"
+"import.summary.nothing_written":
+  en: "Nothing has been written yet"
+  es: "Hasta ahora no se ha escrito nada"
+  gl: "Ata agora non se escribiu nada"
+  it: "Finora non è stato scritto nulla"
+"import.create_and_import.one":
+  en: "Create workspace and import %{count} request"
+  es: "Crear espacio de trabajo e importar %{count} petición"
+  gl: "Crear espazo de traballo e importar %{count} petición"
+  it: "Crea spazio di lavoro e importa %{count} richiesta"
+"import.create_and_import.other":
+  en: "Create workspace and import %{count} requests"
+  es: "Crear espacio de trabajo e importar %{count} peticiones"
+  gl: "Crear espazo de traballo e importar %{count} peticións"
+  it: "Crea spazio di lavoro e importa %{count} richieste"
+"import.done.created.one":
+  en: "Workspace created and %{count} request imported"
+  es: "Espacio de trabajo creado e importada %{count} petición"
+  gl: "Espazo de traballo creado e importada %{count} petición"
+  it: "Spazio di lavoro creato e %{count} richiesta importata"
+"import.done.created.other":
+  en: "Workspace created and %{count} requests imported"
+  es: "Espacio de trabajo creado e importadas %{count} peticiones"
+  gl: "Espazo de traballo creado e importadas %{count} peticións"
+  it: "Spazio di lavoro creato e %{count} richieste importate"
+"import.done.in_workspace":
+  en: "The collection %{collection} is in the workspace %{workspace}."
+  es: "La colección %{collection} está en el espacio de trabajo %{workspace}."
+  gl: "A colección %{collection} está no espazo de traballo %{workspace}."
+  it: "La raccolta %{collection} è nello spazio di lavoro %{workspace}."
+"import.done.open_workspace":
+  en: "Open workspace"
+  es: "Abrir espacio de trabajo"
+  gl: "Abrir espazo de traballo"
+  it: "Apri spazio di lavoro"
+"import.title":
+  en: "Import"
+  es: "Importar"
+  gl: "Importar"
+  it: "Importa"
+"import.format":
+  en: "Format"
+  es: "Formato"
+  gl: "Formato"
+  it: "Formato"
+"import.source":
+  en: "Source"
+  es: "Origen"
+  gl: "Orixe"
+  it: "Origine"
+"import.detected":
+  en: "Detected from the file"
+  es: "Detectado al leer el fichero"
+  gl: "Detectado ao ler o ficheiro"
+  it: "Rilevato dal file"
+"import.postman.drop":
+  en: "Drop one or more Postman files or"
+  es: "Arrastra uno o varios ficheros de Postman o"
+  gl: "Arrastra un ou varios ficheiros de Postman ou"
+  it: "Trascina uno o più file di Postman oppure"
+"import.postman.types":
+  en: "Collection v2.0 / v2.1 · Environment · Globals · .zip export"
+  es: "Collection v2.0 / v2.1 · Environment · Globals · .zip de exportación"
+  gl: "Collection v2.0 / v2.1 · Environment · Globals · .zip de exportación"
+  it: "Collection v2.0 / v2.1 · Environment · Globals · .zip di esportazione"
+"import.postman.supported":
+  en: "Collection v2.1 · v2.0 · Environment · Globals"
+  es: "Collection v2.1 · v2.0 · Environment · Globals"
+  gl: "Collection v2.1 · v2.0 · Environment · Globals"
+  it: "Collection v2.1 · v2.0 · Environment · Globals"
+"import.postman.paste_hint":
+  en: "Paste a collection, environment or globals export. Paste one at a time: use files for several."
+  es: "Pega una exportación de colección, entorno o globals. De una en una: para varias, usa ficheros."
+  gl: "Pega unha exportación de colección, contorno ou globals. De unha en unha: para varias, usa ficheiros."
+  it: "Incolla un'esportazione di raccolta, ambiente o globals. Una alla volta: per più di una, usa i file."
+"import.postman.folder_hint":
+  en: "Every Postman export in the folder and its subfolders is read."
+  es: "Se leen todas las exportaciones de Postman de la carpeta y sus subcarpetas."
+  gl: "Lense todas as exportacións de Postman do cartafol e os seus subcartafoles."
+  it: "Vengono lette tutte le esportazioni di Postman della cartella e delle sottocartelle."
+"import.postman.none_found":
+  en: "No Postman export found."
+  es: "No se ha encontrado ninguna exportación de Postman."
+  gl: "Non se atopou ningunha exportación de Postman."
+  it: "Nessuna esportazione di Postman trovata."
+"import.postman.collection_meta":
+  en: "Collection %{version} · %{requests} · %{folders}"
+  es: "Collection %{version} · %{requests} · %{folders}"
+  gl: "Collection %{version} · %{requests} · %{folders}"
+  it: "Collection %{version} · %{requests} · %{folders}"
+"import.postman.environment_meta":
+  en: "Environment · %{variables}"
+  es: "Environment · %{variables}"
+  gl: "Environment · %{variables}"
+  it: "Environment · %{variables}"
+"import.postman.globals_meta":
+  en: "Globals · %{variables}"
+  es: "Globals · %{variables}"
+  gl: "Globals · %{variables}"
+  it: "Globals · %{variables}"
+"import.postman.variables.one":
+  en: "%{count} variable"
+  es: "%{count} variable"
+  gl: "%{count} variable"
+  it: "%{count} variabile"
+"import.postman.variables.other":
+  en: "%{count} variables"
+  es: "%{count} variables"
+  gl: "%{count} variables"
+  it: "%{count} variabili"
+"import.postman.requests.one":
+  en: "%{count} request"
+  es: "%{count} petición"
+  gl: "%{count} petición"
+  it: "%{count} richiesta"
+"import.postman.requests.other":
+  en: "%{count} requests"
+  es: "%{count} peticiones"
+  gl: "%{count} peticións"
+  it: "%{count} richieste"
+"import.postman.folders.one":
+  en: "%{count} folder"
+  es: "%{count} carpeta"
+  gl: "%{count} cartafol"
+  it: "%{count} cartella"
+"import.postman.folders.other":
+  en: "%{count} folders"
+  es: "%{count} carpetas"
+  gl: "%{count} cartafoles"
+  it: "%{count} cartelle"
+"import.postman.env_note":
+  en: "Environments are imported with the collection. Uncheck the ones you do not want."
+  es: "Los entornos se importan con la colección. Quita los que no quieras."
+  gl: "Os contornos impórtanse coa colección. Quita os que non queiras."
+  it: "Gli ambienti vengono importati con la raccolta. Deseleziona quelli che non vuoi."
+"import.postman.environments":
+  en: "Environments"
+  es: "Entornos"
+  gl: "Contornos"
+  it: "Ambienti"
+"import.postman.convert":
+  en: "Convert"
+  es: "Convertir"
+  gl: "Converter"
+  it: "Converti"
+"import.postman.opt_folders":
+  en: "Folders to subfolders"
+  es: "Carpetas a subcarpetas"
+  gl: "Cartafoles a subcartafoles"
+  it: "Cartelle in sottocartelle"
+"import.postman.opt_folders_sub":
+  en: "Keeps names and order. Off, every request goes at the top of the collection"
+  es: "Conserva nombres y orden. Sin marcar, todas las peticiones van a la raíz de la colección"
+  gl: "Conserva nomes e orde. Sen marcar, todas as peticións van á raíz da colección"
+  it: "Mantiene nomi e ordine. Se disattivato, tutte le richieste vanno in cima alla raccolta"
+"import.postman.opt_variables":
+  en: "Collection variables to every environment"
+  es: "Variables de colección a cada entorno"
+  gl: "Variables de colección a cada contorno"
+  it: "Variabili della raccolta in ogni ambiente"
+"import.postman.opt_variables_sub":
+  en: "Also globals. A value of the environment wins"
+  es: "También las globals. Gana el valor del entorno"
+  gl: "Tamén as globals. Gaña o valor do contorno"
+  it: "Anche le globals. Vince il valore dell'ambiente"
+"import.postman.opt_secrets":
+  en: "Secrets to .local.env"
+  es: "Secretos a .local.env"
+  gl: "Segredos a .local.env"
+  it: "Segreti in .local.env"
+"import.postman.opt_secrets_sub":
+  en: "Variables of type secret. The versioned file does not hold them. Off, they are left out"
+  es: "Variables de tipo secret. El fichero versionado no las contiene. Sin marcar, no se importan"
+  gl: "Variables de tipo secret. O ficheiro versionado non as contén. Sen marcar, non se importan"
+  it: "Variabili di tipo secret. Il file versionato non le contiene. Se disattivato, non vengono importate"
+"import.postman.opt_auth":
+  en: "Authorization"
+  es: "Autorización"
+  gl: "Autorización"
+  it: "Autorizzazione"
+"import.postman.opt_auth_sub":
+  en: "Bearer, Basic, API key and OAuth 2.0 tokens, inherited ones copied to each request"
+  es: "Bearer, Basic, API key y tokens OAuth 2.0; las heredadas se copian a cada petición"
+  gl: "Bearer, Basic, API key e tokens OAuth 2.0; as herdadas cópianse a cada petición"
+  it: "Bearer, Basic, API key e token OAuth 2.0; quelle ereditate vengono copiate in ogni richiesta"
+"import.postman.opt_scripts":
+  en: "Convert pm.* scripts"
+  es: "Convertir scripts pm.*"
+  gl: "Converter scripts pm.*"
+  it: "Converti gli script pm.*"
+"import.postman.opt_scripts_sub":
+  en: "Pre-request and tests. What has no equivalent stays as a comment"
+  es: "Pre-request y tests. Lo que no tiene equivalente queda como comentario"
+  gl: "Pre-request e tests. O que non ten equivalente queda como comentario"
+  it: "Pre-request e test. Ciò che non ha equivalente resta come commento"
+"import.postman.opt_docs":
+  en: "Descriptions and saved examples"
+  es: "Descripciones y ejemplos guardados"
+  gl: "Descricións e exemplos gardados"
+  it: "Descrizioni ed esempi salvati"
+"import.postman.opt_docs_sub":
+  en: "In the Docs tab of each request"
+  es: "En la pestaña Docs de cada petición"
+  gl: "Na lapela Docs de cada petición"
+  it: "Nella scheda Docs di ogni richiesta"
+"import.compat.ok":
+  en: "%{count} complete"
+  es: "%{count} completas"
+  gl: "%{count} completas"
+  it: "%{count} complete"
+"import.compat.warning":
+  en: "%{count} with warnings"
+  es: "%{count} con avisos"
+  gl: "%{count} con avisos"
+  it: "%{count} con avvisi"
+"import.compat.unsupported":
+  en: "%{count} unsupported"
+  es: "%{count} sin soporte"
+  gl: "%{count} sen soporte"
+  it: "%{count} non supportate"
+"import.issue.script_converted":
+  en: "script converted"
+  es: "script convertido"
+  gl: "script convertido"
+  it: "script convertito"
+"import.issue.script_partial":
+  en: "partial script, %{converted} of %{total} statements"
+  es: "script parcial, %{converted} de %{total} sentencias"
+  gl: "script parcial, %{converted} de %{total} sentenzas"
+  it: "script parziale, %{converted} di %{total} istruzioni"
+"import.issue.send_request":
+  en: "pm.sendRequest is not available"
+  es: "pm.sendRequest sin soporte"
+  gl: "pm.sendRequest sen soporte"
+  it: "pm.sendRequest non disponibile"
+"import.issue.script_not_converted":
+  en: "script not converted"
+  es: "script sin convertir"
+  gl: "script sen converter"
+  it: "script non convertito"
+"import.issue.oauth2":
+  en: "OAuth 2.0: fixed token, not renewed"
+  es: "OAuth 2.0: token fijo, no se renueva"
+  gl: "OAuth 2.0: token fixo, non se renova"
+  it: "OAuth 2.0: token fisso, non rinnovato"
+"import.issue.auth_unsupported":
+  en: "%{kind} auth not supported, imported without it"
+  es: "autorización %{kind} sin soporte, se importa sin ella"
+  gl: "autorización %{kind} sen soporte, impórtase sen ela"
+  it: "autorizzazione %{kind} non supportata, importata senza"
+"import.issue.form_data_file":
+  en: "form-data with a file, check the path"
+  es: "form-data con fichero, revisa la ruta"
+  gl: "form-data con ficheiro, revisa a ruta"
+  it: "form-data con file, controlla il percorso"
+"import.issue.form_data_many":
+  en: "form-data with several files, the first is kept"
+  es: "form-data con varios ficheros, se conserva el primero"
+  gl: "form-data con varios ficheiros, consérvase o primeiro"
+  it: "form-data con più file, viene mantenuto il primo"
+"import.issue.body_unsupported":
+  en: "%{kind} body not supported, imported empty"
+  es: "cuerpo %{kind} sin soporte, se importa vacío"
+  gl: "corpo %{kind} sen soporte, impórtase baleiro"
+  it: "corpo %{kind} non supportato, importato vuoto"
+"import.report.title":
+  en: "Import report: %{name}"
+  es: "Informe de importación: %{name}"
+  gl: "Informe de importación: %{name}"
+  it: "Rapporto di importazione: %{name}"
+"import.report.requests":
+  en: "Requests to review"
+  es: "Peticiones que revisar"
+  gl: "Peticións que revisar"
+  it: "Richieste da controllare"
+"import.report.warnings":
+  en: "Warnings"
+  es: "Avisos"
+  gl: "Avisos"
+  it: "Avvisi"
+"import.report.review.one":
+  en: "%{count} request needs a review"
+  es: "%{count} petición necesita revisión"
+  gl: "%{count} petición necesita revisión"
+  it: "%{count} richiesta da controllare"
+"import.report.review.other":
+  en: "%{count} requests need a review"
+  es: "%{count} peticiones necesitan revisión"
+  gl: "%{count} peticións necesitan revisión"
+  it: "%{count} richieste da controllare"
+"import.report.view":
+  en: "View report"
+  es: "Ver informe"
+  gl: "Ver informe"
+  it: "Vedi rapporto"
+"import.environments_only":
+  en: "Import environments"
+  es: "Importar entornos"
+  gl: "Importar contornos"
+  it: "Importa ambienti"
+"import.create_and_import_environments":
+  en: "Create workspace and import environments"
+  es: "Crear espacio de trabajo e importar entornos"
+  gl: "Crear espazo de traballo e importar contornos"
+  it: "Crea spazio di lavoro e importa ambienti"
+"import.done.environments":
+  en: "Imported the environments"
+  es: "Entornos importados"
+  gl: "Contornos importados"
+  it: "Ambienti importati"
+"import.done.environments_note":
+  en: "They are in the environment picker."
+  es: "Ya están en el selector de entornos."
+  gl: "Xa están no selector de contornos."
+  it: "Sono nel selettore degli ambienti."
+"import.menu_postman":
+  en: "Postman (collection or environment)..."
+  es: "Postman (colección o entorno)..."
+  gl: "Postman (colección ou contorno)..."
+  it: "Postman (raccolta o ambiente)..."
+"import.not_recognized":
+  en: "This is not an OpenAPI spec or a Postman export."
+  es: "Esto no es una especificación OpenAPI ni una exportación de Postman."
+  gl: "Isto non é unha especificación OpenAPI nin unha exportación de Postman."
+  it: "Questa non è una specifica OpenAPI né un'esportazione di Postman."
+"import.palette.update_postman":
+  en: "Update collection from Postman..."
+  es: "Actualizar colección desde Postman..."
+  gl: "Actualizar colección desde Postman..."
+  it: "Aggiorna raccolta da Postman..."
+"import.dest.use_source":
+  en: "Use the source folder as the workspace"
+  es: "Usar la carpeta de origen como espacio de trabajo"
+  gl: "Usar o cartafol de orixe como espazo de traballo"
+  it: "Usa la cartella di origine come spazio di lavoro"
+"import.menu_bruno":
+  en: "Bruno (collection folder)..."
+  es: "Bruno (carpeta de una colección)..."
+  gl: "Bruno (cartafol dunha colección)..."
+  it: "Bruno (cartella di una raccolta)..."
+"import.palette.bruno":
+  en: "Import Bruno collection..."
+  es: "Importar colección de Bruno..."
+  gl: "Importar colección de Bruno..."
+  it: "Importa raccolta di Bruno..."
+"import.bruno.none_found":
+  en: "No Bruno collection found: pick the folder with bruno.json or opencollection.yml."
+  es: "No se encontró ninguna colección de Bruno: elige la carpeta con bruno.json u opencollection.yml."
+  gl: "Non se atopou ningunha colección de Bruno: escolle o cartafol con bruno.json ou opencollection.yml."
+  it: "Nessuna raccolta di Bruno trovata: scegli la cartella con bruno.json o opencollection.yml."
+"import.bruno.supported":
+  en: "Folder · .zip · .bru · OpenCollection .yml"
+  es: "Carpeta · .zip · .bru · .yml de OpenCollection"
+  gl: "Cartafol · .zip · .bru · .yml de OpenCollection"
+  it: "Cartella · .zip · .bru · .yml di OpenCollection"
+"import.bruno.paste_hint":
+  en: "One .bru or .yml request. For a whole collection, use Folder."
+  es: "Una petición .bru o .yml. Para una colección entera, usa Carpeta."
+  gl: "Unha petición .bru ou .yml. Para unha colección enteira, usa Cartafol."
+  it: "Una richiesta .bru o .yml. Per una raccolta intera, usa Cartella."
+"import.bruno.drop":
+  en: "Drop a .zip of a Bruno collection, or request files, or"
+  es: "Arrastra un .zip de una colección de Bruno, o peticiones sueltas, o"
+  gl: "Arrastra un .zip dunha colección de Bruno, ou peticións soltas, ou"
+  it: "Trascina uno .zip di una raccolta di Bruno, o richieste singole, oppure"
+"import.bruno.types":
+  en: ".zip · .bru · OpenCollection .yml"
+  es: ".zip · .bru · .yml de OpenCollection"
+  gl: ".zip · .bru · .yml de OpenCollection"
+  it: ".zip · .bru · .yml di OpenCollection"
+"import.bruno.folder_hint":
+  en: "The collection's folder, the one with bruno.json or opencollection.yml, or a folder that holds it."
+  es: "La carpeta de la colección, la que tiene bruno.json u opencollection.yml, o una carpeta que la contenga."
+  gl: "O cartafol da colección, o que ten bruno.json ou opencollection.yml, ou un cartafol que o conteña."
+  it: "La cartella della raccolta, quella con bruno.json o opencollection.yml, o una cartella che la contiene."
+"import.bruno.collection_meta":
+  en: "%{formats} · %{requests} · %{folders}"
+  es: "%{formats} · %{requests} · %{folders}"
+  gl: "%{formats} · %{requests} · %{folders}"
+  it: "%{formats} · %{requests} · %{folders}"
+"import.bruno.environment_meta":
+  en: "Environment · %{variables} · %{secrets}"
+  es: "Entorno · %{variables} · %{secrets}"
+  gl: "Contorno · %{variables} · %{secrets}"
+  it: "Ambiente · %{variables} · %{secrets}"
+"import.bruno.secrets.one":
+  en: "%{count} secret"
+  es: "%{count} secreto"
+  gl: "%{count} segredo"
+  it: "%{count} segreto"
+"import.bruno.secrets.other":
+  en: "%{count} secrets"
+  es: "%{count} secretos"
+  gl: "%{count} segredos"
+  it: "%{count} segreti"
+"import.bruno.env_note":
+  en: "Bruno keeps the values of secrets on each machine, not in the collection: they are created empty in .local.env."
+  es: "Bruno guarda los valores de los secretos en cada equipo, no en la colección: se crean vacíos en .local.env."
+  gl: "Bruno garda os valores dos segredos en cada equipo, non na colección: créanse baleiros en .local.env."
+  it: "Bruno conserva i valori dei segreti su ogni computer, non nella raccolta: vengono creati vuoti in .local.env."
+"import.bruno.opt_variables":
+  en: "Collection and folder variables to every environment"
+  es: "Variables de colección y carpeta a cada entorno"
+  gl: "Variables de colección e cartafol a cada contorno"
+  it: "Variabili di raccolta e cartella in ogni ambiente"
+"import.bruno.opt_variables_sub":
+  en: "The environment's value wins"
+  es: "Gana el valor del entorno"
+  gl: "Gaña o valor do contorno"
+  it: "Vince il valore dell'ambiente"
+"import.bruno.opt_secrets_sub":
+  en: "Bruno does not keep their values in the collection: they are created empty, to fill in. Off, they are left out"
+  es: "Bruno no guarda sus valores en la colección: se crean vacíos para rellenarlos. Sin marcar, no se importan"
+  gl: "Bruno non garda os seus valores na colección: créanse baleiros para enchelos. Sen marcar, non se importan"
+  it: "Bruno non conserva i loro valori nella raccolta: vengono creati vuoti da compilare. Se disattivato, non vengono importati"
+"import.bruno.opt_scripts":
+  en: "Convert scripts, tests and assert"
+  es: "Convertir scripts, tests y assert"
+  gl: "Converter scripts, tests e assert"
+  it: "Converti script, test e assert"
+"import.bruno.opt_scripts_sub":
+  en: "bru.*, req.* and res.*. What has no equivalent stays as a comment"
+  es: "bru.*, req.* y res.*. Lo que no tiene equivalente queda como comentario"
+  gl: "bru.*, req.* e res.*. O que non ten equivalente queda como comentario"
+  it: "bru.*, req.* e res.*. Ciò che non ha equivalente resta come commento"
+"import.bruno.opt_docs":
+  en: "Documentation"
+  es: "Documentación"
+  gl: "Documentación"
+  it: "Documentazione"
+"import.bruno.opt_docs_sub":
+  en: "The docs block, in the Docs tab of each request"
+  es: "El bloque docs, en la pestaña Docs de cada petición"
+  gl: "O bloque docs, na lapela Docs de cada petición"
+  it: "Il blocco docs, nella scheda Docs di ogni richiesta"
+"import.bruno.opt_colors":
+  en: "Environment colors"
+  es: "Colores de los entornos"
+  gl: "Cores dos contornos"
+  it: "Colori degli ambienti"
+"import.bruno.opt_colors_sub":
+  en: "To the nearest Brasa color, in .brasa/project.toml"
+  es: "Al color más parecido de Brasa, en .brasa/project.toml"
+  gl: "Á cor máis parecida de Brasa, en .brasa/project.toml"
+  it: "Al colore di Brasa più vicino, in .brasa/project.toml"
+"import.bruno.environment_variables":
+  en: "Environment · %{variables}"
+  es: "Entorno · %{variables}"
+  gl: "Contorno · %{variables}"
+  it: "Ambiente · %{variables}"
+"import.palette.update_bruno":
+  en: "Update collection from Bruno..."
+  es: "Actualizar colección desde Bruno..."
+  gl: "Actualizar colección desde Bruno..."
+  it: "Aggiorna raccolta da Bruno..."

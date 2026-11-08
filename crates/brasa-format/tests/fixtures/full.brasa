@@ -1,0 +1,21 @@
+POST {{baseUrl}}/users
+Content-Type: application/json
+Authorization: Bearer {{token}}
+X-Timestamp: {{ now() }}
+# X-Debug: 1
+
+::: query
+page = 1
+# verbose = true
+
+::: body json
+{ "name": "{{userName}}", "id": "{{requestId}}" }
+
+::: pre
+vars.set("requestId", util.uuid());
+
+::: post
+test("created", () => {
+  expect(res.status).toBe(201);
+});
+env.set("userId", res.json().id);

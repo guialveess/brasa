@@ -1,0 +1,195 @@
+{
+  "info": {
+    "name": "Demo API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "bearer",
+    "bearer": [{ "key": "token", "value": "{{collectionToken}}", "type": "string" }]
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "https://api.example.com" },
+    { "key": "collectionToken", "value": "secret-collection-token" }
+  ],
+  "item": [
+    {
+      "name": "Auth",
+      "auth": {
+        "type": "basic",
+        "basic": [
+          { "key": "username", "value": "admin", "type": "string" },
+          { "key": "password", "value": "{{adminPass}}", "type": "string" }
+        ]
+      },
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "X-Debug", "value": "1", "disabled": true }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/login?debug=1",
+              "query": [{ "key": "debug", "value": "1" }]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"user\": \"{{username}}\" }",
+              "options": { "raw": { "language": "json" } }
+            },
+            "description": "Login endpoint"
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": ["pm.environment.set('ts', Date.now());"]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status is 200', function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Users",
+          "item": [
+            {
+              "name": "List users",
+              "request": {
+                "method": "GET",
+                "auth": { "type": "inherit" },
+                "url": "{{baseUrl}}/users?page=2&limit=10",
+                "description": { "content": "Returns paginated users", "type": "text/plain" }
+              }
+            },
+            {
+              "name": "Create user",
+              "request": {
+                "method": "POST",
+                "auth": { "type": "noauth" },
+                "url": { "raw": "{{baseUrl}}/users" },
+                "body": {
+                  "mode": "raw",
+                  "raw": "plain body {{name}}"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Uploads",
+      "item": [
+        {
+          "name": "Form encoded",
+          "request": {
+            "method": "POST",
+            "url": { "raw": "{{baseUrl}}/form" },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                { "key": "a", "value": "1" },
+                { "key": "b", "value": "2", "disabled": true }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Multipart",
+          "request": {
+            "method": "POST",
+            "url": { "raw": "{{baseUrl}}/upload" },
+            "body": {
+              "mode": "formdata",
+              "formdata": [{ "key": "file", "type": "file", "src": "/tmp/x" }]
+            }
+          }
+        },
+        {
+          "name": "Raw file",
+          "request": {
+            "method": "POST",
+            "url": { "raw": "{{baseUrl}}/upload-raw" },
+            "body": {
+              "mode": "file",
+              "file": { "src": "/tmp/x" }
+            }
+          }
+        },
+        {
+          "name": "GraphQL query",
+          "request": {
+            "method": "POST",
+            "url": { "raw": "{{baseUrl}}/graphql" },
+            "body": {
+              "mode": "graphql",
+              "graphql": { "query": "{ ping }", "variables": "{}" }
+            }
+          }
+        },
+        {
+          "name": "Xml payload",
+          "request": {
+            "method": "POST",
+            "url": { "raw": "{{baseUrl}}/xml" },
+            "body": {
+              "mode": "raw",
+              "raw": "<ping>{{name}}</ping>",
+              "options": { "raw": { "language": "xml" } }
+            }
+          }
+        },
+        {
+          "name": "Api key header",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/secure" },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                { "key": "key", "value": "X-Api-Key", "type": "string" },
+                { "key": "value", "value": "{{apiKey}}", "type": "string" },
+                { "key": "in", "value": "header", "type": "string" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Api key query",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/secure-query" },
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                { "key": "key", "value": "token", "type": "string" },
+                { "key": "value", "value": "{{apiKey}}", "type": "string" },
+                { "key": "in", "value": "query", "type": "string" }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ping",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "{{baseUrl}}/ping" }
+      }
+    }
+  ]
+}

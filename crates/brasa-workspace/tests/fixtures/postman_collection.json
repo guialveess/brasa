@@ -1,0 +1,40 @@
+{
+  "info": {
+    "name": "Sample API"
+  },
+  "variable": [{ "key": "token", "value": "abc123" }],
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "url": { "raw": "{{baseUrl}}/login" },
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": { "raw": { "language": "json" } }
+            }
+          }
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "url": { "raw": "{{baseUrl}}/login-legacy" }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Upload",
+      "request": {
+        "method": "POST",
+        "url": { "raw": "{{baseUrl}}/upload" },
+        "body": { "mode": "formdata" }
+      }
+    }
+  ]
+}

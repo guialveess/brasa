@@ -1,0 +1,54 @@
+[package]
+name = "brasa-app"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[[bin]]
+name = "brasa"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = { workspace = true }
+lsp-types = { workspace = true }
+# Only the tree-sitter grammars the request/response/script editors actually highlight:
+# JSON and XML bodies, JavaScript pre/post scripts. "tree-sitter-html" is the closest available
+# grammar to XML in this version of gpui-component (there is no dedicated XML grammar), used as a
+# readable approximation for `::: body xml`. Both features pull in the base "tree-sitter" feature,
+# which bundles the JSON grammar, so it is not listed again here.
+gpui-kit = { workspace = true, features = ["tree-sitter-javascript", "tree-sitter-html"] }
+chrono = { workspace = true }
+dirs = { workspace = true }
+dunce = { workspace = true }
+notify = { workspace = true }
+async-channel = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+toml = { workspace = true }
+log = { workspace = true }
+rust-i18n = { workspace = true }
+telaio-ui = { workspace = true }
+brasa-core = { path = "../brasa-core" }
+brasa-format = { path = "../brasa-format" }
+brasa-workspace = { path = "../brasa-workspace" }
+brasa-runner = { path = "../brasa-runner" }
+brasa-script = { path = "../brasa-script" }
+brasa-load = { path = "../brasa-load" }
+telaio-git = { workspace = true }
+telaio-update = { workspace = true }
+telaio-app = { workspace = true }
+brasa-cli = { path = "../brasa-cli" }
+# The temporary checkout of a Git repository the OpenAPI import reads specs from.
+tempfile = { workspace = true }
+zip = { workspace = true }
+
+[target.'cfg(windows)'.build-dependencies]
+embed-resource = "3"
+
+[dev-dependencies]
+pretty_assertions = { workspace = true }
+
+[lints]
+workspace = true

@@ -1,0 +1,28 @@
+[package]
+name = "brasa-runner"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+brasa-core = { path = "../brasa-core" }
+brasa-script = { path = "../brasa-script" }
+brasa-http = { path = "../brasa-http" }
+thiserror = { workspace = true }
+log = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }
+pretty_assertions = { workspace = true }
+serde_json = { workspace = true }
+# Only for the sample suite test, which loads samples/workspace.
+brasa-workspace = { path = "../brasa-workspace" }
+# Only for the test that runs converted Postman scripts.
+brasa-format = { path = "../brasa-format" }
+# Enables the test server helper for this crate's own tests, without shipping it in release builds.
+brasa-http = { path = "../brasa-http", features = ["test-support"] }
+
+[lints]
+workspace = true

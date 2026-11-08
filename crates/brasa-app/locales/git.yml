@@ -1,0 +1,877 @@
+# Git integration: Source Control panel, diffs, commit, branches and log. Glossary and rules: docs/i18n.md
+_version: 2
+"git.panel.title":
+  en: "Commit"
+  es: "Commit"
+  gl: "Commit"
+  it: "Commit"
+"git.panel.refresh":
+  en: "Refresh"
+  es: "Actualizar"
+  gl: "Actualizar"
+  it: "Aggiorna"
+"git.panel.changes":
+  en: "Changes"
+  es: "Cambios"
+  gl: "Cambios"
+  it: "Modifiche"
+"git.panel.unversioned":
+  en: "Unversioned Files"
+  es: "Archivos sin versionar"
+  gl: "Ficheiros sen versionar"
+  it: "File non versionati"
+"git.panel.discard":
+  en: "Discard changes"
+  es: "Descartar cambios"
+  gl: "Descartar cambios"
+  it: "Annulla modifiche"
+"git.panel.all_changes":
+  en: "all the changes"
+  es: "todos los cambios"
+  gl: "todos os cambios"
+  it: "tutte le modifiche"
+"git.panel.staged_outside.one":
+  en: "%{count} file staged outside this workspace will be included in the commit."
+  es: "%{count} archivo preparado fuera de este espacio de trabajo entrará en el commit."
+  gl: "%{count} ficheiro preparado fóra deste espazo de traballo entrará no commit."
+  it: "%{count} file preparato fuori da questo spazio di lavoro sarà incluso nel commit."
+"git.panel.staged_outside.other":
+  en: "%{count} files staged outside this workspace will be included in the commit."
+  es: "%{count} archivos preparados fuera de este espacio de trabajo entrarán en el commit."
+  gl: "%{count} ficheiros preparados fóra deste espazo de traballo entrarán no commit."
+  it: "%{count} file preparati fuori da questo spazio di lavoro saranno inclusi nel commit."
+"git.panel.unstage_them":
+  en: "Unstage them"
+  es: "Quitarlos del commit"
+  gl: "Quitalos do commit"
+  it: "Rimuovili dal commit"
+"git.discard.title":
+  en: "Discard changes?"
+  es: "¿Descartar los cambios?"
+  gl: "Descartar os cambios?"
+  it: "Annullare le modifiche?"
+"git.discard.text":
+  en: "The changes to %{name} will be lost. Discarded changes can't be recovered."
+  es: "Se perderán los cambios de %{name}. Los cambios descartados no se pueden recuperar."
+  gl: "Perderanse os cambios de %{name}. Os cambios descartados non se poden recuperar."
+  it: "Le modifiche a %{name} andranno perse. Le modifiche annullate non si possono recuperare."
+"git.discard.confirm":
+  en: "Discard"
+  es: "Descartar"
+  gl: "Descartar"
+  it: "Annulla modifiche"
+"git.empty.no_workspace":
+  en: "Open a workspace to see its changes."
+  es: "Abre un espacio de trabajo para ver sus cambios."
+  gl: "Abre un espazo de traballo para ver os seus cambios."
+  it: "Apri uno spazio di lavoro per vederne le modifiche."
+"git.empty.missing":
+  en: "Git isn't available"
+  es: "Git no está disponible"
+  gl: "Git non está dispoñible"
+  it: "Git non è disponibile"
+"git.empty.missing_text":
+  en: "Brasa uses the git installed on this machine. Install it or set its path in Settings."
+  es: "Brasa usa el git instalado en este equipo. Instálalo o indica su ruta en Ajustes."
+  gl: "Brasa usa o git instalado neste equipo. Instálao ou indica a súa ruta en Axustes."
+  it: "Brasa usa il git installato su questo computer. Installalo o indica il suo percorso nelle Impostazioni."
+"git.empty.open_settings":
+  en: "Open Git settings"
+  es: "Abrir ajustes de Git"
+  gl: "Abrir axustes de Git"
+  it: "Apri le impostazioni di Git"
+"git.empty.install":
+  en: "How to install Git"
+  es: "Cómo instalar Git"
+  gl: "Como instalar Git"
+  it: "Come installare Git"
+"git.empty.not_a_repo":
+  en: "Not a Git repository"
+  es: "No es un repositorio Git"
+  gl: "Non é un repositorio Git"
+  it: "Non è un repository Git"
+"git.empty.not_a_repo_text":
+  en: "Initialize one in this workspace. Brasa adds a .gitignore with *.local.env."
+  es: "Inicializa uno en este espacio de trabajo. Brasa añade un .gitignore con *.local.env."
+  gl: "Inicializa un neste espazo de traballo. Brasa engade un .gitignore con *.local.env."
+  it: "Inizializzane uno in questo spazio di lavoro. Brasa aggiunge un .gitignore con *.local.env."
+"git.empty.init":
+  en: "Initialize repository"
+  es: "Inicializar repositorio"
+  gl: "Inicializar repositorio"
+  it: "Inizializza repository"
+"git.empty.error":
+  en: "Git failed"
+  es: "Git ha fallado"
+  gl: "Git fallou"
+  it: "Git non è riuscito"
+"git.empty.no_changes":
+  en: "No changes"
+  es: "Sin cambios"
+  gl: "Sen cambios"
+  it: "Nessuna modifica"
+"git.empty.clean":
+  en: "Everything is committed."
+  es: "No hay nada pendiente de commit."
+  gl: "Non hai nada pendente de commit."
+  it: "Non c'è nulla di cui eseguire il commit."
+"git.empty.ahead.one":
+  en: "%{count} commit not pushed yet."
+  es: "%{count} commit sin enviar todavía."
+  gl: "%{count} commit sen enviar aínda."
+  it: "%{count} commit non ancora inviato."
+"git.empty.ahead.other":
+  en: "%{count} commits not pushed yet."
+  es: "%{count} commits sin enviar todavía."
+  gl: "%{count} commits sen enviar aínda."
+  it: "%{count} commit non ancora inviati."
+"git.diff.failed":
+  en: "Could not read the changes"
+  es: "No se pudieron leer los cambios"
+  gl: "Non se puideron ler os cambios"
+  it: "Impossibile leggere le modifiche"
+"git.diff.no_changes":
+  en: "No differences"
+  es: "Sin diferencias"
+  gl: "Sen diferenzas"
+  it: "Nessuna differenza"
+"git.diff.no_changes_text":
+  en: "The file is the same as in the last commit."
+  es: "El archivo es igual que en el último commit."
+  gl: "O ficheiro é igual que no último commit."
+  it: "Il file è uguale all'ultimo commit."
+"git.diff.previous":
+  en: "Previous change"
+  es: "Cambio anterior"
+  gl: "Cambio anterior"
+  it: "Modifica precedente"
+"git.diff.next":
+  en: "Next change"
+  es: "Cambio siguiente"
+  gl: "Cambio seguinte"
+  it: "Modifica successiva"
+"git.diff.position":
+  en: "%{current} of %{total}"
+  es: "%{current} de %{total}"
+  gl: "%{current} de %{total}"
+  it: "%{current} di %{total}"
+"git.diff.split":
+  en: "Side by side"
+  es: "Lado a lado"
+  gl: "Lado a lado"
+  it: "Affiancato"
+"git.diff.unified":
+  en: "Unified"
+  es: "Unificado"
+  gl: "Unificado"
+  it: "Unificato"
+"git.diff.open_request":
+  en: "Open request"
+  es: "Abrir petición"
+  gl: "Abrir petición"
+  it: "Apri richiesta"
+"git.diff.status_modified":
+  en: "Modified"
+  es: "Modificado"
+  gl: "Modificado"
+  it: "Modificato"
+"git.diff.status_added":
+  en: "Added"
+  es: "Añadido"
+  gl: "Engadido"
+  it: "Aggiunto"
+"git.diff.status_deleted":
+  en: "Deleted"
+  es: "Borrado"
+  gl: "Borrado"
+  it: "Eliminato"
+"git.diff.status_renamed":
+  en: "Renamed"
+  es: "Renombrado"
+  gl: "Renomeado"
+  it: "Rinominato"
+"git.diff.status_untracked":
+  en: "Untracked"
+  es: "Sin versionar"
+  gl: "Sen versionar"
+  it: "Non versionato"
+"git.diff.status_conflict":
+  en: "Conflict"
+  es: "Conflicto"
+  gl: "Conflito"
+  it: "Conflitto"
+"git.diff.stage_hunk":
+  en: "Stage"
+  es: "Preparar"
+  gl: "Preparar"
+  it: "Prepara"
+"git.diff.unstage_hunk":
+  en: "Unstage"
+  es: "Quitar del commit"
+  gl: "Quitar do commit"
+  it: "Rimuovi dal commit"
+"git.diff.revert_hunk":
+  en: "Revert"
+  es: "Revertir"
+  gl: "Reverter"
+  it: "Ripristina"
+"git.diff.revert_title":
+  en: "Revert this change?"
+  es: "¿Revertir este cambio?"
+  gl: "Reverter este cambio?"
+  it: "Ripristinare questa modifica?"
+"git.diff.revert_text":
+  en: "The block goes back to how it was in the last commit. Reverted changes can't be recovered."
+  es: "El bloque vuelve a como estaba en el último commit. Los cambios revertidos no se pueden recuperar."
+  gl: "O bloque volve a como estaba no último commit. Os cambios revertidos non se poden recuperar."
+  it: "Il blocco torna com'era nell'ultimo commit. Le modifiche ripristinate non si possono recuperare."
+"git.diff.request":
+  en: "Request"
+  es: "Petición"
+  gl: "Petición"
+  it: "Richiesta"
+"git.request.request":
+  en: "Method and URL"
+  es: "Método y URL"
+  gl: "Método e URL"
+  it: "Metodo e URL"
+"git.request.headers":
+  en: "Headers"
+  es: "Cabeceras"
+  gl: "Cabeceiras"
+  it: "Intestazioni"
+"git.request.query":
+  en: "Query"
+  es: "Query"
+  gl: "Query"
+  it: "Query"
+"git.request.auth":
+  en: "Auth"
+  es: "Autenticación"
+  gl: "Autenticación"
+  it: "Autenticazione"
+"git.request.body":
+  en: "Body"
+  es: "Cuerpo"
+  gl: "Corpo"
+  it: "Corpo"
+"git.request.pre_script":
+  en: "Pre-request script"
+  es: "Script previo"
+  gl: "Script previo"
+  it: "Script pre"
+"git.request.post_script":
+  en: "Post-response script"
+  es: "Script posterior"
+  gl: "Script posterior"
+  it: "Script post"
+"git.request.docs":
+  en: "Docs"
+  es: "Documentación"
+  gl: "Documentación"
+  it: "Documentazione"
+"git.request.new_header":
+  en: "new header"
+  es: "cabecera nueva"
+  gl: "cabeceira nova"
+  it: "nuova intestazione"
+"git.request.removed_header":
+  en: "removed header"
+  es: "cabecera quitada"
+  gl: "cabeceira quitada"
+  it: "intestazione rimossa"
+"git.request.changed_header":
+  en: "changed header"
+  es: "cabecera cambiada"
+  gl: "cabeceira cambiada"
+  it: "intestazione modificata"
+"git.request.new_field":
+  en: "new field"
+  es: "campo nuevo"
+  gl: "campo novo"
+  it: "nuovo campo"
+"git.request.removed_field":
+  en: "removed field"
+  es: "campo quitado"
+  gl: "campo quitado"
+  it: "campo rimosso"
+"git.request.changed_field":
+  en: "changed field"
+  es: "campo cambiado"
+  gl: "campo cambiado"
+  it: "campo modificato"
+"git.request.changed.one":
+  en: "%{count} changed"
+  es: "%{count} cambiado"
+  gl: "%{count} cambiado"
+  it: "%{count} modificato"
+"git.request.changed.other":
+  en: "%{count} changed"
+  es: "%{count} cambiados"
+  gl: "%{count} cambiados"
+  it: "%{count} modificati"
+"git.request.added.one":
+  en: "%{count} added"
+  es: "%{count} añadido"
+  gl: "%{count} engadido"
+  it: "%{count} aggiunto"
+"git.request.added.other":
+  en: "%{count} added"
+  es: "%{count} añadidos"
+  gl: "%{count} engadidos"
+  it: "%{count} aggiunti"
+"git.request.removed.one":
+  en: "%{count} removed"
+  es: "%{count} quitado"
+  gl: "%{count} quitado"
+  it: "%{count} rimosso"
+"git.request.removed.other":
+  en: "%{count} removed"
+  es: "%{count} quitados"
+  gl: "%{count} quitados"
+  it: "%{count} rimossi"
+"git.request.unchanged":
+  en: "Unchanged: %{parts}"
+  es: "Sin cambios: %{parts}"
+  gl: "Sen cambios: %{parts}"
+  it: "Invariati: %{parts}"
+"git.panel.discard_all":
+  en: "Discard all changes"
+  es: "Descartar todos los cambios"
+  gl: "Descartar todos os cambios"
+  it: "Annulla tutte le modifiche"
+"git.panel.group_by_folder":
+  en: "Group by folder"
+  es: "Agrupar por carpeta"
+  gl: "Agrupar por cartafol"
+  it: "Raggruppa per cartella"
+"git.panel.show_as_list":
+  en: "Show as a list"
+  es: "Mostrar como lista"
+  gl: "Amosar como lista"
+  it: "Mostra come elenco"
+"git.diff.working_tree":
+  en: "Working tree"
+  es: "Árbol de trabajo"
+  gl: "Árbore de traballo"
+  it: "Albero di lavoro"
+"git.diff.binary":
+  en: "Binary file"
+  es: "Archivo binario"
+  gl: "Ficheiro binario"
+  it: "File binario"
+"git.diff.binary_text":
+  en: "Git can't show the changes of a binary file line by line."
+  es: "Git no puede mostrar línea a línea los cambios de un archivo binario."
+  gl: "Git non pode amosar liña a liña os cambios dun ficheiro binario."
+  it: "Git non può mostrare riga per riga le modifiche di un file binario."
+"git.panel.log":
+  en: "Log"
+  es: "Historial"
+  gl: "Historial"
+  it: "Cronologia"
+"git.panel.more":
+  en: "More actions"
+  es: "Más acciones"
+  gl: "Máis accións"
+  it: "Altre azioni"
+"git.commit.placeholder":
+  en: "Commit message"
+  es: "Mensaje del commit"
+  gl: "Mensaxe do commit"
+  it: "Messaggio del commit"
+"git.commit.amend":
+  en: "Amend"
+  es: "Modificar el último"
+  gl: "Modificar o último"
+  it: "Modifica l'ultimo"
+"git.commit.files.one":
+  en: "%{count} file"
+  es: "%{count} archivo"
+  gl: "%{count} ficheiro"
+  it: "%{count} file"
+"git.commit.files.other":
+  en: "%{count} files"
+  es: "%{count} archivos"
+  gl: "%{count} ficheiros"
+  it: "%{count} file"
+"git.commit.commit":
+  en: "Commit"
+  es: "Commit"
+  gl: "Commit"
+  it: "Commit"
+"git.commit.commit_and_push":
+  en: "Commit and Push…"
+  es: "Commit y Push…"
+  gl: "Commit e Push…"
+  it: "Commit e Push…"
+"git.secrets.text.one":
+  en: "%{files} holds secrets and is about to be committed."
+  es: "%{files} contiene secretos y va a entrar en el commit."
+  gl: "%{files} contén segredos e vai entrar no commit."
+  it: "%{files} contiene segreti e sta per entrare nel commit."
+"git.secrets.text.other":
+  en: "%{files} hold secrets and are about to be committed."
+  es: "%{files} contienen secretos y van a entrar en el commit."
+  gl: "%{files} conteñen segredos e van entrar no commit."
+  it: "%{files} contengono segreti e stanno per entrare nel commit."
+"git.secrets.unstage":
+  en: "Unstage"
+  es: "Quitar del commit"
+  gl: "Quitar do commit"
+  it: "Rimuovi dal commit"
+"git.secrets.ignore":
+  en: "Add to .gitignore"
+  es: "Añadir a .gitignore"
+  gl: "Engadir a .gitignore"
+  it: "Aggiungi a .gitignore"
+"git.empty.push.one":
+  en: "Push %{count} commit"
+  es: "Push de %{count} commit"
+  gl: "Push de %{count} commit"
+  it: "Push di %{count} commit"
+"git.empty.push.other":
+  en: "Push %{count} commits"
+  es: "Push de %{count} commits"
+  gl: "Push de %{count} commits"
+  it: "Push di %{count} commit"
+"git.menu.pull":
+  en: "Pull"
+  es: "Pull"
+  gl: "Pull"
+  it: "Pull"
+"git.menu.push":
+  en: "Push"
+  es: "Push"
+  gl: "Push"
+  it: "Push"
+"git.menu.fetch":
+  en: "Fetch"
+  es: "Fetch"
+  gl: "Fetch"
+  it: "Fetch"
+"git.sync.committing":
+  en: "Committing…"
+  es: "Haciendo commit…"
+  gl: "Facendo commit…"
+  it: "Commit in corso…"
+"git.sync.pushing":
+  en: "Pushing…"
+  es: "Haciendo push…"
+  gl: "Facendo push…"
+  it: "Push in corso…"
+"git.sync.pulling":
+  en: "Pulling…"
+  es: "Haciendo pull…"
+  gl: "Facendo pull…"
+  it: "Pull in corso…"
+"git.sync.fetching":
+  en: "Fetching…"
+  es: "Haciendo fetch…"
+  gl: "Facendo fetch…"
+  it: "Fetch in corso…"
+"git.sync.no_remote":
+  en: "This branch has no remote to push to. Add one with git remote add."
+  es: "Esta rama no tiene un remoto al que hacer push. Añade uno con git remote add."
+  gl: "Esta rama non ten un remoto ao que facer push. Engade un con git remote add."
+  it: "Questo branch non ha un remoto su cui fare push. Aggiungine uno con git remote add."
+"git.sync.pushed":
+  en: "Pushed to %{target}."
+  es: "Push a %{target} hecho."
+  gl: "Push a %{target} feito."
+  it: "Push su %{target} completato."
+"git.push.title":
+  en: "Push commits?"
+  es: "¿Hacer push de los commits?"
+  gl: "Facer push dos commits?"
+  it: "Fare push dei commit?"
+"git.push.text.one":
+  en: "%{count} commit will be pushed to %{target}:"
+  es: "Se enviará %{count} commit a %{target}:"
+  gl: "Enviarase %{count} commit a %{target}:"
+  it: "%{count} commit sarà inviato a %{target}:"
+"git.push.text.other":
+  en: "%{count} commits will be pushed to %{target}:"
+  es: "Se enviarán %{count} commits a %{target}:"
+  gl: "Enviaranse %{count} commits a %{target}:"
+  it: "%{count} commit saranno inviati a %{target}:"
+"git.push.more.one":
+  en: "and %{count} more"
+  es: "y %{count} más"
+  gl: "e %{count} máis"
+  it: "e altri %{count}"
+"git.push.more.other":
+  en: "and %{count} more"
+  es: "y %{count} más"
+  gl: "e %{count} máis"
+  it: "e altri %{count}"
+"git.push.confirm":
+  en: "Push"
+  es: "Push"
+  gl: "Push"
+  it: "Push"
+"git.failure.push_rejected":
+  en: "Push rejected"
+  es: "Push rechazado"
+  gl: "Push rexeitado"
+  it: "Push rifiutato"
+"git.failure.commit":
+  en: "Commit failed"
+  es: "El commit falló"
+  gl: "O commit fallou"
+  it: "Il commit non è riuscito"
+"git.failure.push":
+  en: "Push failed"
+  es: "El push falló"
+  gl: "O push fallou"
+  it: "Il push non è riuscito"
+"git.failure.pull_conflicts":
+  en: "Pull left conflicts"
+  es: "El pull dejó conflictos"
+  gl: "O pull deixou conflitos"
+  it: "Il pull ha lasciato conflitti"
+"git.failure.pull":
+  en: "Pull failed"
+  es: "El pull falló"
+  gl: "O pull fallou"
+  it: "Il pull non è riuscito"
+"git.failure.fetch":
+  en: "Fetch failed"
+  es: "El fetch falló"
+  gl: "O fetch fallou"
+  it: "Il fetch non è riuscito"
+"git.failure.rejected_text":
+  en: "%{upstream} has commits you don't have. Pull them first, then push again."
+  es: "%{upstream} tiene commits que no tienes. Haz pull primero y luego vuelve a hacer push."
+  gl: "%{upstream} ten commits que non tes. Fai pull primeiro e despois volve facer push."
+  it: "%{upstream} ha commit che non hai. Fai prima il pull, poi ripeti il push."
+"git.failure.rejected_text_plain":
+  en: "The remote has commits you don't have. Pull them first, then push again."
+  es: "El remoto tiene commits que no tienes. Haz pull primero y luego vuelve a hacer push."
+  gl: "O remoto ten commits que non tes. Fai pull primeiro e despois volve facer push."
+  it: "Il remoto ha commit che non hai. Fai prima il pull, poi ripeti il push."
+"git.failure.auth_text":
+  en: "The remote refused the credentials. Brasa uses git's credential helper or SSH agent: check that they work in a terminal."
+  es: "El remoto rechazó las credenciales. Brasa usa el gestor de credenciales de git o el agente SSH: comprueba que funcionan en un terminal."
+  gl: "O remoto rexeitou as credenciais. Brasa usa o xestor de credenciais de git ou o axente SSH: comproba que funcionan nun terminal."
+  it: "Il remoto ha rifiutato le credenziali. Brasa usa il gestore di credenziali di git o l'agente SSH: verifica che funzionino in un terminale."
+"git.failure.no_author_text":
+  en: "Git doesn't know who you are. Set user.name and user.email with git config."
+  es: "Git no sabe quién eres. Configura user.name y user.email con git config."
+  gl: "Git non sabe quen es. Configura user.name e user.email con git config."
+  it: "Git non sa chi sei. Imposta user.name e user.email con git config."
+"git.failure.nothing_text":
+  en: "There is nothing staged to commit."
+  es: "No hay nada preparado para el commit."
+  gl: "Non hai nada preparado para o commit."
+  it: "Non c'è nulla di preparato per il commit."
+"git.failure.conflicts_text":
+  en: "Some files have conflicts. Resolve them in an external tool, then commit."
+  es: "Algunos archivos tienen conflictos. Resuélvelos con una herramienta externa y luego haz commit."
+  gl: "Algúns ficheiros teñen conflitos. Resólveos cunha ferramenta externa e despois fai commit."
+  it: "Alcuni file hanno conflitti. Risolvili con uno strumento esterno, poi esegui il commit."
+"git.failure.network_text":
+  en: "The remote could not be reached. Check the connection and try again."
+  es: "No se pudo conectar con el remoto. Comprueba la conexión y vuelve a intentarlo."
+  gl: "Non se puido conectar co remoto. Comproba a conexión e volve intentalo."
+  it: "Impossibile raggiungere il remoto. Controlla la connessione e riprova."
+"git.failure.hook_text":
+  en: "A git hook stopped the operation. Its output says why."
+  es: "Un hook de git detuvo la operación. Su salida explica el motivo."
+  gl: "Un hook de git detivo a operación. A súa saída explica o motivo."
+  it: "Un hook di git ha fermato l'operazione. Il suo output spiega il motivo."
+"git.failure.other_text":
+  en: "Git reported an error. Its output says why."
+  es: "Git informó de un error. Su salida explica el motivo."
+  gl: "Git informou dun erro. A súa saída explica o motivo."
+  it: "Git ha segnalato un errore. Il suo output spiega il motivo."
+"git.failure.show_output":
+  en: "Show git output"
+  es: "Ver la salida de git"
+  gl: "Ver a saída de git"
+  it: "Mostra l'output di git"
+"git.failure.pull_and_push":
+  en: "Pull and push"
+  es: "Pull y push"
+  gl: "Pull e push"
+  it: "Pull e push"
+"git.failure.output_title":
+  en: "Git output"
+  es: "Salida de git"
+  gl: "Saída de git"
+  it: "Output di git"
+"git.time.just_now":
+  en: "just now"
+  es: "ahora mismo"
+  gl: "agora mesmo"
+  it: "proprio ora"
+"git.time.minutes_ago":
+  en: "%{count} min ago"
+  es: "hace %{count} min"
+  gl: "hai %{count} min"
+  it: "%{count} min fa"
+"git.time.hours_ago":
+  en: "%{count} h ago"
+  es: "hace %{count} h"
+  gl: "hai %{count} h"
+  it: "%{count} h fa"
+"git.branches.recent":
+  en: "Recent"
+  es: "Recientes"
+  gl: "Recentes"
+  it: "Recenti"
+"git.branches.local":
+  en: "Local"
+  es: "Locales"
+  gl: "Locais"
+  it: "Locali"
+"git.branches.remote":
+  en: "Remote"
+  es: "Remotas"
+  gl: "Remotas"
+  it: "Remoti"
+"git.diff.parent":
+  en: "Parent"
+  es: "Padre"
+  gl: "Pai"
+  it: "Genitore"
+"git.diff.commit":
+  en: "Commit"
+  es: "Commit"
+  gl: "Commit"
+  it: "Commit"
+"git.sync.checking_out":
+  en: "Checking out…"
+  es: "Cambiando de rama…"
+  gl: "Cambiando de rama…"
+  it: "Cambio di branch…"
+"git.sync.branching":
+  en: "Updating branches…"
+  es: "Actualizando ramas…"
+  gl: "Actualizando ramas…"
+  it: "Aggiornamento dei branch…"
+"git.failure.checkout":
+  en: "Checkout failed"
+  es: "No se pudo cambiar de rama"
+  gl: "Non se puido cambiar de rama"
+  it: "Impossibile cambiare branch"
+"git.failure.branch":
+  en: "Branch operation failed"
+  es: "La operación con la rama falló"
+  gl: "A operación coa rama fallou"
+  it: "L'operazione sul branch non è riuscita"
+"git.failure.not_merged_text":
+  en: "The branch has commits that are not merged anywhere else."
+  es: "La rama tiene commits que no están fusionados en ninguna otra."
+  gl: "A rama ten commits que non están fusionados en ningunha outra."
+  it: "Il branch ha commit che non sono stati uniti altrove."
+"git.failure.local_changes_text":
+  en: "Your uncommitted changes would be overwritten. Commit them or stash and check out."
+  es: "Se sobrescribirían tus cambios sin commit. Haz commit o guárdalos con stash y cambia de rama."
+  gl: "Sobrescribiríanse os teus cambios sen commit. Fai commit ou gárdaos con stash e cambia de rama."
+  it: "Le modifiche senza commit verrebbero sovrascritte. Esegui il commit o salvale con stash e cambia branch."
+"git.checkout.title":
+  en: "Check out %{name}?"
+  es: "¿Cambiar a %{name}?"
+  gl: "Cambiar a %{name}?"
+  it: "Passare a %{name}?"
+"git.checkout.text.one":
+  en: "You have %{count} uncommitted change on %{branch}."
+  es: "Tienes %{count} cambio sin commit en %{branch}."
+  gl: "Tes %{count} cambio sen commit en %{branch}."
+  it: "Hai %{count} modifica senza commit su %{branch}."
+"git.checkout.text.other":
+  en: "You have %{count} uncommitted changes on %{branch}."
+  es: "Tienes %{count} cambios sin commit en %{branch}."
+  gl: "Tes %{count} cambios sen commit en %{branch}."
+  it: "Hai %{count} modifiche senza commit su %{branch}."
+"git.checkout.stash":
+  en: "Stash and check out"
+  es: "Guardar con stash y cambiar"
+  gl: "Gardar con stash e cambiar"
+  it: "Salva con stash e cambia"
+"git.checkout.stash_text":
+  en: "Restored when you come back to %{branch}."
+  es: "Se restauran al volver a %{branch}."
+  gl: "Restáuranse ao volver a %{branch}."
+  it: "Ripristinate quando torni su %{branch}."
+"git.checkout.bring":
+  en: "Bring changes"
+  es: "Llevar los cambios"
+  gl: "Levar os cambios"
+  it: "Porta le modifiche"
+"git.checkout.bring_text":
+  en: "Only works if they don't conflict with %{name}."
+  es: "Solo funciona si no chocan con %{name}."
+  gl: "Só funciona se non chocan con %{name}."
+  it: "Funziona solo se non sono in conflitto con %{name}."
+"git.checkout.confirm":
+  en: "Check out"
+  es: "Cambiar"
+  gl: "Cambiar"
+  it: "Cambia"
+"git.checkout.restored":
+  en: "Restored the changes stashed on %{name}."
+  es: "Se restauraron los cambios guardados en %{name}."
+  gl: "Restauráronse os cambios gardados en %{name}."
+  it: "Ripristinate le modifiche salvate su %{name}."
+"git.branch.name_placeholder":
+  en: "Branch name"
+  es: "Nombre de la rama"
+  gl: "Nome da rama"
+  it: "Nome del branch"
+"git.branch.new":
+  en: "New branch"
+  es: "Nueva rama"
+  gl: "Nova rama"
+  it: "Nuovo branch"
+"git.branch.new_from":
+  en: "New branch from %{name}"
+  es: "Nueva rama desde %{name}"
+  gl: "Nova rama desde %{name}"
+  it: "Nuovo branch da %{name}"
+"git.branch.rename":
+  en: "Rename branch"
+  es: "Renombrar rama"
+  gl: "Renomear rama"
+  it: "Rinomina branch"
+"git.branch.delete_title":
+  en: "Delete branch?"
+  es: "¿Borrar la rama?"
+  gl: "Borrar a rama?"
+  it: "Eliminare il branch?"
+"git.branch.delete_text":
+  en: "The branch %{name} will be deleted. Its commits stay where they are merged."
+  es: "Se borrará la rama %{name}. Sus commits siguen donde estén fusionados."
+  gl: "Borrarase a rama %{name}. Os seus commits seguen onde estean fusionados."
+  it: "Il branch %{name} sarà eliminato. I suoi commit restano dove sono stati uniti."
+"git.branch.force_title":
+  en: "Delete an unmerged branch?"
+  es: "¿Borrar una rama sin fusionar?"
+  gl: "Borrar unha rama sen fusionar?"
+  it: "Eliminare un branch non unito?"
+"git.branch.force_text":
+  en: "%{name} has commits that are not merged anywhere else. Deleting it loses them."
+  es: "%{name} tiene commits que no están fusionados en ninguna otra rama. Si la borras, se pierden."
+  gl: "%{name} ten commits que non están fusionados en ningunha outra rama. Se a borras, pérdense."
+  it: "%{name} ha commit che non sono stati uniti altrove. Eliminandolo si perdono."
+"git.branch.force_confirm":
+  en: "Delete anyway"
+  es: "Borrar de todos modos"
+  gl: "Borrar de todos xeitos"
+  it: "Elimina comunque"
+"git.menu.tooltip":
+  en: "Branches"
+  es: "Ramas"
+  gl: "Ramas"
+  it: "Branch"
+"git.menu.search":
+  en: "Search branches and actions"
+  es: "Buscar ramas y acciones"
+  gl: "Buscar ramas e accións"
+  it: "Cerca branch e azioni"
+"git.menu.empty":
+  en: "No branch or action matches."
+  es: "Ninguna rama ni acción coincide."
+  gl: "Ningunha rama nin acción coincide."
+  it: "Nessun branch o azione corrisponde."
+"git.menu.hint_checkout":
+  en: "Checkout"
+  es: "Cambiar"
+  gl: "Cambiar"
+  it: "Cambia"
+"git.menu.hint_create":
+  en: "Create from current"
+  es: "Crear desde la actual"
+  gl: "Crear desde a actual"
+  it: "Crea dall'attuale"
+"git.menu.checkout":
+  en: "Checkout"
+  es: "Cambiar a esta rama"
+  gl: "Cambiar a esta rama"
+  it: "Passa a questo branch"
+"git.menu.new_from":
+  en: "New branch from '%{name}'…"
+  es: "Nueva rama desde '%{name}'…"
+  gl: "Nova rama desde '%{name}'…"
+  it: "Nuovo branch da '%{name}'…"
+"git.menu.compare":
+  en: "Compare with '%{name}'"
+  es: "Comparar con '%{name}'"
+  gl: "Comparar con '%{name}'"
+  it: "Confronta con '%{name}'"
+"git.menu.show_log":
+  en: "Show log"
+  es: "Ver historial"
+  gl: "Ver historial"
+  it: "Mostra cronologia"
+"git.menu.rename":
+  en: "Rename…"
+  es: "Renombrar…"
+  gl: "Renomear…"
+  it: "Rinomina…"
+"git.menu.create":
+  en: "Create branch %{name}"
+  es: "Crear la rama %{name}"
+  gl: "Crear a rama %{name}"
+  it: "Crea il branch %{name}"
+"git.menu.create_from":
+  en: "From %{name}"
+  es: "Desde %{name}"
+  gl: "Desde %{name}"
+  it: "Da %{name}"
+"git.menu.new_branch":
+  en: "New branch"
+  es: "Nueva rama"
+  gl: "Nova rama"
+  it: "Nuovo branch"
+"git.menu.log":
+  en: "Log"
+  es: "Historial"
+  gl: "Historial"
+  it: "Cronologia"
+"git.palette.init":
+  en: "Git: Initialize repository"
+  es: "Git: Inicializar repositorio"
+  gl: "Git: Inicializar repositorio"
+  it: "Git: Inizializza repository"
+"git.palette.commit":
+  en: "Git: Commit"
+  es: "Git: Commit"
+  gl: "Git: Commit"
+  it: "Git: Commit"
+"git.palette.commit_and_push":
+  en: "Git: Commit and Push"
+  es: "Git: Commit y Push"
+  gl: "Git: Commit e Push"
+  it: "Git: Commit e Push"
+"git.palette.push":
+  en: "Git: Push"
+  es: "Git: Push"
+  gl: "Git: Push"
+  it: "Git: Push"
+"git.palette.pull":
+  en: "Git: Pull"
+  es: "Git: Pull"
+  gl: "Git: Pull"
+  it: "Git: Pull"
+"git.palette.fetch":
+  en: "Git: Fetch"
+  es: "Git: Fetch"
+  gl: "Git: Fetch"
+  it: "Git: Fetch"
+"git.palette.new_branch":
+  en: "Git: New branch"
+  es: "Git: Nueva rama"
+  gl: "Git: Nova rama"
+  it: "Git: Nuovo branch"
+"git.palette.checkout":
+  en: "Git: Checkout branch"
+  es: "Git: Cambiar de rama"
+  gl: "Git: Cambiar de rama"
+  it: "Git: Cambia branch"
+"git.palette.log":
+  en: "Git: Show log"
+  es: "Git: Ver historial"
+  gl: "Git: Ver historial"
+  it: "Git: Mostra cronologia"

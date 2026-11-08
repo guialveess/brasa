@@ -1,0 +1,37 @@
+# What's new tab. Glossary and rules: docs/i18n.md
+_version: 2
+"whats_new.tab":
+  en: "What's new"
+  es: "Novedades"
+  gl: "Novidades"
+  it: "Novità"
+"whats_new.title":
+  en: "What's new in Brasa %{version}"
+  es: "Novedades de Brasa %{version}"
+  gl: "Novidades de Brasa %{version}"
+  it: "Novità di Brasa %{version}"
+"whats_new.subtitle":
+  en: "The release notes of this version. They are in English, like the release on GitHub."
+  es: "Las notas de esta versión. Están en inglés, como la release en GitHub."
+  gl: "As notas desta versión. Están en inglés, como a release en GitHub."
+  it: "Le note di questa versione. Sono in inglese, come la release su GitHub."
+"whats_new.release_page":
+  en: "View on GitHub"
+  es: "Ver en GitHub"
+  gl: "Ver en GitHub"
+  it: "Vedi su GitHub"
+"whats_new.no_notes":
+  en: "This build has no release notes yet."
+  es: "Esta compilación aún no tiene notas de la versión."
+  gl: "Esta compilación aínda non ten notas da versión."
+  it: "Questa build non ha ancora le note di rilascio."
+"whats_new.palette_action":
+  en: "Show what's new"
+  es: "Mostrar novedades"
+  gl: "Amosar as novidades"
+  it: "Mostra le novità"
+"whats_new.show_after_update":
+  en: "Show after an update"
+  es: "Mostrar tras actualizar"
+  gl: "Amosar tras actualizar"
+  it: "Mostra dopo un aggiornamento"

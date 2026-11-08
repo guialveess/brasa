@@ -1,0 +1,157 @@
+# Keyboard shortcuts cheat sheet (F1). Glossary and rules: docs/i18n.md
+_version: 2
+"shortcuts.title":
+  en: "Keyboard shortcuts"
+  es: "Atajos de teclado"
+  gl: "Atallos de teclado"
+  it: "Scorciatoie da tastiera"
+"shortcuts.group.general":
+  en: "General"
+  es: "General"
+  gl: "Xeral"
+  it: "Generale"
+"shortcuts.group.requests":
+  en: "Requests"
+  es: "Peticiones"
+  gl: "Peticións"
+  it: "Richieste"
+"shortcuts.group.sidebar":
+  en: "Sidebar"
+  es: "Barra lateral"
+  gl: "Barra lateral"
+  it: "Barra laterale"
+"shortcuts.group.environments":
+  en: "Environments"
+  es: "Entornos"
+  gl: "Contornos"
+  it: "Ambienti"
+"shortcuts.action.palette":
+  en: "Open the command palette"
+  es: "Abrir la paleta de comandos"
+  gl: "Abrir a paleta de comandos"
+  it: "Apri la tavolozza dei comandi"
+"shortcuts.action.open_folder":
+  en: "Open a folder"
+  es: "Abrir una carpeta"
+  gl: "Abrir un cartafol"
+  it: "Apri una cartella"
+"shortcuts.action.import_openapi":
+  en: "Import an OpenAPI spec"
+  es: "Importar una especificación OpenAPI"
+  gl: "Importar unha especificación OpenAPI"
+  it: "Importa una specifica OpenAPI"
+"shortcuts.action.settings":
+  en: "Open Settings"
+  es: "Abrir ajustes"
+  gl: "Abrir axustes"
+  it: "Apri impostazioni"
+"shortcuts.action.close_tab":
+  en: "Close the tab"
+  es: "Cerrar la pestaña"
+  gl: "Pechar a pestana"
+  it: "Chiudi la scheda"
+"shortcuts.action.next_tab":
+  en: "Next tab"
+  es: "Pestaña siguiente"
+  gl: "Pestana seguinte"
+  it: "Scheda successiva"
+"shortcuts.action.previous_tab":
+  en: "Previous tab"
+  es: "Pestaña anterior"
+  gl: "Pestana anterior"
+  it: "Scheda precedente"
+"shortcuts.action.send":
+  en: "Send the request"
+  es: "Enviar la petición"
+  gl: "Enviar a petición"
+  it: "Invia la richiesta"
+"shortcuts.action.save":
+  en: "Save"
+  es: "Guardar"
+  gl: "Gardar"
+  it: "Salva"
+"shortcuts.action.select_environment":
+  en: "Select environment 1 to 9"
+  es: "Seleccionar el entorno 1 a 9"
+  gl: "Seleccionar o contorno 1 a 9"
+  it: "Seleziona l'ambiente da 1 a 9"
+"shortcuts.action.no_environment":
+  en: "No environment"
+  es: "Sin entorno"
+  gl: "Sen contorno"
+  it: "Nessun ambiente"
+"shortcuts.action.move_environment":
+  en: "Move the environment up or down"
+  es: "Subir o bajar el entorno"
+  gl: "Subir ou baixar o contorno"
+  it: "Sposta l'ambiente su o giù"
+"shortcuts.action.rename":
+  en: "Rename the selected request or folder"
+  es: "Renombrar la petición o carpeta seleccionada"
+  gl: "Renomear a petición ou cartafol seleccionado"
+  it: "Rinomina la richiesta o cartella selezionata"
+"shortcuts.action.delete":
+  en: "Delete the selected request or folder"
+  es: "Eliminar la petición o carpeta seleccionada"
+  gl: "Eliminar a petición ou cartafol seleccionado"
+  it: "Elimina la richiesta o cartella selezionata"
+"shortcuts.action.toggle_collections":
+  en: "Show or hide Collections"
+  es: "Mostrar u ocultar Colecciones"
+  gl: "Amosar ou agochar Coleccións"
+  it: "Mostra o nascondi Raccolte"
+"shortcuts.action.toggle_source_control":
+  en: "Show or hide Source Control"
+  es: "Mostrar u ocultar Control de código fuente"
+  gl: "Amosar ou agochar Control de código fonte"
+  it: "Mostra o nascondi Controllo del codice sorgente"
+"shortcuts.action.toggle_environments":
+  en: "Show or hide Environments"
+  es: "Mostrar u ocultar Entornos"
+  gl: "Amosar ou agochar Contornos"
+  it: "Mostra o nascondi Ambienti"
+"shortcuts.action.toggle_load_tests":
+  en: "Show or hide Load tests"
+  es: "Mostrar u ocultar Pruebas de carga"
+  gl: "Amosar ou agochar Probas de carga"
+  it: "Mostra o nascondi Test di carico"
+"shortcuts.action.pick":
+  en: "Select several requests or folders to move them together"
+  es: "Seleccionar varias peticiones o carpetas para moverlas juntas"
+  gl: "Seleccionar varias peticións ou cartafoles para movelos xuntos"
+  it: "Seleziona più richieste o cartelle per spostarle insieme"
+"shortcuts.key.click":
+  en: "Click"
+  es: "Clic"
+  gl: "Clic"
+  it: "Clic"
+"shortcuts.action.complete_variable":
+  en: "Show suggestions: variables, header names and values"
+  es: "Mostrar sugerencias: variables, nombres y valores de cabeceras"
+  gl: "Amosar suxestións: variables, nomes e valores de cabeceiras"
+  it: "Mostra i suggerimenti: variabili, nomi e valori delle intestazioni"
+"shortcuts.action.undo":
+  en: "Undo the last edit of the request"
+  es: "Deshacer la última edición de la petición"
+  gl: "Desfacer a última edición da petición"
+  it: "Annulla l'ultima modifica della richiesta"
+"shortcuts.action.redo":
+  en: "Redo"
+  es: "Rehacer"
+  gl: "Refacer"
+  it: "Ripeti"
+"shortcuts.action.delete_line":
+  en: "Delete the line in a script editor"
+  es: "Borrar la línea en un editor de scripts"
+  gl: "Borrar a liña nun editor de scripts"
+  it: "Elimina la riga in un editor di script"
+"shortcuts.group.load_tests":
+  en: "Load tests"
+  es: "Pruebas de carga"
+  gl: "Probas de carga"
+  it: "Test di carico"
+"shortcuts.action.copy_load_summary":
+  en: "Copy the results summary as Markdown"
+  es: "Copiar el resumen de resultados como Markdown"
+  gl: "Copiar o resumo de resultados como Markdown"
+  it: "Copia il riepilogo dei risultati come Markdown"

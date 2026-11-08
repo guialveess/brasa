@@ -1,0 +1,137 @@
+# Strings shared by several areas. Glossary and rules: docs/i18n.md
+_version: 2
+"common.unknown":
+  en: "unknown"
+  es: "desconocido"
+  gl: "descoñecido"
+  it: "sconosciuto"
+"common.requests":
+  en: "Requests"
+  es: "Peticiones"
+  gl: "Peticións"
+  it: "Richieste"
+"common.request":
+  en: "Request"
+  es: "Petición"
+  gl: "Petición"
+  it: "Richiesta"
+"common.name":
+  en: "Name"
+  es: "Nombre"
+  gl: "Nome"
+  it: "Nome"
+"common.save":
+  en: "Save"
+  es: "Guardar"
+  gl: "Gardar"
+  it: "Salva"
+"common.saved_toast":
+  en: "Saved"
+  es: "Guardado"
+  gl: "Gardado"
+  it: "Salvato"
+"common.cancel":
+  en: "Cancel"
+  es: "Cancelar"
+  gl: "Cancelar"
+  it: "Annulla"
+"common.ok":
+  en: "OK"
+  es: "Aceptar"
+  gl: "Aceptar"
+  it: "OK"
+"common.copy":
+  en: "Copy"
+  es: "Copiar"
+  gl: "Copiar"
+  it: "Copia"
+"common.code":
+  en: "Code"
+  es: "Código"
+  gl: "Código"
+  it: "Codice"
+"common.value":
+  en: "Value"
+  es: "Valor"
+  gl: "Valor"
+  it: "Valore"
+"common.no_environment":
+  en: "No environment"
+  es: "Sin entorno"
+  gl: "Sen contorno"
+  it: "Nessun ambiente"
+"common.sending":
+  en: "Sending..."
+  es: "Enviando..."
+  gl: "Enviando..."
+  it: "Invio in corso..."
+"common.body":
+  en: "Body"
+  es: "Cuerpo"
+  gl: "Corpo"
+  it: "Corpo"
+"common.headers":
+  en: "Headers"
+  es: "Cabeceras"
+  gl: "Cabeceiras"
+  it: "Intestazioni"
+"common.search":
+  en: "Search"
+  es: "Buscar"
+  gl: "Buscar"
+  it: "Cerca"
+"common.define":
+  en: "Define"
+  es: "Definir"
+  gl: "Definir"
+  it: "Definisci"
+"common.open_folder":
+  en: "Open folder..."
+  es: "Abrir carpeta..."
+  gl: "Abrir cartafol..."
+  it: "Apri cartella..."
+"common.new_request":
+  en: "New request"
+  es: "Nueva petición"
+  gl: "Nova petición"
+  it: "Nuova richiesta"
+"common.create":
+  en: "Create"
+  es: "Crear"
+  gl: "Crear"
+  it: "Crea"
+"common.new_folder":
+  en: "New folder"
+  es: "Nueva carpeta"
+  gl: "Novo cartafol"
+  it: "Nuova cartella"
+"common.dismiss":
+  en: "Dismiss"
+  es: "Descartar"
+  gl: "Descartar"
+  it: "Ignora"
+"common.rename":
+  en: "Rename"
+  es: "Renombrar"
+  gl: "Renomear"
+  it: "Rinomina"
+"common.delete":
+  en: "Delete"
+  es: "Eliminar"
+  gl: "Eliminar"
+  it: "Elimina"
+"common.new_workspace":
+  en: "New workspace..."
+  es: "Nuevo espacio de trabajo..."
+  gl: "Novo espazo de traballo..."
+  it: "Nuovo spazio di lavoro..."
+"common.close":
+  en: "Close"
+  es: "Cerrar"
+  gl: "Pechar"
+  it: "Chiudi"
+"common.export":
+  en: "Export"
+  es: "Exportar"
+  gl: "Exportar"
+  it: "Esporta"

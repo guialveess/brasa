@@ -1,0 +1,227 @@
+# Response panel. Glossary and rules: docs/i18n.md
+_version: 2
+"response.placeholder.not_sent":
+  en: "Send the request to see the response"
+  es: "Envía la petición para ver la respuesta"
+  gl: "Envía a petición para ver a resposta"
+  it: "Invia la richiesta per vedere la risposta"
+"response.status.not_sent":
+  en: "Not sent"
+  es: "No enviada"
+  gl: "Non enviada"
+  it: "Non inviata"
+"response.tab.tests":
+  en: "Tests"
+  es: "Pruebas"
+  gl: "Probas"
+  it: "Test"
+"response.tab.console":
+  en: "Console"
+  es: "Consola"
+  gl: "Consola"
+  it: "Console"
+"response.body.empty":
+  en: "No response body."
+  es: "La respuesta no tiene cuerpo."
+  gl: "A resposta non ten corpo."
+  it: "La risposta non ha corpo."
+"response.body.formatting":
+  en: "Formatting a large response..."
+  es: "Formateando una respuesta grande..."
+  gl: "Formatando unha resposta grande..."
+  it: "Formattazione di una risposta grande..."
+"response.body.too_many_lines":
+  en: "This response is %{size}, too large to display in full without slowing the app down. View the first %{cap} lines instead."
+  es: "Esta respuesta es de %{size}, demasiado grande para mostrarla entera sin ralentizar la aplicación. Mira las primeras %{cap} líneas en su lugar."
+  gl: "Esta resposta é de %{size}, demasiado grande para amosala enteira sen ralentizar a aplicación. Mira as primeiras %{cap} liñas no seu lugar."
+  it: "Questa risposta è di %{size}, troppo grande per mostrarla per intero senza rallentare l'app. Visualizza le prime %{cap} righe invece."
+"response.body.preview_line_truncated":
+  en: " ... (line cut short)"
+  es: " ... (línea recortada)"
+  gl: " ... (liña recortada)"
+  it: " ... (riga troncata)"
+"response.body.view_preview":
+  en: "View a preview"
+  es: "Ver una vista previa"
+  gl: "Ver unha vista previa"
+  it: "Visualizza un'anteprima"
+"response.body.preview_truncated":
+  en: "... %{shown} of %{total} lines shown. Copy to get the rest."
+  es: "... %{shown} de %{total} líneas mostradas. Copia para obtener el resto."
+  gl: "... %{shown} de %{total} liñas amosadas. Copia para obter o resto."
+  it: "... %{shown} di %{total} righe mostrate. Copia per ottenere il resto."
+"response.body.pretty":
+  en: "Pretty"
+  es: "Formateado"
+  gl: "Formatado"
+  it: "Formattato"
+"response.body.raw":
+  en: "Raw"
+  es: "Sin procesar"
+  gl: "Sen procesar"
+  it: "Grezzo"
+"response.body.not_utf8.one":
+  en: "<%{count} byte, not valid UTF-8>"
+  es: "<%{count} byte, no es UTF-8 válido>"
+  gl: "<%{count} byte, non é UTF-8 válido>"
+  it: "<%{count} byte, UTF-8 non valido>"
+"response.body.not_utf8.other":
+  en: "<%{count} bytes, not valid UTF-8>"
+  es: "<%{count} bytes, no es UTF-8 válido>"
+  gl: "<%{count} bytes, non é UTF-8 válido>"
+  it: "<%{count} byte, UTF-8 non valido>"
+"response.headers.no_response":
+  en: "No response headers."
+  es: "No hay cabeceras de respuesta."
+  gl: "Non hai cabeceiras de resposta."
+  it: "Nessuna intestazione di risposta."
+"response.headers.empty":
+  en: "No headers."
+  es: "Sin cabeceras."
+  gl: "Sen cabeceiras."
+  it: "Nessuna intestazione."
+"response.headers.name":
+  en: "Name"
+  es: "Nombre"
+  gl: "Nome"
+  it: "Nome"
+"response.headers.copy_all":
+  en: "Copy all headers"
+  es: "Copiar todas las cabeceras"
+  gl: "Copiar todas as cabeceiras"
+  it: "Copia tutte le intestazioni"
+"response.tests.empty":
+  en: "No tests ran."
+  es: "No se ejecutó ninguna prueba."
+  gl: "Non se executou ningunha proba."
+  it: "Nessun test eseguito."
+"response.tests.passed.one":
+  en: "%{passed} of %{total} test passed"
+  es: "%{passed} de %{total} prueba superada"
+  gl: "%{passed} de %{total} proba superada"
+  it: "%{passed} test su %{total} superato"
+"response.tests.passed.other":
+  en: "%{passed} of %{total} tests passed"
+  es: "%{passed} de %{total} pruebas superadas"
+  gl: "%{passed} de %{total} probas superadas"
+  it: "%{passed} test su %{total} superati"
+"response.tests.failed.one":
+  en: "%{failed} of %{total} test failed"
+  es: "%{failed} de %{total} prueba fallida"
+  gl: "%{failed} de %{total} proba fallida"
+  it: "%{failed} test su %{total} fallito"
+"response.tests.failed.other":
+  en: "%{failed} of %{total} tests failed"
+  es: "%{failed} de %{total} pruebas fallidas"
+  gl: "%{failed} de %{total} probas fallidas"
+  it: "%{failed} test su %{total} falliti"
+"response.console.empty":
+  en: "No console output."
+  es: "Sin salida de consola."
+  gl: "Sen saída da consola."
+  it: "Nessun output della console."
+"response.console.no_match":
+  en: "Nothing matches the filter."
+  es: "Nada coincide con el filtro."
+  gl: "Nada coincide co filtro."
+  it: "Nessun elemento corrisponde al filtro."
+"response.console.filter":
+  en: "Filter console"
+  es: "Filtrar consola"
+  gl: "Filtrar consola"
+  it: "Filtra console"
+"response.console.filter_all":
+  en: "All"
+  es: "Todo"
+  gl: "Todo"
+  it: "Tutto"
+"response.console.filter_network":
+  en: "Network"
+  es: "Red"
+  gl: "Rede"
+  it: "Rete"
+"response.console.filter_logs":
+  en: "Logs"
+  es: "Logs"
+  gl: "Logs"
+  it: "Log"
+"response.console.filter_errors":
+  en: "Errors"
+  es: "Errores"
+  gl: "Erros"
+  it: "Errori"
+"response.console.clear":
+  en: "Clear"
+  es: "Limpiar"
+  gl: "Limpar"
+  it: "Pulisci"
+"response.console.tree":
+  en: "Tree"
+  es: "Árbol"
+  gl: "Árbore"
+  it: "Albero"
+"response.console.expand_all":
+  en: "Expand all"
+  es: "Expandir todo"
+  gl: "Expandir todo"
+  it: "Espandi tutto"
+"response.console.collapse":
+  en: "Collapse"
+  es: "Contraer"
+  gl: "Contraer"
+  it: "Comprimi"
+"response.console.copy_value":
+  en: "Copy value"
+  es: "Copiar valor"
+  gl: "Copiar valor"
+  it: "Copia valore"
+"response.console.copy_key":
+  en: "Copy key"
+  es: "Copiar clave"
+  gl: "Copiar chave"
+  it: "Copia chiave"
+"response.console.copy_path":
+  en: "Copy path"
+  es: "Copiar ruta"
+  gl: "Copiar ruta"
+  it: "Copia percorso"
+"response.console.raw_request":
+  en: "REQUEST"
+  es: "PETICIÓN"
+  gl: "PETICIÓN"
+  it: "RICHIESTA"
+"response.console.raw_response":
+  en: "RESPONSE"
+  es: "RESPUESTA"
+  gl: "RESPOSTA"
+  it: "RISPOSTA"
+"response.warning.unknown_variable":
+  en: "Unknown variable"
+  es: "Variable desconocida"
+  gl: "Variable descoñecida"
+  it: "Variabile sconosciuta"
+"response.warning.unknown_variables":
+  en: "Unknown variables"
+  es: "Variables desconocidas"
+  gl: "Variables descoñecidas"
+  it: "Variabili sconosciute"
+"response.stage.pre_failed":
+  en: "Pre-request script failed: %{error}"
+  es: "Falló el script previo: %{error}"
+  gl: "Fallou o script previo: %{error}"
+  it: "Script pre non riuscito: %{error}"
+"response.stage.send_failed":
+  en: "Sending failed: %{error}"
+  es: "Falló el envío: %{error}"
+  gl: "Fallou o envío: %{error}"
+  it: "Invio non riuscito: %{error}"
+"response.stage.body_too_large":
+  en: "The response is larger than the limit of %{limit}. You can raise the limit in Settings, Requests, Responses."
+  es: "La respuesta supera el límite de %{limit}. Puedes subir el límite en Ajustes, Peticiones, Respuestas."
+  gl: "A resposta supera o límite de %{limit}. Podes subir o límite en Axustes, Peticións, Respostas."
+  it: "La risposta supera il limite di %{limit}. Puoi alzare il limite in Impostazioni, Richieste, Risposte."
+"response.stage.post_failed":
+  en: "Post-response script failed: %{error}"
+  es: "Falló el script posterior: %{error}"
+  gl: "Fallou o script posterior: %{error}"
+  it: "Script post non riuscito: %{error}"

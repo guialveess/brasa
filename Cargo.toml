@@ -1,0 +1,87 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+default-members = ["crates/*"]
+
+[workspace.package]
+edition = "2024"
+version = "0.10.0-dev"
+publish = false
+license = "Apache-2.0"
+authors = ["Estanislao Pérez Nartallo <tanisperez@gmail.com>"]
+
+[workspace.dependencies]
+gpui-kit = "0.8.0"
+# The design system and standard components shared with Vano and Nastro. Same gpui-kit pin.
+telaio-ui = { git = "https://github.com/tanisperez/telaio", tag = "v0.15.0" }
+telaio-update = { git = "https://github.com/tanisperez/telaio", tag = "v0.15.0" }
+# The application shell: logging, command line pieces, language, numbers, paths, window bootstrap.
+telaio-app = { git = "https://github.com/tanisperez/telaio", tag = "v0.15.0" }
+# The git client shared with ted, it drives the `git` executable.
+telaio-git = { git = "https://github.com/tanisperez/telaio", tag = "v0.15.0" }
+rquickjs = "0.14"
+ureq = "3.4"
+serde = "1"
+serde_json = "1"
+# OpenAPI and Swagger specs written in YAML (brasa-format), the maintained fork of serde_yaml.
+serde_norway = "0.9"
+thiserror = "2"
+anyhow = "1"
+lsp-types = "0.97"
+uuid = { version = "1.26", features = ["v4"] }
+base64 = "0.23"
+fastrand = "2"
+pretty_assertions = "1.4"
+tempfile = "3"
+# gzip for the saved sample logs of load test runs, with the default pure Rust backend.
+flate2 = "1.1"
+zip = { version = "9", default-features = false, features = ["deflate"] }
+tiny_http = "0.12"
+dirs = "7"
+dunce = "1"
+toml = "0.8"
+log = "0.4"
+# Already built by gpui-component (translations); same version.
+rust-i18n = "4.2"
+# The PDF load test report (brasa-load). Only the text shaping feature, no raster images.
+krilla = { version = "0.8.2", default-features = false, features = ["simple-text"] }
+# Glyph advances, to measure text for the PDF layout. Already built by krilla, same version.
+skrifa = "0.42"
+# Local time for the load test reports and the dashboard header. Already built by gpui.
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+# The Source Control panel's file watcher (milestone 0.5.0). Both already built by gpui-component
+# and gpui, same versions.
+notify = "8.2"
+async-channel = "2.5"
+
+# Vendored locally so the shared metrics (radii, row heights, paddings) and palette plumbing can
+# be restyled for Brasa without upstream access. ../telaio, checked out at v0.15.0.
+[patch."https://github.com/tanisperez/telaio"]
+telaio-ui = { path = "../telaio/crates/telaio-ui" }
+telaio-app = { path = "../telaio/crates/telaio-app" }
+telaio-git = { path = "../telaio/crates/telaio-git" }
+telaio-update = { path = "../telaio/crates/telaio-update" }
+
+[workspace.lints.clippy]
+all = "warn"
+unwrap_used = "warn"
+expect_used = "warn"
+
+[workspace.lints.rust]
+# The one unsafe call Brasa needs, the Windows `AttachConsole` of `brasa --help` (#136), lives
+# in `telaio_app::cli`.
+unsafe_code = "forbid"
+
+# Measured on 2026-09-30 (#34): fat LTO gives an 8% smaller binary and slightly lower RSS than
+# thin, with no measurable runtime difference, for about 25% more release build time. Panics stay
+# as unwind: with abort, a panic in a load test worker thread would close the whole app.
+[profile.release]
+lto = "fat"
+codegen-units = 1
+strip = true
+
+# gpui and the other dependencies are far too slow unoptimized: a plain debug build blocked the UI
+# thread for most of a load test while scrolling (37 s of 45). Optimizing only the dependencies
+# keeps that under control while the workspace's own crates stay quick to rebuild and debug.
+[profile.dev.package."*"]
+opt-level = 2

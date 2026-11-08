@@ -1,0 +1,5 @@
+GET https://example.com
+
+::: docs
+\::: this looks like a section but is not
+\\::: this is a literal backslash followed by a marker-looking prefix

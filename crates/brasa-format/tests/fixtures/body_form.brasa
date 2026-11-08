@@ -1,0 +1,7 @@
+POST {{baseUrl}}/login
+Content-Type: application/x-www-form-urlencoded
+
+::: body form
+username = tanis
+password = {{pwd}}
+# remember = true

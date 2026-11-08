@@ -1,0 +1,28 @@
+[package]
+name = "brasa-load"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+brasa-core = { path = "../brasa-core" }
+brasa-runner = { path = "../brasa-runner" }
+brasa-http = { path = "../brasa-http" }
+flate2 = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+krilla = { workspace = true }
+skrifa = { workspace = true }
+
+[dev-dependencies]
+pretty_assertions = { workspace = true }
+tempfile = { workspace = true }
+brasa-script = { path = "../brasa-script" }
+# Enables the test server helper for this crate's own tests, without shipping it in release builds.
+brasa-http = { path = "../brasa-http", features = ["test-support"] }
+
+[lints]
+workspace = true

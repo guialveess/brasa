@@ -1,0 +1,107 @@
+# In-app updater (macOS and Windows builds from GitHub, the Windows portable zip and the Linux notices). Glossary and rules: docs/i18n.md
+_version: 2
+"update.setting.title":
+  en: "Updates"
+  es: "Actualizaciones"
+  gl: "Actualizacións"
+  it: "Aggiornamenti"
+"update.setting.check":
+  en: "Check for updates automatically"
+  es: "Buscar actualizaciones automáticamente"
+  gl: "Buscar actualizacións automaticamente"
+  it: "Cerca aggiornamenti automaticamente"
+"update.setting.check_description":
+  en: "Once, a few seconds after launch. Never polls in the background."
+  es: "Una vez, unos segundos tras arrancar. Nunca consulta en segundo plano."
+  gl: "Unha vez, uns segundos tras arrancar. Nunca consulta en segundo plano."
+  it: "Una volta, pochi secondi dopo l'avvio. Non controlla mai in background."
+"update.status.ready":
+  en: "Update %{version} ready, restart"
+  es: "Actualización %{version} lista, reiniciar"
+  gl: "Actualización %{version} lista, reiniciar"
+  it: "Aggiornamento %{version} pronto, riavvia"
+"update.status.available":
+  en: "Update %{version} available, download"
+  es: "Actualización %{version} disponible, descargar"
+  gl: "Actualización %{version} dispoñible, descargar"
+  it: "Aggiornamento %{version} disponibile, scarica"
+"update.status.available_script":
+  en: "Update %{version} available, copy the update command"
+  es: "Actualización %{version} disponible, copiar el comando para actualizar"
+  gl: "Actualización %{version} dispoñible, copiar o comando para actualizar"
+  it: "Aggiornamento %{version} disponibile, copia il comando di aggiornamento"
+"update.status.notes":
+  en: "Release notes"
+  es: "Notas de la versión"
+  gl: "Notas da versión"
+  it: "Note di rilascio"
+"update.checking":
+  en: "Checking for updates..."
+  es: "Buscando actualizaciones..."
+  gl: "Buscando actualizacións..."
+  it: "Ricerca di aggiornamenti..."
+"update.up_to_date":
+  en: "Brasa is up to date (%{version})"
+  es: "Brasa está actualizado (%{version})"
+  gl: "Brasa está actualizado (%{version})"
+  it: "Brasa è aggiornato (%{version})"
+"update.already_ready":
+  en: "Update %{version} is ready, restart to install it"
+  es: "La actualización %{version} está lista, reinicia para instalarla"
+  gl: "A actualización %{version} está lista, reinicia para instalala"
+  it: "L'aggiornamento %{version} è pronto, riavvia per installarlo"
+"update.found":
+  en: "Update %{version} downloaded, restart to install it"
+  es: "Actualización %{version} descargada, reinicia para instalarla"
+  gl: "Actualización %{version} descargada, reinicia para instalala"
+  it: "Aggiornamento %{version} scaricato, riavvia per installarlo"
+"update.available_manual":
+  en: "Update %{version} is available, download the new portable zip from the release page"
+  es: "La actualización %{version} está disponible, descarga el nuevo zip portable desde la página de la versión"
+  gl: "A actualización %{version} está dispoñible, descarga o novo zip portable desde a páxina da versión"
+  it: "L'aggiornamento %{version} è disponibile, scarica il nuovo zip portatile dalla pagina della release"
+"update.available_linux":
+  en: "Update %{version} is available, download it from the release page"
+  es: "La actualización %{version} está disponible, descárgala desde la página de la versión"
+  gl: "A actualización %{version} está dispoñible, descárgaa desde a páxina da versión"
+  it: "L'aggiornamento %{version} è disponibile, scaricalo dalla pagina della release"
+"update.available_script":
+  en: "Update %{version} is available, run the install command again to update"
+  es: "La actualización %{version} está disponible, vuelve a ejecutar el comando de instalación para actualizar"
+  gl: "A actualización %{version} está dispoñible, volve executar o comando de instalación para actualizar"
+  it: "L'aggiornamento %{version} è disponibile, esegui di nuovo il comando di installazione per aggiornare"
+"update.command_copied":
+  en: "Command copied. Close Brasa and run it in a terminal to update: %{command}"
+  es: "Comando copiado. Cierra Brasa y ejecútalo en una terminal para actualizar: %{command}"
+  gl: "Comando copiado. Pecha Brasa e execútao nun terminal para actualizar: %{command}"
+  it: "Comando copiato. Chiudi Brasa ed eseguilo in un terminale per aggiornare: %{command}"
+"update.check_failed":
+  en: "Could not check for updates: %{error}"
+  es: "No se pudo buscar actualizaciones: %{error}"
+  gl: "Non se puido buscar actualizacións: %{error}"
+  it: "Impossibile cercare aggiornamenti: %{error}"
+"update.install_failed":
+  en: "Could not install the update: %{error}"
+  es: "No se pudo instalar la actualización: %{error}"
+  gl: "Non se puido instalar a actualización: %{error}"
+  it: "Impossibile installare l'aggiornamento: %{error}"
+"update.fallback":
+  en: "Could not update in place, download the new version from GitHub"
+  es: "No se pudo actualizar en el sitio, descarga la nueva versión desde GitHub"
+  gl: "Non se puido actualizar no sitio, descarga a nova versión desde GitHub"
+  it: "Impossibile aggiornare sul posto, scarica la nuova versione da GitHub"
+"update.confirm.title":
+  en: "Restart to update?"
+  es: "¿Reiniciar para actualizar?"
+  gl: "Reiniciar para actualizar?"
+  it: "Riavviare per aggiornare?"
+"update.confirm.text":
+  en: "There are unsaved changes that will be lost when Brasa restarts."
+  es: "Hay cambios sin guardar que se perderán al reiniciar Brasa."
+  gl: "Hai cambios sen gardar que se perderán ao reiniciar Brasa."
+  it: "Ci sono modifiche non salvate che andranno perse al riavvio di Brasa."
+"update.confirm.restart":
+  en: "Restart"
+  es: "Reiniciar"
+  gl: "Reiniciar"
+  it: "Riavvia"

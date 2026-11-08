@@ -1,0 +1,262 @@
+# Git log tab (#174, design 4a). Glossary and rules: docs/i18n.md
+_version: 2
+"git_log.tab":
+  en: "Git log"
+  es: "Git log"
+  gl: "Git log"
+  it: "Git log"
+"git_log.filter_branches":
+  en: "Filter branches"
+  es: "Filtrar ramas"
+  gl: "Filtrar ramas"
+  it: "Filtra branch"
+"git_log.all_branches":
+  en: "All branches"
+  es: "Todas las ramas"
+  gl: "Todas as ramas"
+  it: "Tutti i branch"
+"git_log.section.local":
+  en: "Local"
+  es: "Locales"
+  gl: "Locais"
+  it: "Locali"
+"git_log.section.remote":
+  en: "Remote"
+  es: "Remotas"
+  gl: "Remotas"
+  it: "Remoti"
+"git_log.section.tags":
+  en: "Tags"
+  es: "Etiquetas"
+  gl: "Etiquetas"
+  it: "Tag"
+"git_log.branch_hint":
+  en: "Double-click a branch to check it out."
+  es: "Doble clic en una rama para hacer checkout."
+  gl: "Dobre clic nunha rama para facer checkout."
+  it: "Doppio clic su un branch per eseguire il checkout."
+"git_log.no_branches":
+  en: "No branches match."
+  es: "Ninguna rama coincide."
+  gl: "Ningunha rama coincide."
+  it: "Nessun branch corrisponde."
+"git_log.menu.checkout":
+  en: "Checkout"
+  es: "Hacer checkout"
+  gl: "Facer checkout"
+  it: "Esegui il checkout"
+"git_log.menu.new_branch_from":
+  en: "New branch from…"
+  es: "Nueva rama desde…"
+  gl: "Nova rama desde…"
+  it: "Nuovo branch da…"
+"git_log.menu.new_branch_here":
+  en: "New branch from here…"
+  es: "Nueva rama desde aquí…"
+  gl: "Nova rama desde aquí…"
+  it: "Nuovo branch da qui…"
+"git_log.menu.show_log":
+  en: "Show log"
+  es: "Mostrar historial"
+  gl: "Mostrar historial"
+  it: "Mostra la cronologia"
+"git_log.menu.checkout_revision":
+  en: "Checkout revision"
+  es: "Hacer checkout de la revisión"
+  gl: "Facer checkout da revisión"
+  it: "Esegui il checkout della revisione"
+"git_log.menu.copy_id":
+  en: "Copy commit id"
+  es: "Copiar el id del commit"
+  gl: "Copiar o id do commit"
+  it: "Copia l'id del commit"
+"git_log.search":
+  en: "Message or hash"
+  es: "Mensaje o hash"
+  gl: "Mensaxe ou hash"
+  it: "Messaggio o hash"
+"git_log.filter.branch":
+  en: "Branch"
+  es: "Rama"
+  gl: "Rama"
+  it: "Branch"
+"git_log.filter.author":
+  en: "Author"
+  es: "Autor"
+  gl: "Autor"
+  it: "Autore"
+"git_log.filter.path":
+  en: "Path"
+  es: "Ruta"
+  gl: "Ruta"
+  it: "Percorso"
+"git_log.filter.path_placeholder":
+  en: "Any file or folder"
+  es: "Cualquier archivo o carpeta"
+  gl: "Calquera ficheiro ou cartafol"
+  it: "Qualsiasi file o cartella"
+"git_log.filter.any":
+  en: "Any"
+  es: "Cualquiera"
+  gl: "Calquera"
+  it: "Qualsiasi"
+"git_log.filter.all":
+  en: "All"
+  es: "Todas"
+  gl: "Todas"
+  it: "Tutti"
+"git_log.filter.clear_branch":
+  en: "Show all branches"
+  es: "Mostrar todas las ramas"
+  gl: "Mostrar todas as ramas"
+  it: "Mostra tutti i branch"
+"git_log.refresh":
+  en: "Refresh"
+  es: "Actualizar"
+  gl: "Actualizar"
+  it: "Aggiorna"
+"git_log.col.subject":
+  en: "Subject"
+  es: "Asunto"
+  gl: "Asunto"
+  it: "Oggetto"
+"git_log.col.author":
+  en: "Author"
+  es: "Autor"
+  gl: "Autor"
+  it: "Autore"
+"git_log.col.date":
+  en: "Date"
+  es: "Fecha"
+  gl: "Data"
+  it: "Data"
+"git_log.col.commit":
+  en: "Commit"
+  es: "Commit"
+  gl: "Commit"
+  it: "Commit"
+"git_log.loading":
+  en: "Reading the log…"
+  es: "Leyendo el historial…"
+  gl: "Lendo o historial…"
+  it: "Lettura della cronologia…"
+"git_log.loading_more":
+  en: "Loading more commits…"
+  es: "Cargando más commits…"
+  gl: "Cargando máis commits…"
+  it: "Caricamento di altri commit…"
+"git_log.empty.no_repo":
+  en: "No Git repository"
+  es: "Sin repositorio Git"
+  gl: "Sen repositorio Git"
+  it: "Nessun repository Git"
+"git_log.empty.no_repo_text":
+  en: "Open a workspace inside a Git repository to see its history."
+  es: "Abre un espacio de trabajo dentro de un repositorio Git para ver su historial."
+  gl: "Abre un espazo de traballo dentro dun repositorio Git para ver o seu historial."
+  it: "Apri uno spazio di lavoro dentro un repository Git per vederne la cronologia."
+"git_log.empty.no_commits":
+  en: "No commits yet"
+  es: "Aún no hay commits"
+  gl: "Aínda non hai commits"
+  it: "Ancora nessun commit"
+"git_log.empty.no_commits_text":
+  en: "Make the first commit and the history shows here."
+  es: "Haz el primer commit y el historial aparecerá aquí."
+  gl: "Fai o primeiro commit e o historial aparecerá aquí."
+  it: "Esegui il primo commit e la cronologia apparirà qui."
+"git_log.empty.no_match":
+  en: "No commits match"
+  es: "Ningún commit coincide"
+  gl: "Ningún commit coincide"
+  it: "Nessun commit corrisponde"
+"git_log.empty.no_match_text":
+  en: "Change or clear the filters."
+  es: "Cambia o borra los filtros."
+  gl: "Cambia ou borra os filtros."
+  it: "Cambia o rimuovi i filtri."
+"git_log.empty.failed":
+  en: "Could not read the log"
+  es: "No se pudo leer el historial"
+  gl: "Non se puido ler o historial"
+  it: "Impossibile leggere la cronologia"
+"git_log.detail.author":
+  en: "Author"
+  es: "Autor"
+  gl: "Autor"
+  it: "Autore"
+"git_log.detail.date":
+  en: "Date"
+  es: "Fecha"
+  gl: "Data"
+  it: "Data"
+"git_log.detail.commit":
+  en: "Commit"
+  es: "Commit"
+  gl: "Commit"
+  it: "Commit"
+"git_log.detail.parent.one":
+  en: "Parent"
+  es: "Padre"
+  gl: "Pai"
+  it: "Genitore"
+"git_log.detail.parent.other":
+  en: "Parents"
+  es: "Padres"
+  gl: "Pais"
+  it: "Genitori"
+"git_log.detail.copy":
+  en: "Copy the full commit id"
+  es: "Copiar el id completo del commit"
+  gl: "Copiar o id completo do commit"
+  it: "Copia l'id completo del commit"
+"git_log.detail.new_branch":
+  en: "New branch…"
+  es: "Nueva rama…"
+  gl: "Nova rama…"
+  it: "Nuovo branch…"
+"git_log.detail.checkout_revision":
+  en: "Checkout revision"
+  es: "Hacer checkout de la revisión"
+  gl: "Facer checkout da revisión"
+  it: "Checkout della revisione"
+"git_log.detail.files.one":
+  en: "Changed file · %{count}"
+  es: "Archivo modificado · %{count}"
+  gl: "Ficheiro modificado · %{count}"
+  it: "File modificato · %{count}"
+"git_log.detail.files.other":
+  en: "Changed files · %{count}"
+  es: "Archivos modificados · %{count}"
+  gl: "Ficheiros modificados · %{count}"
+  it: "File modificati · %{count}"
+"git_log.detail.files_hint":
+  en: "Click a file to open its diff for this commit."
+  es: "Haz clic en un archivo para abrir su diff en este commit."
+  gl: "Fai clic nun ficheiro para abrir o seu diff neste commit."
+  it: "Fai clic su un file per aprire il suo diff in questo commit."
+"git_log.detail.no_files":
+  en: "This commit changed no files."
+  es: "Este commit no cambió ningún archivo."
+  gl: "Este commit non cambiou ningún ficheiro."
+  it: "Questo commit non ha modificato alcun file."
+"git_log.detail.loading":
+  en: "Reading the commit…"
+  es: "Leyendo el commit…"
+  gl: "Lendo o commit…"
+  it: "Lettura del commit…"
+"git_log.detail.failed":
+  en: "Could not read the commit"
+  es: "No se pudo leer el commit"
+  gl: "Non se puido ler o commit"
+  it: "Impossibile leggere il commit"
+"git_log.detail.binary":
+  en: "binary"
+  es: "binario"
+  gl: "binario"
+  it: "binario"
+"git_log.detail.select":
+  en: "Select a commit to see its details."
+  es: "Selecciona un commit para ver sus detalles."
+  gl: "Selecciona un commit para ver os seus detalles."
+  it: "Seleziona un commit per vederne i dettagli."

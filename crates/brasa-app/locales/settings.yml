@@ -1,0 +1,507 @@
+# Settings modal. Glossary and rules: docs/i18n.md
+_version: 2
+"settings.title":
+  en: "Settings"
+  es: "Ajustes"
+  gl: "Axustes"
+  it: "Impostazioni"
+"settings.saved_to":
+  en: "Saved to"
+  es: "Guardado en"
+  gl: "Gardado en"
+  it: "Salvato in"
+"settings.category.appearance":
+  en: "Appearance"
+  es: "Apariencia"
+  gl: "Aparencia"
+  it: "Aspetto"
+"settings.category.advanced":
+  en: "Advanced"
+  es: "Avanzado"
+  gl: "Avanzado"
+  it: "Avanzate"
+"settings.footer.applied":
+  en: "Changes apply immediately."
+  es: "Los cambios se aplican al instante."
+  gl: "Os cambios aplícanse ao instante."
+  it: "Le modifiche vengono applicate subito."
+"settings.footer.reset":
+  en: "Reset to defaults"
+  es: "Restablecer valores predeterminados"
+  gl: "Restablecer os valores predeterminados"
+  it: "Ripristina i valori predefiniti"
+"settings.language.title":
+  en: "Language"
+  es: "Idioma"
+  gl: "Idioma"
+  it: "Lingua"
+"settings.language.label":
+  en: "Display language"
+  es: "Idioma de la interfaz"
+  gl: "Idioma da interface"
+  it: "Lingua dell'interfaccia"
+"settings.language.description":
+  en: "Automatic follows your system language."
+  es: "Automático sigue el idioma del sistema."
+  gl: "Automático segue o idioma do sistema."
+  it: "Automatica segue la lingua del sistema."
+"settings.language.auto":
+  en: "Automatic (%{language})"
+  es: "Automático (%{language})"
+  gl: "Automático (%{language})"
+  it: "Automatica (%{language})"
+"settings.theme.title":
+  en: "Theme"
+  es: "Tema"
+  gl: "Tema"
+  it: "Tema"
+"settings.theme.description":
+  en: "System follows your OS light/dark setting and switches live."
+  es: "Sistema sigue el modo claro/oscuro del sistema operativo y cambia al instante."
+  gl: "Sistema segue o modo claro/escuro do sistema operativo e cambia ao instante."
+  it: "Sistema segue l'impostazione chiaro/scuro del sistema operativo e cambia subito."
+"settings.interface.title":
+  en: "Interface"
+  es: "Interfaz"
+  gl: "Interface"
+  it: "Interfaccia"
+"settings.interface.font_description":
+  en: "Geist is bundled, so every platform looks the same."
+  es: "Geist está incluida, así que todas las plataformas se ven igual."
+  gl: "Geist está incluída, así que todas as plataformas se ven igual."
+  it: "Geist è incluso, quindi tutte le piattaforme appaiono uguali."
+"settings.font":
+  en: "Font"
+  es: "Fuente"
+  gl: "Tipo de letra"
+  it: "Carattere"
+"settings.font_size":
+  en: "Font size"
+  es: "Tamaño de fuente"
+  gl: "Tamaño da letra"
+  it: "Dimensione carattere"
+"settings.font_bundled":
+  en: "%{name} (bundled)"
+  es: "%{name} (incluida)"
+  gl: "%{name} (incluída)"
+  it: "%{name} (incluso)"
+"settings.editor.title":
+  en: "Editor"
+  es: "Editor"
+  gl: "Editor"
+  it: "Editor"
+"settings.editor.mono_font":
+  en: "Monospace font"
+  es: "Fuente monoespaciada"
+  gl: "Tipo de letra monoespazada"
+  it: "Carattere a spaziatura fissa"
+"settings.editor.indent":
+  en: "JSON indentation"
+  es: "Sangría de JSON"
+  gl: "Sangría de JSON"
+  it: "Rientro JSON"
+"settings.editor.indent_description":
+  en: "When formatting JSON: the Format button of a request body and the Pretty view of a response."
+  es: "Al formatear JSON: el botón Formatear del cuerpo de una petición y la vista Formateado de una respuesta."
+  gl: "Ao formatar JSON: o botón Formatar do corpo dunha petición e a vista Formatado dunha resposta."
+  it: "Quando si formatta il JSON: il pulsante Formatta del corpo di una richiesta e la vista Formattato di una risposta."
+"settings.editor.indent_spaces":
+  en: "%{count} spaces"
+  es: "%{count} espacios"
+  gl: "%{count} espazos"
+  it: "%{count} spazi"
+"settings.tls.title":
+  en: "TLS"
+  es: "TLS"
+  gl: "TLS"
+  it: "TLS"
+"settings.tls.system_certificates":
+  en: "Use system certificates"
+  es: "Usar los certificados del sistema"
+  gl: "Usar os certificados do sistema"
+  it: "Usa i certificati di sistema"
+"settings.tls.system_certificates_description":
+  en: "Verify with the operating system's certificate store, which has the CAs your company installs. Off: only the Mozilla roots bundled with Brasa."
+  es: "Verifica con el almacén de certificados del sistema operativo, que tiene las CA que instala tu empresa. Desactivado: solo las raíces de Mozilla incluidas en Brasa."
+  gl: "Verifica co almacén de certificados do sistema operativo, que ten as CA que instala a túa empresa. Desactivado: só as raíces de Mozilla incluídas en Brasa."
+  it: "Verifica con l'archivio dei certificati del sistema operativo, che contiene le CA installate dalla tua azienda. Disattivato: solo le radici di Mozilla incluse in Brasa."
+"settings.tls.invalid_certificates":
+  en: "Invalid certificates"
+  es: "Certificados no válidos"
+  gl: "Certificados non válidos"
+  it: "Certificati non validi"
+"settings.tls.invalid_certificates_description":
+  en: "Self-signed, expired or mismatched server certificates."
+  es: "Certificados del servidor autofirmados, caducados o que no coinciden."
+  gl: "Certificados do servidor autoasinados, caducados ou que non coinciden."
+  it: "Certificati del server autofirmati, scaduti o non corrispondenti."
+"settings.tls.warn":
+  en: "Send with warning"
+  es: "Enviar con aviso"
+  gl: "Enviar con aviso"
+  it: "Invia con avviso"
+"settings.tls.reject":
+  en: "Reject"
+  es: "Rechazar"
+  gl: "Rexeitar"
+  it: "Rifiuta"
+"settings.tls.accept":
+  en: "Don't verify"
+  es: "No verificar"
+  gl: "Non verificar"
+  it: "Non verificare"
+"settings.response.title":
+  en: "Responses"
+  es: "Respuestas"
+  gl: "Respostas"
+  it: "Risposte"
+"settings.response.max_size":
+  en: "Maximum size"
+  es: "Tamaño máximo"
+  gl: "Tamaño máximo"
+  it: "Dimensione massima"
+"settings.response.max_size_description":
+  en: "A bigger response fails with an error. A big response uses about 30 times its size in memory."
+  es: "Una respuesta mayor falla con un error. Una respuesta grande usa en memoria unas 30 veces su tamaño."
+  gl: "Unha resposta maior falla cun erro. Unha resposta grande usa en memoria unhas 30 veces o seu tamaño."
+  it: "Una risposta più grande fallisce con un errore. Una risposta grande usa in memoria circa 30 volte la sua dimensione."
+"settings.logging.title":
+  en: "Logging"
+  es: "Registro"
+  gl: "Rexistro"
+  it: "Log"
+"settings.logging.level":
+  en: "Log level"
+  es: "Nivel de registro"
+  gl: "Nivel de rexistro"
+  it: "Livello di log"
+"settings.logging.level_description":
+  en: "Debug and Trace add detail to diagnose problems."
+  es: "Debug y Trace añaden detalle para diagnosticar problemas."
+  gl: "Debug e Trace engaden detalle para diagnosticar problemas."
+  it: "Debug e Trace aggiungono dettagli per diagnosticare i problemi."
+"settings.logging.file":
+  en: "Log file"
+  es: "Archivo de registro"
+  gl: "Ficheiro de rexistro"
+  it: "File di log"
+"settings.logging.open_folder":
+  en: "Open folder"
+  es: "Abrir carpeta"
+  gl: "Abrir cartafol"
+  it: "Apri cartella"
+"settings.logging.rotation":
+  en: "Rotated every %{size} MB, keeping the last %{files} files. The %{variable} environment variable overrides the level at startup."
+  es: "Se rota cada %{size} MB y se conservan los últimos %{files} archivos. La variable de entorno %{variable} sustituye el nivel al iniciar."
+  gl: "Rótase cada %{size} MB e consérvanse os últimos %{files} ficheiros. A variable de contorno %{variable} substitúe o nivel ao iniciar."
+  it: "Ruotato ogni %{size} MB, conservando gli ultimi %{files} file. La variabile d'ambiente %{variable} sostituisce il livello all'avvio."
+"settings.category.about":
+  en: "About"
+  es: "Acerca de"
+  gl: "Acerca de"
+  it: "Informazioni"
+"settings.about.ready.title":
+  en: "Brasa %{version} is ready to install"
+  es: "Brasa %{version} está listo para instalar"
+  gl: "Brasa %{version} está listo para instalar"
+  it: "Brasa %{version} è pronto per l'installazione"
+"settings.about.ready.text":
+  en: "Downloaded and verified. Restarting keeps your open tabs; unsaved changes ask first."
+  es: "Descargado y verificado. Reiniciar conserva tus pestañas abiertas; los cambios sin guardar se preguntan antes."
+  gl: "Descargado e verificado. Reiniciar conserva as túas lapelas abertas; os cambios sen gardar pregúntanse antes."
+  it: "Scaricato e verificato. Il riavvio mantiene le schede aperte; per le modifiche non salvate viene chiesta conferma."
+"settings.about.ready.restart":
+  en: "Restart to update"
+  es: "Reiniciar para actualizar"
+  gl: "Reiniciar para actualizar"
+  it: "Riavvia per aggiornare"
+"settings.about.available.title":
+  en: "Brasa %{version} is available"
+  es: "Brasa %{version} está disponible"
+  gl: "Brasa %{version} está dispoñible"
+  it: "Brasa %{version} è disponibile"
+"settings.about.available.text":
+  en: "This portable copy doesn't update itself. Download the new zip, close Brasa and replace brasa.exe."
+  es: "Esta copia portable no se actualiza sola. Descarga el nuevo zip, cierra Brasa y reemplaza brasa.exe."
+  gl: "Esta copia portable non se actualiza soa. Descarga o novo zip, pecha Brasa e substitúe brasa.exe."
+  it: "Questa copia portatile non si aggiorna da sola. Scarica il nuovo zip, chiudi Brasa e sostituisci brasa.exe."
+"settings.about.available.text_linux":
+  en: "This copy doesn't update itself. Download the new version from the release page and replace this one."
+  es: "Esta copia no se actualiza sola. Descarga la nueva versión desde la página de la versión y reemplaza esta."
+  gl: "Esta copia non se actualiza soa. Descarga a nova versión desde a páxina da versión e substitúe esta."
+  it: "Questa copia non si aggiorna da sola. Scarica la nuova versione dalla pagina della release e sostituisci questa."
+"settings.about.available.text_script":
+  en: "Installed with the install script. To update, close Brasa and run the install command again in a terminal."
+  es: "Instalado con el script de instalación. Para actualizar, cierra Brasa y vuelve a ejecutar el comando de instalación en una terminal."
+  gl: "Instalado co script de instalación. Para actualizar, pecha Brasa e volve executar o comando de instalación nun terminal."
+  it: "Installato con lo script di installazione. Per aggiornare, chiudi Brasa ed esegui di nuovo il comando di installazione in un terminale."
+"settings.about.available.copy":
+  en: "Copy command"
+  es: "Copiar comando"
+  gl: "Copiar comando"
+  it: "Copia comando"
+"settings.about.available.download":
+  en: "Download"
+  es: "Descargar"
+  gl: "Descargar"
+  it: "Scarica"
+"settings.about.status.failed":
+  en: "The last check failed. The log has the details."
+  es: "La última comprobación falló. El registro tiene los detalles."
+  gl: "A última comprobación fallou. O rexistro ten os detalles."
+  it: "L'ultimo controllo non è riuscito. I dettagli sono nel log."
+"settings.about.check_now":
+  en: "Check now"
+  es: "Comprobar ahora"
+  gl: "Comprobar agora"
+  it: "Controlla ora"
+"settings.about.downloads_to":
+  en: "Downloads to"
+  es: "Se descarga en"
+  gl: "Descárgase en"
+  it: "Scarica in"
+"settings.about.managed.title":
+  en: "Updates come from your package manager"
+  es: "Las actualizaciones vienen de tu gestor de paquetes"
+  gl: "As actualizacións veñen do teu xestor de paquetes"
+  it: "Gli aggiornamenti arrivano dal tuo gestore di pacchetti"
+"settings.about.managed.text":
+  en: "Brasa doesn't update itself on Linux. Install it from the apt or dnf repositories and your usual upgrade command will bring new versions. If you use the tarball, download new versions from the releases page."
+  es: "Brasa no se actualiza solo en Linux. Instálalo desde los repositorios apt o dnf y tu comando de actualización habitual traerá las nuevas versiones. Si usas el tarball, descarga las nuevas versiones desde la página de releases."
+  gl: "Brasa non se actualiza só en Linux. Instálao desde os repositorios apt ou dnf e o teu comando de actualización habitual traerá as novas versións. Se usas o tarball, descarga as novas versións desde a páxina de releases."
+  it: "Brasa non si aggiorna da solo su Linux. Installalo dai repository apt o dnf e il tuo solito comando di aggiornamento porterà le nuove versioni. Se usi il tarball, scarica le nuove versioni dalla pagina delle release."
+"settings.about.managed.link":
+  en: "Install instructions"
+  es: "Instrucciones de instalación"
+  gl: "Instrucións de instalación"
+  it: "Istruzioni di installazione"
+"settings.about.unavailable.title":
+  en: "Updates are not available in this build"
+  es: "Las actualizaciones no están disponibles en esta compilación"
+  gl: "As actualizacións non están dispoñibles nesta compilación"
+  it: "Gli aggiornamenti non sono disponibili in questa build"
+"settings.about.unavailable.text":
+  en: "This build of Brasa doesn't update itself. Download new versions from GitHub."
+  es: "Esta compilación de Brasa no se actualiza sola. Descarga las nuevas versiones desde GitHub."
+  gl: "Esta compilación de Brasa non se actualiza soa. Descarga as novas versións desde GitHub."
+  it: "Questa build di Brasa non si aggiorna da sola. Scarica le nuove versioni da GitHub."
+"settings.about.installed_from":
+  en: "Installed from"
+  es: "Instalado desde"
+  gl: "Instalado desde"
+  it: "Installato da"
+"settings.about.footer.updater":
+  en: "Local only. Brasa only contacts GitHub to check for updates."
+  es: "Solo local. Brasa únicamente contacta con GitHub para buscar actualizaciones."
+  gl: "Só local. Brasa unicamente contacta con GitHub para buscar actualizacións."
+  it: "Solo locale. Brasa contatta GitHub solo per cercare aggiornamenti."
+"settings.about.footer.offline":
+  en: "Local only. Brasa never connects to the internet on its own."
+  es: "Solo local. Brasa nunca se conecta a internet por su cuenta."
+  gl: "Só local. Brasa nunca se conecta a internet por si mesmo."
+  it: "Solo locale. Brasa non si connette mai a internet da solo."
+"settings.interface.welcome":
+  en: "Welcome tab at startup"
+  es: "Bienvenida al abrir"
+  gl: "Benvida ao abrir"
+  it: "Benvenuto all'avvio"
+"settings.interface.welcome_description":
+  en: "Next to the last workspace. Without a workspace to open, it always shows."
+  es: "Junto al último espacio de trabajo. Sin espacio de trabajo que abrir, se muestra siempre."
+  gl: "Xunto ao último espazo de traballo. Sen espazo de traballo que abrir, amósase sempre."
+  it: "Accanto all'ultimo spazio di lavoro. Senza uno spazio di lavoro da aprire, appare sempre."
+"settings.about.whats_new_description":
+  en: "The notes of this version, in a tab."
+  es: "Las notas de esta versión, en una pestaña."
+  gl: "As notas desta versión, nunha lapela."
+  it: "Le note di questa versione, in una scheda."
+"settings.interface.whats_new":
+  en: "What's new after an update"
+  es: "Novedades tras actualizar"
+  gl: "Novidades tras actualizar"
+  it: "Novità dopo un aggiornamento"
+"settings.interface.whats_new_description":
+  en: "Opens a tab with the notes of the new version, once."
+  es: "Abre una pestaña con las notas de la nueva versión, una vez."
+  gl: "Abre unha lapela coas notas da nova versión, unha vez."
+  it: "Apre una scheda con le note della nuova versione, una volta."
+"settings.category.git":
+  en: "Git"
+  es: "Git"
+  gl: "Git"
+  it: "Git"
+"settings.git.executable":
+  en: "Git executable"
+  es: "Ejecutable de Git"
+  gl: "Executable de Git"
+  it: "Eseguibile di Git"
+"settings.git.executable_description":
+  en: "Leave it on Auto-detect to use git from PATH, or pick a binary."
+  es: "Déjalo en Detección automática para usar git del PATH, o elige un binario."
+  gl: "Déixao en Detección automática para usar git do PATH, ou escolle un binario."
+  it: "Lascia il rilevamento automatico per usare git dal PATH, oppure scegli un binario."
+"settings.git.auto":
+  en: "Auto-detect"
+  es: "Detección automática"
+  gl: "Detección automática"
+  it: "Rilevamento automatico"
+"settings.git.browse":
+  en: "Browse…"
+  es: "Examinar…"
+  gl: "Examinar…"
+  it: "Sfoglia…"
+"settings.git.detect_again":
+  en: "Detect again"
+  es: "Detectar de nuevo"
+  gl: "Detectar de novo"
+  it: "Rileva di nuovo"
+"settings.git.detecting":
+  en: "Looking for git…"
+  es: "Buscando git…"
+  gl: "Buscando git…"
+  it: "Ricerca di git…"
+"settings.git.found":
+  en: "git version %{version}"
+  es: "git versión %{version}"
+  gl: "git versión %{version}"
+  it: "git versione %{version}"
+"settings.git.found_wsl":
+  en: "git version %{version} (WSL: %{distro})"
+  es: "git versión %{version} (WSL: %{distro})"
+  gl: "git versión %{version} (WSL: %{distro})"
+  it: "git versione %{version} (WSL: %{distro})"
+"settings.git.needs":
+  en: "Brasa needs %{min} or later"
+  es: "Brasa necesita %{min} o posterior"
+  gl: "Brasa precisa %{min} ou posterior"
+  it: "Brasa richiede la %{min} o successiva"
+"settings.git.not_found":
+  en: "Git was not found. Install it or pick the executable."
+  es: "No se encontró Git. Instálalo o elige el ejecutable."
+  gl: "Non se atopou Git. Instálao ou escolle o executable."
+  it: "Git non trovato. Installalo o scegli l'eseguibile."
+"settings.git.xcode_missing":
+  en: "Git needs the Xcode Command Line Tools, which are not installed."
+  es: "Git necesita las Xcode Command Line Tools, que no están instaladas."
+  gl: "Git precisa das Xcode Command Line Tools, que non están instaladas."
+  it: "Git richiede gli Xcode Command Line Tools, che non sono installati."
+"settings.git.too_old":
+  en: "git version %{version} is too old. Brasa needs %{min} or later."
+  es: "git versión %{version} es demasiado antigua. Brasa necesita %{min} o posterior."
+  gl: "git versión %{version} é demasiado antiga. Brasa precisa %{min} ou posterior."
+  it: "git versione %{version} è troppo vecchia. Brasa richiede la %{min} o successiva."
+"settings.git.failed":
+  en: "Could not run git: %{error}"
+  es: "No se pudo ejecutar git: %{error}"
+  gl: "Non se puido executar git: %{error}"
+  it: "Impossibile eseguire git: %{error}"
+"settings.git.install_help":
+  en: "How to install Git"
+  es: "Cómo instalar Git"
+  gl: "Como instalar Git"
+  it: "Come installare Git"
+"settings.git.sync_title":
+  en: "Sync"
+  es: "Sincronización"
+  gl: "Sincronización"
+  it: "Sincronizzazione"
+"settings.git.fetch":
+  en: "Fetch automatically"
+  es: "Obtener automáticamente"
+  gl: "Obter automaticamente"
+  it: "Recupera automaticamente"
+"settings.git.fetch_description":
+  en: "Keeps the ahead and behind counts current when you come back to the window. Never merges."
+  es: "Mantiene al día los contadores de commits por delante y por detrás cuando vuelves a la ventana. Nunca fusiona."
+  gl: "Mantén ao día os contadores de commits por diante e por detrás cando volves á xanela. Nunca fusiona."
+  it: "Mantiene aggiornati i contatori dei commit avanti e indietro quando torni alla finestra. Non esegue mai merge."
+"settings.git.pull_title":
+  en: "Pull"
+  es: "Pull"
+  gl: "Pull"
+  it: "Pull"
+"settings.git.pull_label":
+  en: "Pull strategy"
+  es: "Estrategia de pull"
+  gl: "Estratexia de pull"
+  it: "Strategia di pull"
+"settings.git.pull_description":
+  en: "Follow git config uses pull.rebase and pull.ff, and merges when they are not set."
+  es: "Seguir la configuración de git usa pull.rebase y pull.ff, y fusiona si no están definidos."
+  gl: "Seguir a configuración de git usa pull.rebase e pull.ff, e fusiona se non están definidos."
+  it: "Segui la configurazione di git usa pull.rebase e pull.ff, e fa il merge se non sono impostati."
+"settings.git.pull_follow":
+  en: "Follow git config"
+  es: "Seguir config de git"
+  gl: "Seguir config de git"
+  it: "Segui config di git"
+"settings.git.pull_merge":
+  en: "Merge"
+  es: "Fusionar"
+  gl: "Fusionar"
+  it: "Merge"
+"settings.git.pull_rebase":
+  en: "Rebase"
+  es: "Rebase"
+  gl: "Rebase"
+  it: "Rebase"
+"settings.git.commit_action":
+  en: "Default commit action"
+  es: "Acción de commit predeterminada"
+  gl: "Acción de commit predeterminada"
+  it: "Azione di commit predefinita"
+"settings.git.commit_action_description":
+  en: "What Ctrl+Enter does in the commit message."
+  es: "Lo que hace Ctrl+Enter en el mensaje de commit."
+  gl: "O que fai Ctrl+Enter na mensaxe de commit."
+  it: "Cosa fa Ctrl+Invio nel messaggio di commit."
+"settings.git.action_commit":
+  en: "Commit"
+  es: "Commit"
+  gl: "Commit"
+  it: "Commit"
+"settings.git.action_commit_and_push":
+  en: "Commit and Push"
+  es: "Commit y Push"
+  gl: "Commit e Push"
+  it: "Commit e Push"
+"settings.git.safety_title":
+  en: "Safety"
+  es: "Seguridad"
+  gl: "Seguridade"
+  it: "Sicurezza"
+"settings.git.block_secrets":
+  en: "Block commits with secrets"
+  es: "Bloquear commits con secretos"
+  gl: "Bloquear commits con segredos"
+  it: "Blocca i commit con segreti"
+"settings.git.block_secrets_description":
+  en: "Stops the commit when a .local.env file is included."
+  es: "Detiene el commit cuando se incluye un archivo .local.env."
+  gl: "Detén o commit cando se inclúe un ficheiro .local.env."
+  it: "Ferma il commit quando è incluso un file .local.env."
+"settings.git.confirm_discard":
+  en: "Confirm before discarding changes"
+  es: "Confirmar antes de descartar cambios"
+  gl: "Confirmar antes de descartar cambios"
+  it: "Conferma prima di scartare le modifiche"
+"settings.git.confirm_discard_description":
+  en: "Discarded changes can't be recovered."
+  es: "Los cambios descartados no se pueden recuperar."
+  gl: "Os cambios descartados non se poden recuperar."
+  it: "Le modifiche scartate non possono essere recuperate."
+"settings.git.author":
+  en: "Commit author"
+  es: "Autor del commit"
+  gl: "Autor do commit"
+  it: "Autore del commit"
+"settings.git.author_description":
+  en: "Read from git config. Change it there."
+  es: "Se lee de la configuración de git. Cámbialo ahí."
+  gl: "Léese da configuración de git. Cámbiao aí."
+  it: "Letto dalla configurazione di git. Modificalo lì."
+"settings.git.author_not_configured":
+  en: "Not configured"
+  es: "Sin configurar"
+  gl: "Sen configurar"
+  it: "Non configurato"

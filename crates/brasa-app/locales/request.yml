@@ -1,0 +1,202 @@
+# Request editor, Code snippet dialog, environment picker. Glossary and rules: docs/i18n.md
+_version: 2
+"request.method":
+  en: "Method"
+  es: "Método"
+  gl: "Método"
+  it: "Metodo"
+"request.send":
+  en: "Send"
+  es: "Enviar"
+  gl: "Enviar"
+  it: "Invia"
+"request.script.enabled":
+  en: "Run this script"
+  es: "Ejecutar este script"
+  gl: "Executar este script"
+  it: "Esegui questo script"
+"request.empty.open_request":
+  en: "Open a request from the sidebar"
+  es: "Abre una petición desde la barra lateral"
+  gl: "Abre unha petición desde a barra lateral"
+  it: "Apri una richiesta dalla barra laterale"
+"request.kv.key":
+  en: "Key"
+  es: "Clave"
+  gl: "Chave"
+  it: "Chiave"
+"request.body.none":
+  en: "None"
+  es: "Ninguno"
+  gl: "Ningún"
+  it: "Nessuno"
+"request.body.text":
+  en: "Text"
+  es: "Texto"
+  gl: "Texto"
+  it: "Testo"
+"request.body.form_urlencoded":
+  en: "Form (urlencoded)"
+  es: "Formulario (urlencoded)"
+  gl: "Formulario (urlencoded)"
+  it: "Modulo (urlencoded)"
+"request.body.form":
+  en: "Form"
+  es: "Formulario"
+  gl: "Formulario"
+  it: "Modulo"
+"request.body.multipart_hint":
+  en: "A value that starts with @ sends a file: @logo.png. Relative paths start at the workspace folder. Write @@ for a literal @."
+  es: "Un valor que empieza por @ envía un fichero: @logo.png. Las rutas relativas parten de la carpeta del espacio de trabajo. Escribe @@ para una @ literal."
+  gl: "Un valor que comeza por @ envía un ficheiro: @logo.png. As rutas relativas parten do cartafol do espazo de traballo. Escribe @@ para unha @ literal."
+  it: "Un valore che inizia con @ invia un file: @logo.png. I percorsi relativi partono dalla cartella dello spazio di lavoro. Scrivi @@ per una @ letterale."
+"request.body.format":
+  en: "Format"
+  es: "Formatear"
+  gl: "Formatar"
+  it: "Formatta"
+"request.body.empty":
+  en: "This request has no body."
+  es: "Esta petición no tiene cuerpo."
+  gl: "Esta petición non ten corpo."
+  it: "Questa richiesta non ha un corpo."
+"request.url_bar.custom_method":
+  en: "Custom..."
+  es: "Personalizado..."
+  gl: "Personalizado..."
+  it: "Personalizzato..."
+"request.env.no_workspace":
+  en: "No workspace"
+  es: "Sin espacio de trabajo"
+  gl: "Sen espazo de traballo"
+  it: "Nessuno spazio di lavoro"
+"request.format.today":
+  en: "today"
+  es: "hoy"
+  gl: "hoxe"
+  it: "oggi"
+"request.format.yesterday":
+  en: "yesterday"
+  es: "ayer"
+  gl: "onte"
+  it: "ieri"
+"request.format.days_ago":
+  en: "%{count} days ago"
+  es: "hace %{count} días"
+  gl: "hai %{count} días"
+  it: "%{count} giorni fa"
+"request.variable.origin_environment":
+  en: "Environment: %{name}"
+  es: "Entorno: %{name}"
+  gl: "Contorno: %{name}"
+  it: "Ambiente: %{name}"
+"request.variable.origin_session":
+  en: "Set by a script (this session)"
+  es: "Definida por un script (esta sesión)"
+  gl: "Definida por un script (esta sesión)"
+  it: "Impostata da uno script (questa sessione)"
+"request.variable.script_defined":
+  en: "Set by the pre script, its value is known when the request is sent"
+  es: "Definida por el script previo, su valor se conoce al enviar la petición"
+  gl: "Definida polo script previo, o seu valor coñécese ao enviar a petición"
+  it: "Impostata dallo script pre, il valore si conosce all'invio della richiesta"
+"request.variable.masked":
+  en: "Hidden because it looks like a secret"
+  es: "Oculto porque parece un secreto"
+  gl: "Oculto porque parece un segredo"
+  it: "Nascosto perché sembra un segreto"
+"request.variable.completion_no_environment":
+  en: "No environment selected, its variables are not listed"
+  es: "No hay ningún entorno seleccionado, sus variables no aparecen"
+  gl: "Non hai ningún contorno seleccionado, as súas variables non aparecen"
+  it: "Nessun ambiente selezionato, le sue variabili non sono elencate"
+"request.variable.completion_script":
+  en: "Set by the pre script"
+  es: "Definida por el script previo"
+  gl: "Definida polo script previo"
+  it: "Impostata dallo script pre"
+"request.variable.empty":
+  en: "(empty)"
+  es: "(vacío)"
+  gl: "(baleiro)"
+  it: "(vuoto)"
+"request.auth.none":
+  en: "None"
+  es: "Ninguna"
+  gl: "Ningunha"
+  it: "Nessuna"
+"request.auth.basic":
+  en: "Basic"
+  es: "Básica"
+  gl: "Básica"
+  it: "Basic"
+"request.auth.bearer":
+  en: "Bearer"
+  es: "Bearer"
+  gl: "Bearer"
+  it: "Bearer"
+"request.auth.api_key":
+  en: "API key"
+  es: "Clave de API"
+  gl: "Chave de API"
+  it: "Chiave API"
+"request.auth.empty":
+  en: "This request sends no authorization."
+  es: "Esta petición no envía autenticación."
+  gl: "Esta petición non envía autenticación."
+  it: "Questa richiesta non invia autenticazione."
+"request.auth.username":
+  en: "Username"
+  es: "Usuario"
+  gl: "Usuario"
+  it: "Nome utente"
+"request.auth.password":
+  en: "Password"
+  es: "Contraseña"
+  gl: "Contrasinal"
+  it: "Password"
+"request.auth.token":
+  en: "Token"
+  es: "Token"
+  gl: "Token"
+  it: "Token"
+"request.auth.name":
+  en: "Name"
+  es: "Nombre"
+  gl: "Nome"
+  it: "Nome"
+"request.auth.add_to":
+  en: "Add to"
+  es: "Enviar en"
+  gl: "Enviar en"
+  it: "Invia in"
+"request.auth.in_header":
+  en: "Header"
+  es: "Cabecera"
+  gl: "Cabeceira"
+  it: "Intestazione"
+"request.auth.in_query":
+  en: "Query param"
+  es: "Parámetro de consulta"
+  gl: "Parámetro de consulta"
+  it: "Parametro di query"
+"request.auth.header_wins":
+  en: "The %{name} header of the Headers tab is sent instead."
+  es: "Se envía en su lugar la cabecera %{name} de la pestaña Cabeceras."
+  gl: "Envíase no seu lugar a cabeceira %{name} da lapela Cabeceiras."
+  it: "Viene inviata invece l'intestazione %{name} della scheda Intestazioni."
+"request.auth.param_wins":
+  en: "The %{name} param of the Params tab is sent instead."
+  es: "Se envía en su lugar el parámetro %{name} de la pestaña Parámetros."
+  gl: "Envíase no seu lugar o parámetro %{name} da lapela Parámetros."
+  it: "Viene inviato invece il parametro %{name} della scheda Parametri."
+"request.auth.show_secret":
+  en: "Show"
+  es: "Mostrar"
+  gl: "Mostrar"
+  it: "Mostra"
+"request.auth.hide_secret":
+  en: "Hide"
+  es: "Ocultar"
+  gl: "Ocultar"
+  it: "Nascondi"
