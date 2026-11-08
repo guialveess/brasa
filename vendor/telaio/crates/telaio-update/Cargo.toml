@@ -1,0 +1,28 @@
+[package]
+name = "telaio-update"
+description = "In-app updater shared by Postino, Vano and Nastro (no gpui)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+publish = false
+
+[dependencies]
+# platform-verifier: trust the OS certificate store, see `agent` in src/lib.rs.
+ureq = { workspace = true, features = ["platform-verifier"] }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+semver = { workspace = true }
+sha2 = { workspace = true }
+thiserror = { workspace = true }
+log = { workspace = true }
+dirs = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }
+tiny_http = { workspace = true }
+pretty_assertions = { workspace = true }
+
+[lints]
+workspace = true

@@ -7,6 +7,24 @@ folder, or nowhere else.
 Forked from [Postino](https://github.com/tanisperez/postino) by Estanislao Pérez Nartallo
 (Apache-2.0), rebranded and restyled.
 
+## Install
+
+**macOS** (Apple Silicon):
+
+```
+curl -fsSL https://raw.githubusercontent.com/guialveess/brasa/main/install.sh | sh
+```
+
+**Windows** (x86_64, portable, no installer yet; run in PowerShell, not WSL):
+
+```
+irm https://raw.githubusercontent.com/guialveess/brasa/main/install.ps1 | iex
+```
+
+Both download the latest release from [GitHub Releases](https://github.com/guialveess/brasa/releases)
+for the current platform. The macOS build is ad-hoc signed, not notarized: `install.sh` clears
+the quarantine flag the download carries so the first launch does not need a right-click, Open.
+
 ## Building from source
 
 Install Rust with [`rustup`](https://rustup.rs). The toolchain version is pinned in
@@ -44,5 +62,5 @@ theme builder, fonts).
 
 ## License
 
-Apache License 2.0, inherited from the upstream Brasa project. See [LICENSE](LICENSE) and
+Apache License 2.0, inherited from the upstream Postino project. See [LICENSE](LICENSE) and
 [NOTICE](NOTICE).

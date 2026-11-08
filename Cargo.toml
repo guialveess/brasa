@@ -2,6 +2,8 @@
 resolver = "3"
 members = ["crates/*"]
 default-members = ["crates/*"]
+# vendor/telaio is its own, separate cargo workspace (see its README), not a member of this one.
+exclude = ["vendor/telaio"]
 
 [workspace.package]
 edition = "2024"
@@ -54,13 +56,14 @@ chrono = { version = "0.4", default-features = false, features = ["clock"] }
 notify = "8.2"
 async-channel = "2.5"
 
-# Vendored locally so the shared metrics (radii, row heights, paddings) and palette plumbing can
-# be restyled for Brasa without upstream access. ../telaio, checked out at v0.15.0.
+# Vendored in tree (vendor/telaio, see its README) so the shared metrics (radii, row heights,
+# paddings) and palette plumbing can be restyled for Brasa, and so a plain clone builds on its
+# own, CI included, with no sibling checkout of telaio needed.
 [patch."https://github.com/tanisperez/telaio"]
-telaio-ui = { path = "../telaio/crates/telaio-ui" }
-telaio-app = { path = "../telaio/crates/telaio-app" }
-telaio-git = { path = "../telaio/crates/telaio-git" }
-telaio-update = { path = "../telaio/crates/telaio-update" }
+telaio-ui = { path = "vendor/telaio/crates/telaio-ui" }
+telaio-app = { path = "vendor/telaio/crates/telaio-app" }
+telaio-git = { path = "vendor/telaio/crates/telaio-git" }
+telaio-update = { path = "vendor/telaio/crates/telaio-update" }
 
 [workspace.lints.clippy]
 all = "warn"

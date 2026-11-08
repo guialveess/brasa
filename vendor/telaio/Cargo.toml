@@ -1,0 +1,38 @@
+[workspace]
+resolver = "3"
+members = ["crates/telaio-ui", "crates/telaio-app", "crates/telaio-git", "crates/telaio-update"]
+
+[workspace.package]
+edition = "2024"
+version = "0.15.0"
+license = "Apache-2.0"
+authors = ["Estanislao Pérez Nartallo <tanisperez@gmail.com>"]
+repository = "https://github.com/tanisperez/telaio"
+
+[workspace.dependencies]
+gpui-kit = "0.8.0"
+serde_json = "1"
+rust-i18n = "4.2"
+pretty_assertions = "1.4"
+ureq = "3.4"
+serde = "1"
+thiserror = "2"
+log = "0.4"
+semver = "1"
+sha2 = "0.11"
+dirs = "7"
+tempfile = "3"
+tiny_http = "0.12"
+sys-locale = "0.3"
+icu_decimal = { version = "2.3", features = ["alloc"] }
+icu_locale_core = "2.3"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+dunce = "1"
+
+[workspace.lints.clippy]
+all = "warn"
+unwrap_used = "warn"
+expect_used = "warn"
+
+[workspace.lints.rust]
+unsafe_code = "deny"

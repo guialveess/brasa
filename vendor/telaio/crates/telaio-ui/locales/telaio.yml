@@ -1,0 +1,108 @@
+# Strings of telaio's own components. Each app sets the locale (rust_i18n::set_locale is
+# process wide), so these follow its language. Every key has en, es, gl and it.
+_version: 2
+"telaio.close":
+  en: "Close"
+  es: "Cerrar"
+  gl: "Pechar"
+  it: "Chiudi"
+"telaio.cancel":
+  en: "Cancel"
+  es: "Cancelar"
+  gl: "Cancelar"
+  it: "Annulla"
+"telaio.delete":
+  en: "Delete"
+  es: "Eliminar"
+  gl: "Eliminar"
+  it: "Elimina"
+"telaio.add":
+  en: "Add"
+  es: "Añadir"
+  gl: "Engadir"
+  it: "Aggiungi"
+"telaio.key":
+  en: "Key"
+  es: "Clave"
+  gl: "Chave"
+  it: "Chiave"
+"telaio.value":
+  en: "Value"
+  es: "Valor"
+  gl: "Valor"
+  it: "Valore"
+"telaio.edit_menu.cut":
+  en: "Cut"
+  es: "Cortar"
+  gl: "Cortar"
+  it: "Taglia"
+"telaio.edit_menu.copy":
+  en: "Copy"
+  es: "Copiar"
+  gl: "Copiar"
+  it: "Copia"
+"telaio.edit_menu.paste":
+  en: "Paste"
+  es: "Pegar"
+  gl: "Pegar"
+  it: "Incolla"
+"telaio.edit_menu.select_all":
+  en: "Select all"
+  es: "Seleccionar todo"
+  gl: "Seleccionar todo"
+  it: "Seleziona tutto"
+"telaio.theme.system":
+  en: "System"
+  es: "Sistema"
+  gl: "Sistema"
+  it: "Sistema"
+"telaio.theme.light":
+  en: "Light"
+  es: "Claro"
+  gl: "Claro"
+  it: "Chiaro"
+"telaio.theme.dark":
+  en: "Dark"
+  es: "Oscuro"
+  gl: "Escuro"
+  it: "Scuro"
+"telaio.shortcuts.title":
+  en: "Keyboard shortcuts"
+  es: "Atajos de teclado"
+  gl: "Atallos de teclado"
+  it: "Scorciatoie da tastiera"
+"telaio.shortcuts.open":
+  en: "Show keyboard shortcuts"
+  es: "Mostrar los atajos de teclado"
+  gl: "Amosar os atallos de teclado"
+  it: "Mostra le scorciatoie da tastiera"
+"telaio.shortcuts.tooltip":
+  en: "Keyboard shortcuts (%{keys})"
+  es: "Atajos de teclado (%{keys})"
+  gl: "Atallos de teclado (%{keys})"
+  it: "Scorciatoie da tastiera (%{keys})"
+"telaio.tabs.previous":
+  en: "Scroll tabs left"
+  es: "Desplazar las pestañas a la izquierda"
+  gl: "Desprazar as lapelas á esquerda"
+  it: "Scorri le schede a sinistra"
+"telaio.tabs.next":
+  en: "Scroll tabs right"
+  es: "Desplazar las pestañas a la derecha"
+  gl: "Desprazar as lapelas á dereita"
+  it: "Scorri le schede a destra"
+"telaio.tabs.list":
+  en: "All tabs"
+  es: "Todas las pestañas"
+  gl: "Todas as lapelas"
+  it: "Tutte le schede"
+"telaio.select.search":
+  en: "Search"
+  es: "Buscar"
+  gl: "Buscar"
+  it: "Cerca"
+"telaio.select.no_results":
+  en: "No results"
+  es: "Sin resultados"
+  gl: "Sen resultados"
+  it: "Nessun risultato"

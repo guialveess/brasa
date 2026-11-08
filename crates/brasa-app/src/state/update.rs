@@ -26,7 +26,7 @@ use super::TabsState;
 /// Brasa's updater: releases of `guialveess/brasa`, `BRASA_UPDATE_URL` to test an update
 /// between pre-releases.
 pub const UPDATER: UpdaterConfig = UpdaterConfig {
-    owner: "guilhermealves",
+    owner: "guialveess",
     repo: "brasa",
     app_name: "Brasa",
     url_env: "BRASA_UPDATE_URL",

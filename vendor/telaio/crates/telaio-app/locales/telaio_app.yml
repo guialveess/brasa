@@ -1,0 +1,48 @@
+# Strings of telaio-app's own pieces. Each app sets the locale (rust_i18n::set_locale is
+# process wide), so these follow its language. Every key has en, es, gl and it.
+_version: 2
+"telaio_app.log_level.off":
+  en: "Off"
+  es: "Desactivado"
+  gl: "Desactivado"
+  it: "Disattivato"
+"telaio_app.log_level.error":
+  en: "Error"
+  es: "Error"
+  gl: "Erro"
+  it: "Errore"
+"telaio_app.log_level.warn":
+  en: "Warn"
+  es: "Aviso"
+  gl: "Aviso"
+  it: "Avviso"
+"telaio_app.log_level.info":
+  en: "Info"
+  es: "Info"
+  gl: "Info"
+  it: "Info"
+"telaio_app.log_level.debug":
+  en: "Debug"
+  es: "Debug"
+  gl: "Debug"
+  it: "Debug"
+"telaio_app.log_level.trace":
+  en: "Trace"
+  es: "Trace"
+  gl: "Trace"
+  it: "Trace"
+"telaio_app.about.version":
+  en: "Version"
+  es: "Versión"
+  gl: "Versión"
+  it: "Versione"
+"telaio_app.about.design_system":
+  en: "Design system"
+  es: "Sistema de diseño"
+  gl: "Sistema de deseño"
+  it: "Sistema di design"
+"telaio_app.about.release_notes":
+  en: "Release notes"
+  es: "Notas de la versión"
+  gl: "Notas da versión"
+  it: "Note di rilascio"
