@@ -36,6 +36,39 @@ pub struct RecentWorkspace {
     pub path_label: String,
     /// The path to open on click.
     pub path: PathBuf,
+    /// Its request count and last modified time, read from disk in the background
+    /// ([`load_stats`]) after the card first shows: scanning every recent workspace would make
+    /// opening the tab itself touch the disk, which its own doc comment rules out.
+    pub stats: Option<RecentWorkspaceStats>,
+}
+
+/// What a recent workspace's card shows besides its name and path, read with [`load_stats`].
+#[derive(Debug, Clone, Copy, PartialEq)]
+pub struct RecentWorkspaceStats {
+    /// How many `.brasa` requests it holds, [`crate::state::load_test::count_requests`] of its
+    /// tree.
+    pub request_count: usize,
+    /// The workspace folder's own last modified time, Unix seconds, when the file system reports
+    /// one.
+    pub modified_unix_seconds: Option<i64>,
+}
+
+/// Scans `path` the same way opening it would ([`brasa_workspace::Workspace::open`]) to count its
+/// requests, and reads the folder's own modified time. `None` when `path` no longer exists or
+/// fails to open (the recent list already drops those before this runs, but it can still lose a
+/// race with something deleting the folder). Blocking: call on the background executor.
+pub fn load_stats(path: &Path) -> Option<RecentWorkspaceStats> {
+    let workspace = brasa_workspace::Workspace::open(path).ok()?;
+    let request_count = super::load_test::count_requests(workspace.tree());
+    let modified_unix_seconds = std::fs::metadata(path)
+        .and_then(|metadata| metadata.modified())
+        .ok()
+        .and_then(|modified| modified.duration_since(std::time::UNIX_EPOCH).ok())
+        .map(|elapsed| elapsed.as_secs() as i64);
+    Some(RecentWorkspaceStats {
+        request_count,
+        modified_unix_seconds,
+    })
 }
 
 impl WelcomeTab {
@@ -65,6 +98,7 @@ fn recent_entries(
             ),
             path_label: elide_path(&shorten_path(path, home), PATH_MAX_CHARS),
             path: path.clone(),
+            stats: None,
         })
         .collect()
 }

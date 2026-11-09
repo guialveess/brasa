@@ -216,6 +216,20 @@ impl OpenTab {
         }
     }
 
+    /// This tab's welcome content, mutably, if it is the [`TabKind::Welcome`] tab: used to fill
+    /// in each recent workspace's stats once they load in the background.
+    pub fn welcome_mut(&mut self) -> Option<&mut WelcomeTab> {
+        match &mut self.kind {
+            TabKind::Welcome(welcome) => Some(welcome),
+            TabKind::Request(_)
+            | TabKind::Environment(_)
+            | TabKind::LoadTest(_)
+            | TabKind::Diff(_)
+            | TabKind::Log(_)
+            | TabKind::WhatsNew => None,
+        }
+    }
+
     /// This tab's diff, if it is the [`TabKind::Diff`] tab.
     pub fn diff(&self) -> Option<&DiffTab> {
         match &self.kind {
@@ -1023,6 +1037,7 @@ mod tests {
                 name: "api".to_string(),
                 path_label: "~/api".to_string(),
                 path: std::path::PathBuf::from("/home/ana/api"),
+                stats: None,
             }],
         };
         let second = tabs.open_welcome(refreshed.clone());

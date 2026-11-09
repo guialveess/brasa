@@ -1153,8 +1153,8 @@ impl AppView {
         let folder_id = (!folder.is_empty()).then_some(folder.as_str());
         let mut moved = Vec::new();
         let mut errors = Vec::new();
-        for id in ids {
-            match workspace.move_entry(&id, folder_id) {
+        for (id, result) in workspace.move_entries(&ids, folder_id) {
+            match result {
                 Ok(new_id) => {
                     log::debug!("moved {id} to {new_id}");
                     moved.push((id, new_id));

@@ -44,7 +44,13 @@ pub const STATUS_BAR_BUTTON: f32 = 22.0;
 /// Default sidebar width.
 pub const SIDEBAR_WIDTH: f32 = 260.0;
 /// Minimum sidebar width when resizing.
-pub const SIDEBAR_WIDTH_MIN: f32 = 180.0;
+///
+/// Below about 240 px the Collections header's 5 icon buttons (`sidebar::render_header`) and the
+/// Git panel's own toolbar and file tree (`git::panel`) start overlapping their own label and
+/// truncating file names down to a few characters, not just getting tighter (#241): neither
+/// renders a narrower layout of itself below that point, so the floor is the fix, not a per-panel
+/// one. 240 is the narrowest width both still draw cleanly at.
+pub const SIDEBAR_WIDTH_MIN: f32 = 240.0;
 /// Maximum sidebar width when resizing.
 pub const SIDEBAR_WIDTH_MAX: f32 = 480.0;
 /// Width of the activity rail left of the sidebar.
@@ -95,7 +101,3 @@ pub const WELCOME_TOP_PADDING_NARROW: f32 = 56.0;
 pub const WELCOME_LOGO_SIZE: f32 = 32.0;
 /// Corner radius of the welcome tab's logo square.
 pub const WELCOME_LOGO_RADIUS: f32 = 10.0;
-/// Height of a row of the welcome tab's Start and Recent lists.
-pub const WELCOME_ROW_HEIGHT: f32 = 38.0;
-/// Width of a recent workspace's name in the welcome tab, before its path.
-pub const WELCOME_RECENT_NAME_WIDTH: f32 = 80.0;

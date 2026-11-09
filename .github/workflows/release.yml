@@ -73,7 +73,14 @@ jobs:
         with:
           targets: aarch64-apple-darwin
 
+      # BRASA_UPDATER=github is the compile-time flag that turns on the in-app updater
+      # (telaio_update::updater_enabled, vendored at vendor/telaio): unset, every build (this
+      # workflow included, until now) looks like a dev build and the About screen always shows
+      # "Updates are not available in this build" (#241), even for a copy downloaded from a
+      # release.
       - name: Build
+        env:
+          BRASA_UPDATER: github
         run: cargo build --release --locked --target aarch64-apple-darwin
 
       - name: Package Brasa.app
@@ -105,6 +112,8 @@ jobs:
           targets: x86_64-pc-windows-msvc
 
       - name: Build
+        env:
+          BRASA_UPDATER: github
         run: cargo build --release --locked --target x86_64-pc-windows-msvc
 
       # No installer yet (see the workflow's own doc comment): a portable zip, entries at the top

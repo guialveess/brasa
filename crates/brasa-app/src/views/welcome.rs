@@ -22,12 +22,13 @@ use gpui_kit::*;
 use rust_i18n::t;
 use telaio_ui::components::{MODIFIER_KEY, labelled_checkbox, open_hint};
 
+use crate::state::format::relative_time;
+use crate::state::number::format_integer;
 use crate::state::settings::ThemeChoice;
-use crate::state::welcome::{QUICK_START_URL, RecentWorkspace, WelcomeTab};
+use crate::state::welcome::{QUICK_START_URL, RecentWorkspace, RecentWorkspaceStats, WelcomeTab};
 use crate::theme::metrics::{
     RADIUS_MD, RADIUS_SM, WELCOME_COLUMN_WIDTH, WELCOME_COLUMN_WIDTH_NARROW, WELCOME_LOGO_SIZE,
-    WELCOME_MIN_WIDTH, WELCOME_RECENT_NAME_WIDTH, WELCOME_ROW_HEIGHT, WELCOME_TOP_PADDING,
-    WELCOME_TOP_PADDING_NARROW,
+    WELCOME_MIN_WIDTH, WELCOME_TOP_PADDING, WELCOME_TOP_PADDING_NARROW,
 };
 use crate::theme::{Palette, PaletteExt, BrasaColors};
 
@@ -46,12 +47,52 @@ const ENTRANCE_RISE: f32 = 8.0;
 
 impl AppView {
     /// Opens the welcome tab, or brings it to the front with its recent workspaces read again.
-    /// Also the command palette's "Show welcome" action.
+    /// Also the command palette's "Show welcome" action and the rail's brand button
+    /// ([`super::navigation::render_rail`]).
     pub(crate) fn open_welcome_tab(&mut self, cx: &mut Context<Self>) {
         let welcome = WelcomeTab::load(&self.recent_workspaces, dirs::home_dir().as_deref());
+        let paths: Vec<_> = welcome.recents.iter().map(|recent| recent.path.clone()).collect();
         self.state.tabs.open_welcome(welcome);
         log::debug!("opened the welcome tab");
+        self.load_recent_workspace_stats(paths, cx);
         cx.notify();
+    }
+
+    /// Fills each recent workspace card's request count and modified time, read on the
+    /// background executor ([`crate::state::welcome::load_stats`]) so opening the tab itself
+    /// never touches disk. A no-op once the tab closes or moves on before this finishes.
+    fn load_recent_workspace_stats(&mut self, paths: Vec<std::path::PathBuf>, cx: &mut Context<Self>) {
+        if paths.is_empty() {
+            return;
+        }
+        cx.spawn(async move |this, cx| {
+            let stats = cx
+                .background_spawn(async move {
+                    paths
+                        .iter()
+                        .map(|path| crate::state::welcome::load_stats(path))
+                        .collect::<Vec<_>>()
+                })
+                .await;
+            let _ = this.update(cx, |view, cx| {
+                let Some(index) = view.state.tabs.index_of(crate::state::welcome::TAB_ID) else {
+                    return;
+                };
+                let Some(welcome) = view
+                    .state
+                    .tabs
+                    .get_mut(index)
+                    .and_then(|tab| tab.welcome_mut())
+                else {
+                    return;
+                };
+                for (recent, stats) in welcome.recents.iter_mut().zip(stats) {
+                    recent.stats = stats;
+                }
+                cx.notify();
+            });
+        })
+        .detach();
     }
 
     /// Renders the active welcome tab.
@@ -212,94 +253,72 @@ fn fade_rise(id: impl Into<ElementId>, delay: f32, content: impl IntoElement) ->
         .into_any_element()
 }
 
-/// One spark of [`render_ember_mark`]: its size, position and color, all fractions of the mark's
-/// own `size` so the whole cluster scales cleanly.
-struct Spark {
-    /// Diameter, as a fraction of the mark's size.
-    diameter: f32,
-    /// Left and top, as fractions of the mark's size.
-    left: f32,
-    top: f32,
-}
+/// How many nested rings [`render_ember_mark`] draws, outermost first.
+const RING_COUNT: usize = 4;
+/// Asymmetric inset fractions per ring step, the same ratios the real app icon is built from
+/// (`packaging/icons`'s own generator): more taken from the bottom-left than the top-right each
+/// step, so the stack drifts toward one corner instead of sitting as a flat concentric target.
+const RING_LEFT: f32 = 0.62;
+const RING_RIGHT: f32 = 0.38;
+const RING_TOP: f32 = 0.40;
+const RING_BOTTOM: f32 = 0.60;
+/// How much of the mark's size one inset step takes, and the outer ring's own corner radius, both
+/// fractions of `size`.
+const RING_STEP: f32 = 0.16;
+const RING_OUTER_RADIUS: f32 = 0.32;
 
-/// The cluster of sparks a [`render_ember_mark`] is built from, biggest to smallest, each
-/// overlapping the one before it closely enough that the group reads as one rounded mass, not a
-/// thin trail of shrinking dots. Four, not five: a cluster reads cleanly at this count; a fifth
-/// spark was too small to register as its own shape.
-const SPARKS: [Spark; 4] = [
-    Spark {
-        diameter: 0.62,
-        left: 0.08,
-        top: 0.22,
-    },
-    Spark {
-        diameter: 0.40,
-        left: 0.48,
-        top: 0.0,
-    },
-    Spark {
-        diameter: 0.30,
-        left: 0.50,
-        top: 0.50,
-    },
-    Spark {
-        diameter: 0.17,
-        left: 0.80,
-        top: 0.10,
-    },
-];
-
-/// The brand mark: not Zed's nested squares, and not a literal flame either. A tight cluster of
-/// four overlapping embers, biggest to smallest, in the mark's own
-/// [`crate::theme::BrasaColors::ember_rings`] gradient: a deep, dominant ember anchors the group,
-/// a small hot, pale spark catches the eye at its edge, reading as one rounded mass rather than a
-/// thin trailing line. Plain native shapes, not an SVG: crisp at any size, recolors for free with
-/// the palette, and animates with gpui's own `Animation`/`AnimationExt`, no asset or image
-/// pipeline needed.
+/// The brand mark, matching the real app icon: nested rounded squares, outermost first, in the
+/// mark's own [`crate::theme::BrasaColors::ember_rings`] gradient, drifting toward one corner as
+/// they nest in rather than sitting as a flat concentric target. Plain native shapes, not an SVG:
+/// crisp at any size, recolors for free with the palette, and animates with gpui's own
+/// `Animation`/`AnimationExt`, no asset or image pipeline needed.
 ///
-/// With `animate`, plays a one-shot catch once, when the mark first paints: the dominant ember
-/// appears first, each smaller one popping in and drifting a touch further up a beat later, all
-/// from one shared [`Animation`] (see [`staggered`]). Settles after its span and repaints nothing
-/// again, like the rest of this tab's entrance (`AGENTS.md`, Performance).
+/// With `animate`, plays a one-shot catch once, when the mark first paints: the outer ring appears
+/// first, each smaller one popping in a beat later, all from one shared [`Animation`] (see
+/// [`staggered`]). Settles after its span and repaints nothing again, like the rest of this tab's
+/// entrance (`AGENTS.md`, Performance).
 fn render_ember_mark(palette: &Palette, size: f32, animate: bool) -> AnyElement {
-    /// How small a spark starts, as a fraction of its final size, before it grows into place.
-    const GROW_FROM: f32 = 0.4;
-    /// How far a spark drifts up from its final position as it catches, in px at `size` 32 (it
-    /// scales with the mark).
-    const DRIFT: f32 = 5.0;
+    /// How small a ring starts, as a fraction of its final size, before it grows into place.
+    const GROW_FROM: f32 = 0.55;
 
+    // Skips `ember_rings`' darkest ring, the same way the old spark cluster did: the outer ring
+    // already reads as the ember without it.
     let colors = palette.ember_rings();
     let mut mark = div().relative().flex_none().size(px(size));
-    for (index, spark) in SPARKS.iter().enumerate() {
-        // Skips `ember_rings`' darkest ring: the base spark already reads as the ember without
-        // it, and using all five crowded the trail's gradient into too few visible steps.
+    for index in 0..RING_COUNT {
         let color = colors[index + 1];
-        let diameter = size * spark.diameter;
-        let left = size * spark.left;
-        let top = size * spark.top;
-        let drift = DRIFT * (size / 32.0);
+        let step = size * RING_STEP * index as f32;
+        let left = step * RING_LEFT;
+        let top = step * RING_TOP;
+        let width = size - left - step * RING_RIGHT;
+        let height = size - top - step * RING_BOTTOM;
+        let radius = (size * RING_OUTER_RADIUS - step * 0.5).max(size * 0.08);
         let one = div()
             .absolute()
-            .size(px(diameter))
             .left(px(left))
             .top(px(top))
-            .rounded_full()
+            .w(px(width))
+            .h(px(height))
+            .rounded(px(radius))
             .bg(color);
         let one = if animate {
-            let delay = index as f32 / SPARKS.len() as f32 * 0.5;
+            let delay = index as f32 / RING_COUNT as f32 * 0.5;
             one.with_animation(
-                ("ember-spark", index),
+                ("ember-ring", index),
                 Animation::new(Duration::from_millis(ENTRANCE_MS + 200))
                     .with_easing(staggered(delay)),
                 move |this, delta| {
-                    let grown = diameter * (GROW_FROM + (1.0 - GROW_FROM) * delta);
-                    // Grows from its own center, and settles into place from a touch lower, so
-                    // each spark reads as catching and rising rather than just fading in.
-                    let center_shift = (diameter - grown) / 2.0;
+                    let grown_w = width * (GROW_FROM + (1.0 - GROW_FROM) * delta);
+                    let grown_h = height * (GROW_FROM + (1.0 - GROW_FROM) * delta);
+                    // Grows from its own center, so each ring reads as catching into place
+                    // rather than just fading in.
+                    let shift_x = (width - grown_w) / 2.0;
+                    let shift_y = (height - grown_h) / 2.0;
                     this.opacity(delta)
-                        .size(px(grown))
-                        .left(px(left + center_shift))
-                        .top(px(top + center_shift + drift * (1.0 - delta)))
+                        .w(px(grown_w))
+                        .h(px(grown_h))
+                        .left(px(left + shift_x))
+                        .top(px(top + shift_y))
                 },
             )
             .into_any_element()
@@ -416,7 +435,11 @@ fn separator_dot(palette: &Palette) -> impl IntoElement {
         .child("\u{b7}")
 }
 
-/// The "Recent" list: one row per recent workspace, name and shortened path. A click opens it.
+/// The "Recent" section: a quiet two-column grid of cards, one per recent workspace, instead of
+/// the earlier plain list rows. Each card carries its name, path, request count and last
+/// modified time — nothing a flat row can show without starting to feel like a table. The count
+/// and time show once [`AppView::load_recent_workspace_stats`] fills them in, which is why
+/// [`RecentWorkspace::stats`] starts `None`: this renders instantly, from the paths alone.
 fn render_recents(
     weak: WeakEntity<AppView>,
     recents: &[RecentWorkspace],
@@ -424,53 +447,124 @@ fn render_recents(
     mono_font: &SharedString,
 ) -> impl IntoElement {
     v_flex()
-        .gap(px(6.0))
+        .gap(px(10.0))
         .child(
             div()
                 .px(px(10.0))
-                .pb(px(6.0))
                 .child(SectionLabel::new(t!("welcome.recent"))),
         )
-        .children(recents.iter().enumerate().map(|(index, recent)| {
-            let weak = weak.clone();
-            let path = recent.path.clone();
-            list_row(("welcome-recent", index), palette)
-                .gap(px(12.0))
+        .children(recents.chunks(2).enumerate().map(|(row_index, row)| {
+            h_flex()
+                .gap(px(10.0))
+                .children(row.iter().enumerate().map(|(column_index, recent)| {
+                    render_recent_card(
+                        weak.clone(),
+                        row_index * 2 + column_index,
+                        recent,
+                        palette,
+                        mono_font,
+                    )
+                }))
+        }))
+}
+
+/// One card of [`render_recents`]: an icon, the workspace name and path, and, once loaded, its
+/// request count and last modified time on their own quiet line.
+fn render_recent_card(
+    weak: WeakEntity<AppView>,
+    index: usize,
+    recent: &RecentWorkspace,
+    palette: &Palette,
+    mono_font: &SharedString,
+) -> AnyElement {
+    let path = recent.path.clone();
+    let meta = recent
+        .stats
+        .map(|stats| recent_card_meta(stats))
+        .unwrap_or_default();
+    h_flex()
+        .id(("welcome-recent-card", index))
+        .flex_1()
+        .min_w_0()
+        .items_start()
+        .gap(px(10.0))
+        .p(px(12.0))
+        .rounded(px(RADIUS_MD))
+        .cursor_pointer()
+        .border_1()
+        .border_color(palette.border)
+        .bg(palette.surface)
+        .hover(|style| style.border_color(palette.border_strong).bg(palette.hover))
+        .active(|style| style.bg(palette.pressed))
+        .child(
+            div()
+                .flex_none()
+                .size(px(28.0))
+                .rounded(px(RADIUS_SM))
+                .flex()
+                .items_center()
+                .justify_center()
+                .bg(palette.accent_subtle)
+                .child(
+                    Icon::new(Lucide::FolderTree)
+                        .with_size(px(14.0))
+                        .text_color(palette.accent_text),
+                ),
+        )
+        .child(
+            v_flex()
+                .flex_1()
+                .min_w_0()
+                .gap(px(2.0))
                 .child(
                     div()
-                        .flex_none()
-                        .w(px(WELCOME_RECENT_NAME_WIDTH))
                         .truncate()
                         .text_color(palette.fg)
                         .child(recent.name.clone()),
                 )
                 .child(
                     div()
-                        .flex_1()
-                        .min_w_0()
                         .truncate()
                         .font_family(mono_font.clone())
-                        .text_size(px(12.0))
+                        .text_size(px(11.5))
                         .text_color(palette.fg_subtle)
                         .child(recent.path_label.clone()),
                 )
-                .on_click(move |_, window, cx| {
-                    let _ = weak.update(cx, |view, cx| view.open_workspace_at(&path, window, cx));
-                })
-        }))
+                .child(
+                    div()
+                        .h(px(15.0))
+                        .truncate()
+                        .text_size(px(11.0))
+                        .text_color(palette.fg_subtle)
+                        .child(meta),
+                ),
+        )
+        .on_click(move |_, window, cx| {
+            let _ = weak.update(cx, |view, cx| view.open_workspace_at(&path, window, cx));
+        })
+        .into_any_element()
 }
 
-/// A clickable row of the Recent list, with the hover and pressed backgrounds.
-fn list_row(id: impl Into<ElementId>, palette: &Palette) -> Stateful<Div> {
-    h_flex()
-        .id(id)
-        .h(px(WELCOME_ROW_HEIGHT))
-        .items_center()
-        .px(px(10.0))
-        .rounded(px(RADIUS_MD - 1.0))
-        .cursor_pointer()
-        .hover(|style| style.bg(palette.hover))
-        .active(|style| style.bg(palette.pressed))
+/// The card's third line, once its stats load: `"N requests · modified 3 h ago"` (or "No
+/// requests" for an empty workspace). Empty before they load, so the card's layout does not jump
+/// when they arrive.
+fn recent_card_meta(stats: RecentWorkspaceStats) -> String {
+    let count = if stats.request_count == 1 {
+        t!("welcome.recent_one_request").into_owned()
+    } else {
+        t!(
+            "welcome.recent_request_count",
+            count = format_integer(stats.request_count as u64).as_str()
+        )
+        .into_owned()
+    };
+    match stats.modified_unix_seconds {
+        Some(modified) => {
+            let now = chrono::Utc::now().timestamp();
+            format!("{count} \u{b7} {}", relative_time(modified, now))
+        }
+        None => count,
+    }
 }
 
 /// A compact icon-only theme toggle (System/Light/Dark), instead of three large preview cards:
