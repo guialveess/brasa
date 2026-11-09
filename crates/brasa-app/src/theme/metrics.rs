@@ -56,7 +56,10 @@ pub const SIDEBAR_WIDTH_MAX: f32 = 480.0;
 /// Width of the activity rail left of the sidebar.
 pub const RAIL_WIDTH: f32 = 52.0;
 /// Side length of an activity rail button.
-pub const RAIL_BUTTON_SIZE: f32 = 36.0;
+pub const RAIL_BUTTON_SIZE: f32 = 30.0;
+/// Corner radius of an activity rail button: a soft tile, not the near-full circle a radius
+/// close to half the button's own size reads as.
+pub const RAIL_BUTTON_RADIUS: f32 = 8.0;
 /// Height of a row of the Environments panel.
 pub const ENV_ROW_HEIGHT: f32 = 34.0;
 /// Width of the command palette's search trigger in the title bar.
