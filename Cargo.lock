@@ -665,7 +665,7 @@ dependencies = [
 
 [[package]]
 name = "brasa-app"
-version = "0.10.0"
+version = "0.11.0"
 dependencies = [
  "anyhow",
  "async-channel",
@@ -699,14 +699,14 @@ dependencies = [
 
 [[package]]
 name = "brasa-cli"
-version = "0.10.0"
+version = "0.11.0"
 dependencies = [
  "telaio-app",
 ]
 
 [[package]]
 name = "brasa-core"
-version = "0.10.0"
+version = "0.11.0"
 dependencies = [
  "base64 0.23.1",
  "fastrand",
@@ -717,7 +717,7 @@ dependencies = [
 
 [[package]]
 name = "brasa-format"
-version = "0.10.0"
+version = "0.11.0"
 dependencies = [
  "brasa-core",
  "pretty_assertions",
@@ -730,7 +730,7 @@ dependencies = [
 
 [[package]]
 name = "brasa-http"
-version = "0.10.0"
+version = "0.11.0"
 dependencies = [
  "brasa-core",
  "brasa-http",
@@ -745,7 +745,7 @@ dependencies = [
 
 [[package]]
 name = "brasa-load"
-version = "0.10.0"
+version = "0.11.0"
 dependencies = [
  "brasa-core",
  "brasa-http",
@@ -763,7 +763,7 @@ dependencies = [
 
 [[package]]
 name = "brasa-runner"
-version = "0.10.0"
+version = "0.11.0"
 dependencies = [
  "brasa-core",
  "brasa-format",
@@ -779,7 +779,7 @@ dependencies = [
 
 [[package]]
 name = "brasa-script"
-version = "0.10.0"
+version = "0.11.0"
 dependencies = [
  "brasa-core",
  "pretty_assertions",
@@ -791,7 +791,7 @@ dependencies = [
 
 [[package]]
 name = "brasa-workspace"
-version = "0.10.0"
+version = "0.11.0"
 dependencies = [
  "brasa-core",
  "brasa-format",
