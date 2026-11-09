@@ -15,7 +15,7 @@ Forked from [Postino](https://github.com/tanisperez/postino) by Estanislao Pére
 curl -fsSL https://raw.githubusercontent.com/guialveess/brasa/main/install.sh | sh
 ```
 
-**Windows** (x86_64; run in PowerShell, not WSL):
+**Windows** (x86_64, portable; run in PowerShell, not WSL):
 
 ```
 irm https://raw.githubusercontent.com/guialveess/brasa/main/install.ps1 | iex
