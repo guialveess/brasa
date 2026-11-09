@@ -49,10 +49,8 @@ use super::root::AppView;
 const NAME_COLUMN_WIDTH: f32 = 200.0;
 /// Width of the Stored in column.
 const STORED_COLUMN_WIDTH: f32 = 190.0;
-/// Longest file name, in characters, that fits in a "stored in" chip of that column.
+/// Longest file name, in characters, that fits in a "stored in" chip's tooltip.
 const STORED_CHIP_MAX_CHARS: usize = 22;
-/// Longest file name, in characters, of the chip's menu.
-const STORED_MENU_MAX_CHARS: usize = 64;
 /// Width of the trash column.
 const TRASH_COLUMN_WIDTH: f32 = 30.0;
 /// Height of the toolbar and header controls.
@@ -1098,12 +1096,25 @@ fn render_toolbar(
                     .cleanable(true),
             )),
         )
-        .child(
+        // Filtering by file only means something once there is a second file to tell apart:
+        // for the common case of a single `.env` (or nothing moved to `.local.env` yet), "All /
+        // .env / .local.env" was three ways to show the same one list, and the two raw file
+        // extensions as labels were the most literal source of the ".env/.local.env" confusion
+        // reported in review (#241). It reappears once a row actually moved to the other file
+        // (the chip below) is saved: `base_exists`/`local_exists` update in `mark_saved`, not on
+        // every edit, the same point the row itself stops being able to bounce back unsaved.
+        .children((edit.base_exists && edit.local_exists).then(|| {
             SegmentedControl::new("env-scope")
                 .item(scope_item(all_label, EnvScope::All))
-                .item(scope_item(".env".to_string(), EnvScope::Base))
-                .item(scope_item(".local.env".to_string(), EnvScope::Local)),
-        )
+                .item(scope_item(
+                    t!("environments.layer.shared").into_owned(),
+                    EnvScope::Base,
+                ))
+                .item(scope_item(
+                    t!("environments.layer.local_only").into_owned(),
+                    EnvScope::Local,
+                ))
+        }))
         .child(div().flex_1())
         .child(
             GhostButton::new("env-secrets", secrets_label)
@@ -1308,46 +1319,54 @@ fn file_row(
         .into_owned(),
     });
     let (chip_bg, chip_fg) = chip_colors(Some(row.layer), palette);
-    let (chip_icon, chip_file) = match row.layer {
-        EnvLayer::Base => (
-            IconName::File,
-            env_file_label(&edit.name, ".env", STORED_CHIP_MAX_CHARS),
-        ),
+    // "Shared"/"Local only", not the raw `.env`/`.local.env` file names: the extensions read as
+    // unexplained jargon to someone who has never needed the split (reported as confusing in
+    // review, #241). The actual file is still one hover away, in the chip's own tooltip.
+    let (chip_icon, chip_label) = match row.layer {
+        EnvLayer::Base => (IconName::File, t!("environments.layer.shared").into_owned()),
         EnvLayer::Local => (
             IconName::Lock,
-            env_file_label(&edit.name, ".local.env", STORED_CHIP_MAX_CHARS),
+            t!("environments.layer.local_only").into_owned(),
         ),
+    };
+    let chip_tooltip = match row.layer {
+        EnvLayer::Base => t!(
+            "environments.layer.shared_tooltip",
+            file = env_file_label(&edit.name, ".env", STORED_CHIP_MAX_CHARS).as_str()
+        )
+        .into_owned(),
+        EnvLayer::Local => t!(
+            "environments.layer.local_only_tooltip",
+            file = env_file_label(&edit.name, ".local.env", STORED_CHIP_MAX_CHARS).as_str()
+        )
+        .into_owned(),
     };
     let current = row.layer;
     let picker = chip_button(
         ("env-stored", row_id as usize),
         chip_icon,
-        chip_file,
+        chip_label,
         chip_bg,
         chip_fg,
         palette,
         mono_font,
         cx,
     )
-    .tooltip(t!("environments.stored_in_tooltip"))
+    .tooltip(chip_tooltip)
     .dropdown_menu({
         let weak = weak.clone();
         let tab_id = tab_id.to_string();
-        let name = edit.name.clone();
         move |mut menu, _, _| {
-            for (layer, file) in [
-                (
-                    EnvLayer::Base,
-                    env_file_label(&name, ".env", STORED_MENU_MAX_CHARS),
-                ),
+            for (layer, label) in [
+                (EnvLayer::Base, t!("environments.layer.shared").into_owned()),
                 (
                     EnvLayer::Local,
-                    env_file_label(&name, ".local.env", STORED_MENU_MAX_CHARS),
+                    t!("environments.layer.local_only").into_owned(),
                 ),
             ] {
                 let weak = weak.clone();
                 let tab_id = tab_id.clone();
-                menu = menu.item(PopupMenuItem::new(file).checked(current == layer).on_click(
+                menu = menu.item(PopupMenuItem::new(label).checked(current == layer).on_click(
                     move |_, window, cx| {
                         let tab_id = tab_id.clone();
                         let _ = weak.update(cx, |view, cx| {

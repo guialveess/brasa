@@ -160,6 +160,26 @@ _version: 2
   es: "Guardada en"
   gl: "Gardada en"
   it: "Salvata in"
+"environments.layer.shared":
+  en: "Shared"
+  es: "Compartida"
+  gl: "Compartida"
+  it: "Condivisa"
+"environments.layer.local_only":
+  en: "Local only"
+  es: "Solo local"
+  gl: "Só local"
+  it: "Solo locale"
+"environments.layer.shared_tooltip":
+  en: "Saved in %{file}, meant to be committed"
+  es: "Guardada en %{file}, pensada para subirse al repositorio"
+  gl: "Gardada en %{file}, pensada para subirse ao repositorio"
+  it: "Salvata in %{file}, pensata per essere committata"
+"environments.layer.local_only_tooltip":
+  en: "Saved in %{file}, which never leaves this machine (git-ignored)"
+  es: "Guardada en %{file}, que nunca sale de este equipo (ignorado por git)"
+  gl: "Gardada en %{file}, que nunca sae desta máquina (ignorado por git)"
+  it: "Salvata in %{file}, che non lascia mai questo computer (ignorato da git)"
 "environments.source.session":
   en: "session"
   es: "sesión"
@@ -185,11 +205,6 @@ _version: 2
   es: "Quitar variable"
   gl: "Quitar variable"
   it: "Rimuovi variabile"
-"environments.stored_in_tooltip":
-  en: "Move to the other file"
-  es: "Mover al otro archivo"
-  gl: "Mover ao outro ficheiro"
-  it: "Sposta nell'altro file"
 "environments.empty":
   en: "No variables yet. Use Add variable to create one."
   es: "Aún no hay variables. Usa Añadir variable para crear una."
