@@ -27,8 +27,8 @@ use crate::state::number::format_integer;
 use crate::state::settings::ThemeChoice;
 use crate::state::welcome::{QUICK_START_URL, RecentWorkspace, RecentWorkspaceStats, WelcomeTab};
 use crate::theme::metrics::{
-    RADIUS_MD, RADIUS_SM, WELCOME_COLUMN_WIDTH, WELCOME_COLUMN_WIDTH_NARROW, WELCOME_LOGO_SIZE,
-    WELCOME_MIN_WIDTH, WELCOME_TOP_PADDING, WELCOME_TOP_PADDING_NARROW,
+    RADIUS_MD, RADIUS_SM, RAIL_BUTTON_RADIUS, WELCOME_COLUMN_WIDTH, WELCOME_COLUMN_WIDTH_NARROW,
+    WELCOME_LOGO_SIZE, WELCOME_MIN_WIDTH, WELCOME_TOP_PADDING, WELCOME_TOP_PADDING_NARROW,
 };
 use crate::theme::{Palette, PaletteExt, BrasaColors};
 
@@ -356,8 +356,11 @@ fn render_hero(palette: &Palette) -> impl IntoElement {
         )
 }
 
-/// The one clear move: a full-width primary button. "Open a folder" and the two import paths
-/// are tucked into a single quiet line underneath instead of competing with it for attention.
+/// The one clear move: a compact button, sized to its own label rather than stretched the full
+/// column width. The stretched version read as a generic dashboard CTA (full-width accent pill,
+/// a shape template-generated landing pages default to); a plain button next to its own hero
+/// text reads as a considered choice instead. "Open a folder" and the two import paths are
+/// tucked into a single quiet line underneath it, not competing with it for attention.
 fn render_primary_action(weak: WeakEntity<AppView>, palette: &Palette) -> impl IntoElement {
     let new_weak = weak.clone();
     let open_weak = weak.clone();
@@ -376,18 +379,34 @@ fn render_primary_action(weak: WeakEntity<AppView>, palette: &Palette) -> impl I
             .into_any_element()
     };
 
+    let accent_hover = palette.hover_over(palette.accent);
+    let accent_pressed = palette.pressed_over(palette.accent);
+    let new_workspace_button = div()
+        .id("welcome-new-workspace")
+        .flex_none()
+        .h(px(34.0))
+        .px(px(14.0))
+        .flex()
+        .items_center()
+        .gap(px(6.0))
+        .rounded(px(8.0))
+        .cursor_pointer()
+        .bg(palette.accent)
+        .text_color(palette.accent_fg)
+        .text_size(px(13.0))
+        .font_weight(FontWeight::MEDIUM)
+        .hover(move |style| style.bg(accent_hover))
+        .active(move |style| style.bg(accent_pressed))
+        .child(Icon::new(Lucide::Plus).with_size(px(13.0)))
+        .child(t!("common.new_workspace"))
+        .on_click(move |_, window, cx| {
+            new_workspace::open_new_workspace_dialog(new_weak.clone(), window, cx);
+        });
+
     v_flex()
         .mt(px(28.0))
         .gap(px(12.0))
-        .child(
-            PrimaryButton::new("welcome-new-workspace", t!("common.new_workspace"))
-                .icon(Icon::new(Lucide::Plus))
-                .height(42.0)
-                .full_width()
-                .on_click(move |_, window, cx| {
-                    new_workspace::open_new_workspace_dialog(new_weak.clone(), window, cx);
-                }),
-        )
+        .child(new_workspace_button)
         .child(
             h_flex()
                 .items_center()
@@ -500,13 +519,19 @@ fn render_recent_card(
             div()
                 .flex_none()
                 .size(px(28.0))
-                .rounded(px(RADIUS_SM))
+                // A near-circle (`RADIUS_SM` on a 28 px box) has no corners to absorb an icon's
+                // own slight visual imbalance, and a square icon centered by its bounding box
+                // inside one reads as off-center even when the box math is right (reported
+                // twice in review, on two different glyphs). The rail's own tiles
+                // (`RAIL_BUTTON_RADIUS`) never drew that complaint; same softer, squarer shape
+                // here.
+                .rounded(px(RAIL_BUTTON_RADIUS))
                 .flex()
                 .items_center()
                 .justify_center()
                 .bg(palette.accent_subtle)
                 .child(
-                    Icon::new(Lucide::FolderTree)
+                    Icon::new(Lucide::Folder)
                         .with_size(px(14.0))
                         .text_color(palette.accent_text),
                 ),

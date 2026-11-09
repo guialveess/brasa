@@ -12,7 +12,7 @@ use rust_i18n::t;
 use crate::actions::{ToggleCollections, ToggleEnvironments, ToggleLoadTests, ToggleSourceControl};
 use crate::state::navigation::NavSection;
 use crate::theme::PaletteExt;
-use crate::theme::metrics::{RADIUS_MD, RAIL_BUTTON_SIZE, RAIL_WIDTH};
+use crate::theme::metrics::{RAIL_BUTTON_RADIUS, RAIL_BUTTON_SIZE, RAIL_WIDTH};
 
 use super::root::AppView;
 
@@ -85,7 +85,7 @@ impl AppView {
             .w(px(RAIL_WIDTH))
             .h_full()
             .items_center()
-            .gap(px(10.0))
+            .gap(px(4.0))
             .pt(px(12.0))
             .bg(palette.bg)
             .border_r_1()
@@ -105,19 +105,16 @@ impl AppView {
                             .flex()
                             .items_center()
                             .justify_center()
-                            // Near circular at this size: a floating filled dot for the active
-                            // section instead of a flat tinted square, so it reads as a distinct
-                            // pick rather than a highlighted cell.
-                            .rounded(px(RADIUS_MD))
+                            // A quiet tile, not a glowing filled circle: no shadow, a soft
+                            // corner radius rather than one that reads as a near-full circle at
+                            // this size, the active pick carried by a faint accent tint and the
+                            // icon's own color instead of a loud solid fill.
+                            .rounded(px(RAIL_BUTTON_RADIUS))
                             .cursor_pointer()
                             .when(active, |button| {
                                 button
-                                    .bg(palette.accent)
-                                    .text_color(palette.accent_fg)
-                                    .shadow(vec![
-                                        BoxShadow::new(px(0.0), px(2.0), palette.accent.opacity(0.35))
-                                            .blur_radius(px(8.0)),
-                                    ])
+                                    .bg(palette.accent_subtle)
+                                    .text_color(palette.accent_text)
                             })
                             .when(!active, |button| {
                                 button
@@ -126,7 +123,7 @@ impl AppView {
                                     .active(|style| style.bg(palette.pressed))
                             })
                             .relative()
-                            .child(Icon::new(section_icon(section)).with_size(px(17.0)))
+                            .child(Icon::new(section_icon(section)).with_size(px(16.0)))
                             .when(
                                 section == NavSection::SourceControl && changes > 0,
                                 |button| button.child(change_badge(changes, &palette)),
