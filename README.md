@@ -9,9 +9,17 @@ Forked from [Postino](https://github.com/tanisperez/postino) by Estanislao Pére
 
 ## Screenshots
 
-|                                       Request                                       |                                  Environments                                   |                                  Git                                  |
-| :-----------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: | :----------------------------------------------------------------------: |
-| ![Sending a request and viewing its response](docs/screenshots/request.png) | ![Variables of an environment, shared vs. local only](docs/screenshots/environments.png) | ![Reviewing a diff in the built-in Git panel](docs/screenshots/git.png) |
+Sending a request and viewing its response:
+
+![Sending a request and viewing its response](docs/screenshots/request.png)
+
+Variables of an environment, shared vs. local only:
+
+![Variables of an environment, shared vs. local only](docs/screenshots/environments.png)
+
+Reviewing a diff in the built-in Git panel:
+
+![Reviewing a diff in the built-in Git panel](docs/screenshots/git.png)
 
 ## Install
 
