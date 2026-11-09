@@ -55,6 +55,16 @@ _version: 2
   es: "Recientes"
   gl: "Recentes"
   it: "Recenti"
+"welcome.recent_one_request":
+  en: "1 request"
+  es: "1 solicitud"
+  gl: "1 solicitude"
+  it: "1 richiesta"
+"welcome.recent_request_count":
+  en: "%{count} requests"
+  es: "%{count} solicitudes"
+  gl: "%{count} solicitudes"
+  it: "%{count} richieste"
 "welcome.import_postman":
   en: "Import from Postman..."
   es: "Importar de Postman..."

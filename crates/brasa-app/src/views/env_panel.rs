@@ -280,7 +280,7 @@ impl AppView {
                 ));
             }
             rows = rows.child(match &self.new_env_input {
-                Some(input) => self.render_new_env_input(input, &palette, cx),
+                Some(input) => self.render_new_env_input(input, &palette, &mono_font, cx),
                 None => new_env_row(weak.clone(), &palette),
             });
         } else {
@@ -323,10 +323,18 @@ impl AppView {
     }
 
     /// The inline input row that replaces "+ New environment" while a name is being typed.
+    ///
+    /// Same row chrome as [`env_row`] (no border of its own, a tinted background instead), not a
+    /// separate bordered pill: a full `border_1` around the row shrank its content by the
+    /// border's own width, a px or two off every dot above and below it (reported as
+    /// "misaligned"). The dot is solid accent, not a hollow ring: still colorless like "No
+    /// environment"'s, but reading as "this one is forming" rather than a stray outline
+    /// (reported as "ugly").
     fn render_new_env_input(
         &self,
         input: &Entity<InputState>,
         palette: &Palette,
+        mono_font: &SharedString,
         cx: &Context<Self>,
     ) -> AnyElement {
         h_flex()
@@ -336,25 +344,19 @@ impl AppView {
             .pl(px(4.0))
             .pr(px(8.0))
             .rounded(px(RADIUS_SM))
-            .bg(palette.raised)
-            .border_1()
-            .border_color(palette.accent)
+            .bg(palette.accent_subtle)
             .on_key_down(cx.listener(|view, event: &KeyDownEvent, window, cx| {
                 if event.keystroke.key == "escape" {
                     view.cancel_new_environment(window, cx);
                 }
             }))
             .child(grip_spacer())
-            // A hollow dot, like "No environment"'s: this row has no color of its own yet. Without
-            // it the input's text sat where the dot should be, a few px off from every row above
-            // and below it.
             .child(
                 div()
                     .flex_none()
                     .size(px(7.0))
                     .rounded_full()
-                    .border_1()
-                    .border_color(palette.fg_subtle),
+                    .bg(palette.accent),
             )
             .child(
                 div().flex_1().min_w_0().child(
@@ -367,11 +369,18 @@ impl AppView {
                         .bg(palette.bg.opacity(0.0)),
                 ),
             )
+            // The same key-hint chip as the title bar's search trigger ("Cmd+K"): a bordered,
+            // rounded mono tag, not plain dim text floating at the row's edge.
             .child(
                 div()
                     .flex_none()
+                    .font_family(mono_font.clone())
                     .text_size(px(10.5))
                     .text_color(palette.fg_subtle)
+                    .border_1()
+                    .border_color(palette.border)
+                    .rounded(px(4.0))
+                    .px(px(4.0))
                     .child(t!("navigation.env.create_hint")),
             )
             .into_any_element()

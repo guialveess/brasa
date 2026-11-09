@@ -232,6 +232,42 @@ impl Workspace {
         id: &str,
         folder_id: Option<&str>,
     ) -> Result<String, WorkspaceError> {
+        let new_id = self.move_entry_on_disk(id, folder_id)?;
+        self.rescan()?;
+        Ok(new_id)
+    }
+
+    /// Moves every id in `ids` into `folder_id`, like [`Workspace::move_entry`], but re-scans the
+    /// folder only once at the end, no matter how many of them moved. One that cannot move (a
+    /// name already in the destination) is reported in its own slot, without stopping the others
+    /// or losing the single re-scan.
+    ///
+    /// Moving many entries at once (a multi-select drag) through repeated `move_entry` calls
+    /// re-scans the whole workspace once per entry, which turned a drag of a handful of requests
+    /// into a visible stutter in a workspace with hundreds of files (#239); this does the same
+    /// disk work with one re-scan total.
+    pub fn move_entries(
+        &mut self,
+        ids: &[String],
+        folder_id: Option<&str>,
+    ) -> Vec<(String, Result<String, WorkspaceError>)> {
+        let results = ids
+            .iter()
+            .map(|id| (id.clone(), self.move_entry_on_disk(id, folder_id)))
+            .collect();
+        // Keep the tree consistent even if every move failed (a no-op rescan is cheap) and even
+        // if rescanning itself fails: callers read `tree()` after this, not a `Result` here.
+        let _ = self.rescan();
+        results
+    }
+
+    /// The disk-renaming part of [`Workspace::move_entry`], without the re-scan: callers that
+    /// move several entries batch the re-scan themselves ([`Workspace::move_entries`]).
+    fn move_entry_on_disk(
+        &self,
+        id: &str,
+        folder_id: Option<&str>,
+    ) -> Result<String, WorkspaceError> {
         let old_path = id_to_path(&self.root, id)?;
         let is_request = has_request_extension(&old_path) && old_path.is_file();
         if !is_request && !old_path.is_dir() {
@@ -257,9 +293,7 @@ impl Workspace {
             path: new_path.clone(),
             source,
         })?;
-        let new_id = path_to_id(&self.root, &new_path);
-        self.rescan()?;
-        Ok(new_id)
+        Ok(path_to_id(&self.root, &new_path))
     }
 
     /// Deletes the file or folder with the given id. Deleting a folder removes it and everything

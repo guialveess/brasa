@@ -6,9 +6,12 @@
 //! plain `div` row. The dirty dot / hover-reveals-close-`x` behavior uses gpui's `group_hover`,
 //! toggling opacity between the two rather than swapping elements.
 //!
-//! Tabs reorder by dragging, like any editor: dropping a tab on another puts it in that tab's
-//! place (an accent line on the side it will land), dropping it on the bar's empty space moves it
-//! to the end. The bar only reports the move ([`DocumentTabs::on_reorder`]).
+//! Tabs reorder by dragging, like any editor: hovering a tab over another live-swaps them in the
+//! strip, each one sliding the one slot it actually moved ([`ReorderPreview`]) instead of a static
+//! color marking where it would land — the slide itself is the indicator. Dropping it on the
+//! bar's empty space moves it to the end. The bar only reports the final move
+//! ([`DocumentTabs::on_reorder`]); the live swap while dragging is a purely visual preview, reset
+//! the moment nothing is being dragged.
 //!
 //! When the tabs do not fit, the row scrolls horizontally (the mouse wheel too: gpui turns the
 //! vertical wheel into a horizontal scroll on a row that only scrolls on x) and, on the right,
@@ -24,6 +27,7 @@
 //! asks for one more frame only when it does not (no timers, and an idle window stays idle).
 
 use std::rc::Rc;
+use std::time::Duration;
 
 use gpui_kit::component::menu::{ContextMenuExt as _, DropdownMenu as _, PopupMenu, PopupMenuItem};
 use rust_i18n::t;
@@ -283,7 +287,76 @@ struct StripState {
     last_selected: Option<usize>,
     /// What the last render drew.
     flags: StripFlags,
+    /// The live drag-reorder preview.
+    reorder: ReorderPreview,
 }
+
+/// The live preview of a drag reorder: which original tab index renders at which position while
+/// one is being dragged over the strip, reset to identity the moment nothing is being dragged
+/// ([`cx.has_active_drag`](gpui::App::has_active_drag)).
+#[derive(Clone)]
+struct ReorderPreview {
+    /// A permutation of `0..len`: `order[display_position] = original_index`.
+    order: Vec<usize>,
+    /// `order` just before the last change, so only the tabs that actually moved animate.
+    previous: Vec<usize>,
+    /// Bumped on every change, so a moved tab's slide-in restarts exactly when it moves again.
+    generation: usize,
+}
+
+impl ReorderPreview {
+    /// No tab has moved: `order` is `0..len` in order.
+    fn identity(len: usize) -> Self {
+        let order: Vec<usize> = (0..len).collect();
+        Self {
+            previous: order.clone(),
+            order,
+            generation: 0,
+        }
+    }
+
+    /// Moves `from_original` into `to_original`'s current slot, as if pulled out and dropped
+    /// there: the tabs between the two slide over by one to close or open the gap, the same way
+    /// dragging a tab past its neighbors works in any editor. A no-op, returning `self` unchanged
+    /// (not bumping `generation`), when they are already adjacent in that order.
+    fn move_to(&self, from_original: usize, to_original: usize) -> Self {
+        let (Some(from_pos), Some(to_pos)) = (
+            self.order.iter().position(|&i| i == from_original),
+            self.order.iter().position(|&i| i == to_original),
+        ) else {
+            return self.clone();
+        };
+        if from_pos == to_pos {
+            return self.clone();
+        }
+        let mut order = self.order.clone();
+        let moved = order.remove(from_pos);
+        order.insert(to_pos, moved);
+        Self {
+            previous: self.order.clone(),
+            order,
+            generation: self.generation + 1,
+        }
+    }
+
+    /// How many slots `original_index` moved between `previous` and `order`: positive to the
+    /// right, negative to the left, `0` if it did not move (or isn't in either, which does not
+    /// happen in practice since both are always permutations of the same `0..len`).
+    fn slots_moved(&self, original_index: usize) -> isize {
+        let was = self.previous.iter().position(|&i| i == original_index);
+        let now = self.order.iter().position(|&i| i == original_index);
+        match (was, now) {
+            (Some(was), Some(now)) => now as isize - was as isize,
+            _ => 0,
+        }
+    }
+}
+
+/// A rough, fixed stand-in for a tab's actual (variable) width, just to give the slide-in
+/// animation a plausible starting offset. Not pixel accurate — the tabs this session's own
+/// labels run, and measuring every tab's real width before animating is not worth it for a cue
+/// that only plays for a couple hundred milliseconds.
+const REORDER_SLOT_PX: f32 = 72.0;
 
 /// The open-tabs bar: one [`DocumentTab`] per open document, plus the caller's own
 /// trailing "+" button (added with [`Self::suffix`]).
@@ -341,10 +414,13 @@ impl RenderOnce for DocumentTabs {
                     handle: ScrollHandle::new(),
                     last_selected: None,
                     flags: StripFlags::HIDDEN,
+                    reorder: ReorderPreview::identity(0),
                 }
             });
         let selected_index = self.items.iter().position(|item| item.selected);
-        let (handle, flags) = state.update(cx, |state, _| {
+        let item_count = self.items.len();
+        let has_active_drag = cx.has_active_drag();
+        let (handle, flags, reorder) = state.update(cx, |state, _| {
             // Applied by gpui when the row is prepainted, with that frame's tab bounds.
             if selected_index != state.last_selected {
                 if let Some(index) = selected_index {
@@ -353,7 +429,13 @@ impl RenderOnce for DocumentTabs {
                 state.last_selected = selected_index;
             }
             state.flags = StripFlags::measure(&state.handle, state.flags.show_controls);
-            (state.handle.clone(), state.flags)
+            // Nothing is being dragged (a drop, a cancel, or the first render ever), or the tab
+            // count changed under an in-progress drag (closing one from its own menu, say): the
+            // preview no longer means anything, so it resets to "nothing has moved".
+            if !has_active_drag || state.reorder.order.len() != item_count {
+                state.reorder = ReorderPreview::identity(item_count);
+            }
+            (state.handle.clone(), state.flags, state.reorder.clone())
         });
 
         // The tab list for the menu: label, whether it is the active one, and its click handler.
@@ -363,7 +445,7 @@ impl RenderOnce for DocumentTabs {
             .map(|item| (item.label.clone(), item.selected, item.on_click.clone()))
             .collect();
 
-        let tabs = self.items.into_iter().enumerate().map(|(index, item)| {
+        let mut built: Vec<Option<AnyElement>> = self.items.into_iter().enumerate().map(|(index, item)| {
             let group = SharedString::from(format!("doc-tab-{index}"));
             let selected = item.selected;
             let dirty = item.dirty;
@@ -422,19 +504,24 @@ impl RenderOnce for DocumentTabs {
                     label: item.label.clone(),
                     detail: item.detail.clone(),
                 };
-                let accent = palette.accent;
+                // No color marking the drop target: the tabs between it and the dragged one
+                // live-swap into their new slots instead (`ReorderPreview::move_to`, applied
+                // below), so the movement itself is the indicator (reported: a static accent
+                // line, however drawn, always read as either too weak or too strong).
+                let reorder_state = state.clone();
                 tab = tab
                     .on_drag(dragged, |dragged, _, _, cx| cx.new(|_| dragged.clone()))
-                    // The line marks where the dragged tab lands: before this tab when it
-                    // comes from the right, after it when it comes from the left.
-                    .drag_over::<DraggedTab>(move |style, dragged, _, _| {
-                        if dragged.index > index {
-                            style.border_l_2().border_color(accent)
-                        } else if dragged.index < index {
-                            style.border_r_2().border_color(accent)
-                        } else {
-                            style
+                    .drag_over::<DraggedTab>(move |style, dragged, window, cx| {
+                        if dragged.index != index {
+                            reorder_state.update(cx, |state, _| {
+                                let next = state.reorder.move_to(dragged.index, index);
+                                if next.generation != state.reorder.generation {
+                                    state.reorder = next;
+                                    window.refresh();
+                                }
+                            });
                         }
+                        style
                     })
                     .on_drop(move |dragged: &DraggedTab, window, cx| {
                         handler(dragged.index, index, window, cx)
@@ -504,13 +591,42 @@ impl RenderOnce for DocumentTabs {
                 end = end.on_click(move |_, window, cx| handler(window, cx));
             }
             let tab = tab.child(end);
-            match context_menu {
+            let tab = match context_menu {
                 Some(builder) => tab
                     .context_menu(move |menu, window, cx| builder(menu, window, cx))
                     .into_any_element(),
                 None => tab.into_any_element(),
-            }
-        });
+            };
+            // Slides in from where it moved from, settling into its natural flex position: the
+            // reorder's own visible feedback, in place of the static marker tried before.
+            let slots_moved = reorder.slots_moved(index);
+            let tab = if slots_moved == 0 {
+                tab
+            } else {
+                let start_left = -(slots_moved as f32) * REORDER_SLOT_PX;
+                div()
+                    .child(tab)
+                    .with_animation(
+                        SharedString::from(format!("doc-tab-slide-{index}-{}", reorder.generation)),
+                        Animation::new(Duration::from_millis(180)).with_easing(ease_out_quint()),
+                        move |this, delta| this.left(px(start_left * (1.0 - delta))),
+                    )
+                    .into_any_element()
+            };
+            Some(tab)
+        }).collect();
+
+        // Reordered to the live preview: each slot now shows the original-index tab the preview
+        // says belongs there, so the strip visually reflects the drag in progress.
+        let tabs: Vec<AnyElement> = reorder
+            .order
+            .iter()
+            .map(|&original| {
+                built[original]
+                    .take()
+                    .expect("ReorderPreview::order holds each original index exactly once")
+            })
+            .collect();
 
         let controls = flags.show_controls.then(|| {
             let page = |forward: bool| {
